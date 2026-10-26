@@ -1,0 +1,796 @@
+:root {
+    --color-primary: #1B2A4A;
+    --color-sdg4: #C21F32;
+    --color-sdg10: #DD1367;
+    --color-support: #0F766E;
+    --color-highlight: #FFC857;
+    --color-bg: #FFFAF5;
+    --color-bg-section: #F3F5FA;
+    --color-bg-sdg10: #FDECF3;
+    --color-text: #1F2430;
+    --u: min(100vw / 1440, 100vh / 900);
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-Regular.otf);
+    font-weight: 400;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: var(--color-text);
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Fokus keyboard */
+a:focus-visible {
+    outline: 3px solid var(--color-highlight);
+    outline-offset: 3px;
+}
+
+/* Skip link (muncul saat ditekan Tab) */
+.skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    z-index: 100;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: var(--color-highlight);
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+/* ----- Navbar ----- */
+
+.container-navbar {
+    background-color: #1B2A4A;
+    height: calc(80 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(120 * var(--u));
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    height: calc(48 * var(--u));
+}
+
+.container-logo img {
+    height: 100%;
+}
+
+.container-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: calc(80 * var(--u));
+}
+
+.container-menu a {
+    color: #FFFAF5;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(24 * var(--u));
+    text-decoration: none;
+}
+
+.container-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Penanda halaman aktif (garis bawah, bukan hanya warna) */
+.container-menu a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--color-highlight);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+.container-lang {
+    height: calc(48 * var(--u));
+    width: calc(100 * var(--u));
+    display: flex;
+    align-items: center;
+    border-radius: calc(25 * var(--u));
+    background-color: #FFC857;
+    padding: calc(8 * var(--u));
+    justify-content: space-between;
+}
+
+.container-lang img {
+    height: calc(32 * var(--u));
+}
+
+.container-lang span {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(24 * var(--u));
+    color: #1B2A4A;   /* teks gelap di atas kuning agar kontras */
+}
+
+/* ----- Hero ----- */
+.hero {
+    height: calc(540 * var(--u));
+    padding: calc(120 * var(--u)) calc(120 * var(--u)) calc(120 * var(--u)) calc(120 * var(--u));
+    background-image:
+        linear-gradient(to right,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.2) 60%,
+            rgba(255, 255, 255, 0) 100%),
+        url("../images/hero-sdg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1B2A4A;
+}
+
+.hero-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: calc(48 * var(--u));
+}
+
+.hero-text {
+    font-size: calc(24 * var(--u));
+    font-weight: 400;
+    max-width: calc(600 * var(--u));
+}
+
+/* ----- SDG (Insight) ----- */
+.container-sdg {
+    background-color: #1B2A4A;
+    height: calc(1000 * var(--u));
+    padding: 0 calc(120 * var(--u)) 0 calc(120 * var(--u));
+}
+
+.text-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(40 * var(--u)) 0 calc(40 * var(--u)) 0;
+    color: #F3F5FA;
+    text-align: center;
+}
+
+.text-open h2 {
+    color: #FDECF3;
+    font-size: calc(48 * var(--u));
+    margin-bottom: calc(24 * var(--u));
+}
+
+.text-open p {
+    color: #FDECF3;
+    font-size: calc(24 * var(--u));
+}
+
+.un-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: calc(600 * var(--u));
+}
+
+.left-text h3 {
+    font-size: calc(96 * var(--u));
+    color: #FDECF3;
+}
+
+.left-text p {
+    font-size: calc(32 * var(--u));
+    color: #FDECF3;
+    max-width: calc(600 * var(--u));
+}
+
+.btn-link {
+    background-color: #0F766E;
+    width: calc(360 * var(--u));
+    height: calc(80 * var(--u));
+    border-radius: calc(40 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(24 * var(--u)) 0 calc(24 * var(--u));
+    text-decoration: none;
+}
+
+.btn-link span {
+    font-size: calc(32 * var(--u));
+    color: #FDECF3;
+    font-weight: 600;
+}
+
+.btn-link img {
+    height: calc(24 * var(--u));
+}
+
+.right {
+    height: calc(600 * var(--u));
+    width: calc(429 * var(--u));
+    border-radius: calc(30 * var(--u));
+    padding: calc(16 * var(--u));
+    background: rgba(217, 217, 217, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.cont-logo {
+    height: calc(397 * var(--u));
+    width: calc(397 * var(--u));
+    padding: calc(39 * var(--u));
+    background-color: #F3F5FA;
+    border-radius: calc(14 * var(--u));
+    margin-bottom: calc(40 * var(--u));
+}
+
+.cont-logo img {
+    height: 100%;
+}
+
+.right p {
+    font-size: calc(26 * var(--u));
+    text-align: center;
+    color: #FDECF3;
+}
+
+/* ----- Break ----- */
+.break {
+    height: calc(320 * var(--u));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 calc(200 * var(--u)) 0 calc(200 * var(--u));
+}
+
+.break h2 {
+    font-size: calc(48 * var(--u));
+    text-align: center;
+}
+
+.break p {
+    font-size: calc(32 * var(--u));
+    text-align: center;
+}
+
+/* ----- SDG 4 & 10 (Focus) ----- */
+.container-sdgs {
+    background-color: var(--color-primary);   /* cadangan kalau foto gagal dimuat */
+    background-image: url(../images/photo-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(860 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container-card {
+    height: calc(780 * var(--u));
+    background-color: #FDECF3;
+    width: calc(480 * var(--u));
+    padding: calc(12 * var(--u)) calc(12 * var(--u)) calc(18 * var(--u)) calc(12 * var(--u));
+    border-radius: calc(40 * var(--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont-logo-sdg {
+    height: calc(454 * var(--u));
+}
+
+.cont-logo-sdg img {
+    height: 100%;
+    border-radius: calc(28 * var(--u));
+}
+
+.text-sdg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1F2430;
+}
+
+.text-sdg h3 {
+    font-size: calc(32 * var(--u));
+    text-align: center;
+}
+
+.text-sdg p {
+    font-size: calc(20 * var(--u));
+    text-align: center;
+}
+
+.learn {
+    background-color: var(--color-sdg4);
+    width: calc(200 * var(--u));
+    height: calc(70 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(35 * var(--u));
+    font-size: calc(24 * var(--u));
+    font-weight: 700;
+    color: #FDECF3;
+    text-decoration: none;
+}
+
+.card-sdg10 .learn {
+    background-color: var(--color-sdg10);
+}
+
+.learn:hover {
+    text-decoration: underline;
+}
+
+.learn:focus-visible {
+    outline-color: var(--color-primary);
+}
+
+/* ----- Footer ----- */
+.container-footer {
+    background-color: #1B2A4A;
+    height: calc(400 * var(--u));
+    padding: calc(90 * var(--u));
+    display: flex;
+    gap: calc(25 * var(--u));
+    justify-content: space-between;
+}
+
+.footer-left {
+    max-width: calc(800 * var(--u));
+}
+
+.footer-left > p {
+    font-size: calc(16 * var(--u));
+    max-width: calc(700 * var(--u));
+    color: #FFFAF5;
+    margin-bottom: calc(25 * var(--u));
+}
+
+.logo-starlight img {
+    width: calc(270 * var(--u));
+    margin-bottom: calc(24 * var(--u));
+}
+
+.ig-web {
+    display: flex;
+    gap: calc(24 * var(--u));
+    margin-top: calc(18 * var(--u));
+    align-items: center;
+}
+
+.footer-ig {
+    display: flex;
+    align-items: center;
+    height: calc(60 * var(--u));
+    width: calc(210 * var(--u));
+    padding: calc(5 * var(--u));
+    border-radius: calc(30 * var(--u));
+    gap: calc(8 * var(--u));
+}
+
+.logo-ig {
+    background-color: #FDECF3;
+    height: calc(50 * var(--u));
+    width: calc(50 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(25 * var(--u));
+}
+
+.logo-ig img {
+    height: calc(32 * var(--u));
+}
+
+.footer-ig span,
+.footer-web span {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(14 * var(--u));
+    color: #F3F5FA;
+}
+
+.separator {
+    height: calc(58 * var(--u));
+}
+
+.separator img {
+    height: 100%;
+}
+
+.footer-web {
+    display: flex;
+    align-items: center;
+    height: calc(60 * var(--u));
+    width: calc(180 * var(--u));
+    padding: calc(5 * var(--u));
+    border-radius: calc(30 * var(--u));
+    gap: calc(8 * var(--u));
+}
+
+.logo-sdg {
+    background-color: #FDECF3;
+    height: calc(50 * var(--u));
+    width: calc(50 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(25 * var(--u));
+}
+
+.logo-sdg img {
+    height: calc(32 * var(--u));
+}
+
+.footer-right h2 {
+    color: #FFFAF5;
+    font-size: calc(40 * var(--u));
+}
+
+.contacts {
+    display: flex;
+    gap: calc(25 * var(--u));
+    margin-top: calc(25 * var(--u));
+}
+
+.contacts a {
+    color: #FFFAF5;
+    font-size: calc(14 * var(--u));
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.contact-left, .contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: calc(25 * var(--u));
+}
+
+.hendra, .rama, .indra, .oki {
+    display: flex;
+    align-items: center;
+    gap: calc(20 * var(--u));
+}
+
+
+/* =====================================================
+   MOBILE & TABLET (layar sampai 1023px)
+   Basis desain: iPhone 14 (390px).
+   Aturan desktop di atas TIDAK diubah; blok ini hanya
+   menimpa yang perlu berubah di layar kecil.
+   ===================================================== */
+@media (max-width: 1023px) {
+
+    /* 1 unit = 1px (maks), mengecil hanya jika layar < 390px */
+    :root {
+        --u: min(1px, calc(100vw / 390));
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
+
+    /* --- Navbar --- */
+    .container-navbar {
+        height: auto;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+    }
+
+    .container-logo {
+        height: 36px;
+    }
+
+    .container-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 16px;
+    }
+
+    .container-menu a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .container-lang {
+        width: auto;
+        height: 40px;
+        gap: 8px;
+        padding: 0 12px 0 8px;
+    }
+
+    .container-lang img {
+        height: 24px;
+    }
+
+    .container-lang span {
+        font-size: 1rem;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        height: auto;
+        padding: 48px 16px 56px;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+            url("../images/hero-sdg.jpg");
+    }
+
+    .hero-label {
+        font-size: 1.125rem;
+        margin-bottom: 8px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        margin-bottom: 16px;
+    }
+
+    .hero-text {
+        font-size: 1.125rem;
+        max-width: none;
+    }
+
+    /* --- Insight --- */
+    .container-sdg {
+        height: auto;
+        padding: 40px 16px 48px;
+    }
+
+    .text-open {
+        padding: 0 0 32px;
+    }
+
+    .text-open h2 {
+        font-size: clamp(1.625rem, 7vw, 2.25rem);
+        margin-bottom: 12px;
+    }
+
+    .text-open p {
+        font-size: 1.125rem;
+    }
+
+    .un-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .left {
+        height: auto;
+        gap: 24px;
+    }
+
+    .left-text h3 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        margin-bottom: 16px;
+    }
+
+    .left-text p {
+        font-size: 1.125rem;
+        max-width: none;
+    }
+
+    .btn-link {
+        width: 100%;
+        max-width: 360px;
+        height: 64px;
+    }
+
+    .btn-link span {
+        font-size: 1.25rem;
+    }
+
+    .btn-link img {
+        height: 20px;
+    }
+
+    .right {
+        height: auto;
+        width: 100%;
+        max-width: 480px;
+        padding: 16px;
+    }
+
+    .cont-logo {
+        height: auto;
+        width: 100%;
+        padding: 32px;
+        margin-bottom: 24px;
+    }
+
+    .cont-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .right p {
+        font-size: 1.0625rem;
+    }
+
+    /* --- Break --- */
+    .break {
+        height: auto;
+        padding: 48px 16px;
+    }
+
+    .break h2 {
+        font-size: clamp(1.5rem, 6.5vw, 2rem);
+        margin-bottom: 12px;
+    }
+
+    .break p {
+        font-size: 1.125rem;
+    }
+
+    /* --- Kartu SDG 4 & 10 --- */
+    .container-sdgs {
+        height: auto;
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 16px;
+    }
+
+    .container-card {
+        height: auto;
+        width: 100%;
+        max-width: 480px;
+        gap: 16px;
+        padding: 12px 12px 20px;
+    }
+
+    .cont-logo-sdg {
+        height: auto;
+        width: 100%;
+    }
+
+    .cont-logo-sdg img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text-sdg {
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .text-sdg h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-sdg p {
+        font-size: 1rem;
+    }
+
+    .learn {
+        width: auto;
+        min-width: 200px;
+        height: 56px;
+        padding: 0 24px;
+        font-size: 1.25rem;
+    }
+
+    /* --- Footer --- */
+    .container-footer {
+        height: auto;
+        flex-direction: column;
+        gap: 32px;
+        padding: 40px 16px;
+    }
+
+    .footer-left {
+        max-width: none;
+    }
+
+    .logo-starlight img {
+        width: 200px;
+        margin-bottom: 16px;
+    }
+
+    .footer-left > p {
+        font-size: 1rem;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .ig-web {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 0;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .footer-ig,
+    .footer-web {
+        width: auto;
+        height: 56px;
+    }
+
+    .footer-ig span,
+    .footer-web span {
+        font-size: 0.9375rem;
+    }
+
+    .footer-right h2 {
+        font-size: 2rem;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .contact-left,
+    .contact-right {
+        gap: 16px;
+    }
+
+    .hendra, .rama, .indra, .oki {
+        gap: 12px;
+    }
+
+    .contacts a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        font-size: 0.9375rem;
+        overflow-wrap: anywhere;
+    }
+}

@@ -8,22 +8,52 @@
 </head>
 <body>
 
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">
+        <span class="en">Skip to main content</span>
+        <span class="id">Langsung ke konten utama</span>
+    </a>
 
     <!-- Navbar -->
     <header>
-        <nav class="container-navbar" aria-label="Main navigation">
+        <nav class="container-navbar">
             <div class="container-logo">
                 <img src="../assets/starlight-logo-light.svg" alt="Starlight">
             </div>
             <ul class="container-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sdgs.html" aria-current="page">SDG</a></li>
-                <li class="container-lang">
-                    <img src="../images/US-flag.svg" alt="">
-                    <span>EN</span>
+                <li>
+                    <a href="../index.html">
+                        <span class="en">Home</span>
+                        <span class="id">Beranda</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="sdgs.html" class="active">SDG</a>
+                    <ul class="dropdown-isi">
+                        <li><a href="sdg4.html">SDG 4</a></li>
+                        <li><a href="sdg10.html">SDG 10</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="inclusive.html">
+                        <span class="en">Inclusion</span>
+                        <span class="id">Inklusi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html">
+                        <span class="en">About</span>
+                        <span class="id">Tentang</span>
+                    </a>
+                </li>
+                <li>
+                    <button type="button" class="lang-btn btn-en">
+                        <img src="../assets/logo-EN.png" alt="">
+                        <span>EN</span>
+                    </button>
+                    <button type="button" class="lang-btn btn-id">
+                        <img src="../assets/logo-ID.png" alt="">
+                        <span>ID</span>
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -34,27 +64,49 @@
 
         <!-- Hero -->
         <section class="hero">
-            <p class="hero-label">Sustainable Development</p>
-            <h1>Education &amp; Equality: <br>Two Supporting Goals</h1>
-            <p class="hero-text">Good education only matters if everyone can reach it. That is why we focus on SDG 4 (Quality Education) and SDG 10 (Reduced Inequalities).</p>
+            <p class="hero-label">
+                <span class="en">Sustainable Development</span>
+                <span class="id">Pembangunan Berkelanjutan</span>
+            </p>
+            <h1>
+                <span class="en">Education &amp; Equality: <br>Two Supporting Goals</span>
+                <span class="id">Pendidikan &amp; Kesetaraan: <br>Dua Tujuan yang Saling Mendukung</span>
+            </h1>
+            <p class="hero-text">
+                <span class="en">Good education only matters if everyone can reach it. That is why we focus on SDG 4 (Quality Education) and SDG 10 (Reduced Inequalities).</span>
+                <span class="id">Pendidikan yang baik hanya berarti jika dapat dijangkau semua orang. Itulah sebabnya kami berfokus pada SDG 4 (Pendidikan Berkualitas) dan SDG 10 (Berkurangnya Kesenjangan).</span>
+            </p>
         </section>
         <!-- Hero -->
 
         <!-- Insight -->
         <section class="container-sdg" aria-labelledby="judul-sdgs">
             <div class="text-open">
-                <h2 id="judul-sdgs">Getting to Know the SDGs</h2>
-                <p>The SDGs are a global agreement to address shared challenges such as poverty, education, health, and the environment.</p>
+                <h2 id="judul-sdgs">
+                    <span class="en">Getting to Know the SDGs</span>
+                    <span class="id">Mengenal SDGs</span>
+                </h2>
+                <p>
+                    <span class="en">The SDGs are a global agreement to address shared challenges such as poverty, education, health, and the environment.</span>
+                    <span class="id">SDGs adalah kesepakatan global untuk menjawab tantangan bersama seperti kemiskinan, pendidikan, kesehatan, dan lingkungan.</span>
+                </p>
             </div>
             <div class="un-container">
                 <div class="left">
                     <div class="left-text">
-                        <h3 id="judul-17">17 Goals, <br>One Agenda</h3>
-                        <p>The SDGs consist of 17 goals agreed upon by United Nations member states in 2015 and form part of the 2030 Agenda.</p>
+                        <h3 id="judul-17">
+                            <span class="en">17 Goals, <br>One Agenda</span>
+                            <span class="id">17 Tujuan, <br>Satu Agenda</span>
+                        </h3>
+                        <p>
+                            <span class="en">The SDGs consist of 17 goals agreed upon by United Nations member states in 2015 and form part of the 2030 Agenda.</span>
+                            <span class="id">SDGs terdiri dari 17 tujuan yang disepakati negara-negara anggota PBB pada 2015 dan menjadi bagian dari Agenda 2030.</span>
+                        </p>
                     </div>
 
                     <a class="btn-link" href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
-                        <span>See all 17 Goals</span>
+                        <span class="en">See all 17 Goals</span>
+                        <span class="id">Lihat 17 Tujuan</span>
                         <img src="../assets/arrow.svg" alt="">
                     </a>
                 </div>
@@ -62,7 +114,10 @@
                     <div class="cont-logo">
                         <img src="../images/un-logo.png" alt="United Nations logo">
                     </div>
-                    <p>Adopted by the UN General Assembly on 25 September 2015.</p>
+                    <p>
+                        <span class="en">Adopted by the UN General Assembly on 25 September 2015.</span>
+                        <span class="id">Diadopsi oleh Majelis Umum PBB pada 25 September 2015.</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -71,8 +126,14 @@
 
         <!-- Break -->
         <section class="break">
-            <h2>Our Focus</h2>
-            <p>Of these 17 goals, we focus on the two most closely tied to inclusion: SDG 4 and SDG 10.</p>
+            <h2>
+                <span class="en">Our Focus</span>
+                <span class="id">Fokus Kami</span>
+            </h2>
+            <p>
+                <span class="en">Of these 17 goals, we focus on the two most closely tied to inclusion: SDG 4 and SDG 10.</span>
+                <span class="id">Dari 17 tujuan ini, kami berfokus pada dua yang paling berkaitan dengan inklusi: SDG 4 dan SDG 10.</span>
+            </p>
         </section>
         <!-- Break -->
 
@@ -84,20 +145,38 @@
                     <img src="../assets/sdg4.png" alt="SDG 4 logo">
                 </div>
                 <div class="text-sdg">
-                    <h3>SDG 4 <br>Quality Education</h3>
-                    <p>Ensure inclusive, equitable, and quality education, and promote lifelong learning opportunities for all.</p>
+                    <h3>
+                        <span class="en">SDG 4 <br>Quality Education</span>
+                        <span class="id">SDG 4 <br>Pendidikan Berkualitas</span>
+                    </h3>
+                    <p>
+                        <span class="en">Ensure inclusive, equitable, and quality education, and promote lifelong learning opportunities for all.</span>
+                        <span class="id">Memastikan pendidikan yang inklusif, adil, dan berkualitas, serta mendorong kesempatan belajar sepanjang hayat bagi semua orang.</span>
+                    </p>
                 </div>
-                <a class="learn" href="sdg4.html" aria-label="Learn more about SDG 4">Learn More</a>
+                <a class="learn" href="sdg4.html">
+                    <span class="en">Learn More</span>
+                    <span class="id">Selengkapnya</span>
+                </a>
             </article>
             <article class="container-card card-sdg10">
                 <div class="cont-logo-sdg">
                     <img src="../assets/sdg10.png" alt="SDG 10 logo">
                 </div>
                 <div class="text-sdg">
-                    <h3>SDG 10 <br>Reduced Inequalities</h3>
-                    <p>Reduce inequality within and among countries, and promote social, economic, and political inclusion for all, including persons with disabilities.</p>
+                    <h3>
+                        <span class="en">SDG 10 <br>Reduced Inequalities</span>
+                        <span class="id">SDG 10 <br>Berkurangnya Kesenjangan</span>
+                    </h3>
+                    <p>
+                        <span class="en">Reduce inequality within and among countries, and promote social, economic, and political inclusion for all, including persons with disabilities.</span>
+                        <span class="id">Mengurangi ketimpangan di dalam dan antarnegara, serta mendorong inklusi sosial, ekonomi, dan politik bagi semua, termasuk penyandang disabilitas.</span>
+                    </p>
                 </div>
-                <a class="learn" href="sdg10.html" aria-label="Learn more about SDG 10">Learn More</a>
+                <a class="learn" href="sdg10.html">
+                    <span class="en">Learn More</span>
+                    <span class="id">Selengkapnya</span>
+                </a>
             </article>
         </section>
         <!-- SDG 4 & 10 -->
@@ -105,8 +184,14 @@
 
         <!-- Break -->
         <section class="break">
-            <h2>Why are SDG 4 and SDG 10 connected?</h2>
-            <p>Education opens opportunities, and equality ensures they reach everyone. Explore how both are put into practice through inclusive education.</p>
+            <h2>
+                <span class="en">Why are SDG 4 and SDG 10 connected?</span>
+                <span class="id">Mengapa SDG 4 dan SDG 10 saling terkait?</span>
+            </h2>
+            <p>
+                <span class="en">Education opens opportunities, and equality ensures they reach everyone. Explore how both are put into practice through inclusive education.</span>
+                <span class="id">Pendidikan membuka peluang, dan kesetaraan memastikan peluang itu sampai ke semua orang. Jelajahi bagaimana keduanya diwujudkan lewat pendidikan inklusif.</span>
+            </p>
         </section>
         <!-- Break -->
 
@@ -119,13 +204,18 @@
             <div class="logo-starlight">
                 <img src="../assets/starlight-logo-light.svg" alt="Starlight">
             </div>
-            <p>Information on inclusive education for all, in line with SDG 4 and SDG 10. This website was created for learning purposes.</p>
+            <p>
+                <span class="en">Information on inclusive education for all, in line with SDG 4 and SDG 10. This website was created for learning purposes.</span>
+                <span class="id">Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10. Website ini dibuat untuk keperluan pembelajaran.</span>
+            </p>
             <div class="ig-web">
                 <div class="footer-ig">
                     <div class="logo-ig">
                         <img src="../assets/logo-ig.svg" alt="">
                     </div>
-                    <span>@sdgs_indonesia</span>
+                    <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
+                        <span>@sdgaction</span>
+                    </a>
                 </div>
                 <div class="separator">
                     <img src="../assets/logo-separator.png" alt="">
@@ -134,13 +224,34 @@
                     <div class="logo-sdg">
                         <img src="../assets/logo-sdg.svg" alt="">
                     </div>
-                    <span>THE 17 GOALS</span>
+                    <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
+                        <span class="en">THE 17 GOALS</span>
+                        <span class="id">17 TUJUAN</span>
+                    </a>
                 </div>
             </div>
         </div>
 
+        <nav class="footer-explore">
+            <h2>
+                <span class="en">Explore</span>
+                <span class="id">Jelajahi</span>
+            </h2>
+            <ul class="explore-list">
+                <li><a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a></li>
+                <li><a href="sdgs.html">SDG</a></li>
+                <li><a href="sdg4.html">SDG 4</a></li>
+                <li><a href="sdg10.html">SDG 10</a></li>
+                <li><a href="inclusive.html"><span class="en">Inclusion</span><span class="id">Inklusi</span></a></li>
+                <li><a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a></li>
+            </ul>
+        </nav>
+
         <div class="footer-right">
-            <h2>Contact Us</h2>
+            <h2>
+                <span class="en">Contact Us</span>
+                <span class="id">Hubungi Kami</span>
+            </h2>
             <div class="contacts">
                 <div class="contact-left">
                     <div class="hendra">
@@ -166,5 +277,9 @@
         </div>
     </footer>
     <!-- Footer -->
+
+    <!-- javascript -->
+    <script src="../js/script.js"></script>
+    <!-- javascript -->
 </body>
 </html>

@@ -86,23 +86,6 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
-/* Skip link (muncul saat ditekan Tab) */
-.skip-link {
-    position: absolute;
-    left: 16px;
-    top: -100px;
-    z-index: 100;
-    padding: 12px 16px;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-highlight);
-    color: var(--color-primary);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.skip-link:focus {
-    top: 16px;
-}
 
 /* ----- Navbar ----- */
 .container-navbar {
@@ -112,6 +95,7 @@ a:focus-visible {
     align-items: center;
     justify-content: space-between;
     padding: 0 calc(120 * var(--u));
+    width: 100%;
 }
 
 .container-logo {
@@ -434,7 +418,7 @@ body.indo .id {
 .container-sdgs {
     background-color: var(--color-primary);
     /* cadangan kalau foto gagal dimuat */
-    background-image: url(../images/photo-1.jpg);
+    background-image: url(../images/photo-sdg-1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

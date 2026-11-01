@@ -112,7 +112,6 @@ a:focus-visible {
     align-items: center;
     justify-content: space-between;
     padding: 0 calc(120 * var(--u));
-    font-size: var(--text-h1);
 }
 
 .container-logo {
@@ -123,6 +122,36 @@ a:focus-visible {
 
 .container-logo img {
     height: 100%;
+}
+
+/* ----- Dropdown SDG ----- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-isi {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: calc(180 * var(--u));
+    padding: calc(16 * var(--u)) calc(20 * var(--u));
+    list-style: none;
+    text-align: center;
+    background-color: var(--color-primary);
+    border-radius: calc(16 * var(--u));
+    box-shadow: var(--shadow);
+    z-index: 10;
+}
+
+.dropdown-isi li {
+    padding: calc(8 * var(--u)) 0;
+}
+
+.dropdown:hover .dropdown-isi,
+.dropdown:focus-within .dropdown-isi {
+    display: block;
 }
 
 .container-menu {
@@ -144,36 +173,109 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Penanda halaman aktif (garis bawah, bukan hanya warna) */
-.container-menu a[aria-current="page"] {
+/* Active page marker */
+.container-menu a.active {
     text-decoration: underline;
     text-decoration-color: var(--color-highlight);
     text-decoration-thickness: 3px;
     text-underline-offset: 6px;
 }
 
-.container-lang {
-    height: calc(48 * var(--u));
-    width: calc(100 * var(--u));
+/* ----- Tombol bahasa ----- */
+.lang-btn {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: calc(100 * var(--u));
+    height: calc(48 * var(--u));
+    padding: 0 calc(8 * var(--u));
+    border: 0;
     border-radius: calc(25 * var(--u));
     background-color: var(--color-highlight);
-    padding: calc(8 * var(--u));
-    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.container-lang img {
+.lang-btn img {
+    width: calc(32 * var(--u));
     height: calc(32 * var(--u));
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.container-lang span {
+.lang-btn span {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: calc(24 * var(--u));
     color: var(--color-primary);
-    /* teks gelap di atas kuning agar kontras */
 }
+
+/* Tombol ID: bendera di kanan, teks di kiri */
+.btn-id {
+    display: none;
+    flex-direction: row-reverse;
+}
+
+.btn-en {
+    padding: 0 calc(12 * var(--u)) 0 calc(8 * var(--u));
+}
+
+.btn-id {
+    padding: 0 calc(8 * var(--u)) 0 calc(12 * var(--u));
+}
+
+/* Animasi saat tombol EN muncul */
+.btn-en img {
+    animation: dari-kanan 0.35s;
+}
+
+.btn-en span {
+    animation: dari-kiri 0.35s;
+}
+
+/* Animasi saat tombol ID muncul */
+.btn-id img {
+    animation: dari-kiri 0.35s;
+}
+
+.btn-id span {
+    animation: dari-kanan 0.35s;
+}
+
+@keyframes dari-kiri {
+    from {
+        transform: translateX(calc(-50 * var(--u)));
+    }
+}
+
+@keyframes dari-kanan {
+    from {
+        transform: translateX(calc(50 * var(--u)));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .lang-btn img,
+    .lang-btn span {
+        animation: none;
+    }
+}
+
+/* Bahasa Indonesia disembunyikan dulu */
+.id {
+    display: none;
+}
+
+/* Saat body punya class "indo" */
+body.indo .en {
+    display: none;
+}
+
+body.indo .id {
+    display: inline;
+}
+
 
 /* ----- Hero ----- */
 .hero {
@@ -410,20 +512,20 @@ a:focus-visible {
 /* ----- Footer ----- */
 .container-footer {
     background-color: var(--color-primary);
-    height: calc(400 * var(--u));
+    min-height: calc(400 * var(--u));
     padding: calc(90 * var(--u));
     display: flex;
-    gap: calc(25 * var(--u));
+    gap: calc(40 * var(--u));
     justify-content: space-between;
 }
 
 .footer-left {
-    max-width: calc(800 * var(--u));
+    max-width: calc(420 * var(--u));
 }
 
 .footer-left>p {
     font-size: calc(16 * var(--u));
-    max-width: calc(700 * var(--u));
+    max-width: calc(400 * var(--u));
     color: var(--color-on-dark);
     margin-bottom: calc(25 * var(--u));
 }
@@ -438,6 +540,14 @@ a:focus-visible {
     gap: calc(24 * var(--u));
     margin-top: calc(18 * var(--u));
     align-items: center;
+}
+
+.ig-web a {
+    text-decoration: none;
+}
+
+.ig-web a:hover {
+    text-decoration: underline solid var(--color-bg);
 }
 
 .footer-ig {
@@ -504,9 +614,29 @@ a:focus-visible {
     height: calc(32 * var(--u));
 }
 
+.footer-explore h2,
 .footer-right h2 {
     color: var(--color-on-dark);
     font-size: calc(40 * var(--u));
+}
+
+/* Kolom Explore */
+.explore-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(12 * var(--u));
+    margin-top: calc(25 * var(--u));
+}
+
+.explore-list a {
+    color: var(--color-on-dark);
+    font-size: calc(16 * var(--u));
+    text-decoration: none;
+}
+
+.explore-list a:hover {
+    text-decoration: underline;
 }
 
 .contacts {
@@ -535,303 +665,4 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: calc(20 * var(--u));
-}
-
-
-/* =====================================================
-   MOBILE & TABLET (sampai 1023px)
-   Memakai token rem/clamp dari :root, bukan skala Figma.
-   ===================================================== */
-@media (max-width: 1023px) {
-
-    /* 1 unit = 1px (maks), mengecil hanya jika layar < 390px */
-    :root {
-        --u: min(1px, calc(100vw / 390));
-    }
-
-    body {
-        font-size: var(--text-base);
-        line-height: 1.5;
-    }
-
-    h1, h2, h3 {
-        line-height: 1.2;
-    }
-
-    /* --- Navbar --- */
-    .container-navbar {
-        height: auto;
-        flex-direction: column;
-        gap: var(--space-1);
-        padding: var(--space-2);
-    }
-
-    .container-logo {
-        height: 36px;
-    }
-
-    .container-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4px var(--space-2);
-    }
-
-    .container-menu a {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        font-size: 1rem;
-    }
-
-    .container-lang {
-        width: auto;
-        height: 40px;
-        gap: var(--space-1);
-        padding: 0 12px 0 8px;
-    }
-
-    .container-lang img {
-        height: 24px;
-    }
-
-    .container-lang span {
-        font-size: 1rem;
-    }
-
-    /* --- Hero --- */
-    .hero {
-        height: auto;
-        padding: var(--space-4) var(--space-2) var(--space-5);
-        background-image:
-            linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
-            url("../images/hero-sdg.jpg");
-    }
-
-    .hero-label {
-        font-size: var(--text-lg);
-        margin-bottom: var(--space-1);
-    }
-
-    .hero h1 {
-        font-size: var(--text-h1);
-        margin-bottom: var(--space-2);
-    }
-
-    .hero-text {
-        font-size: var(--text-lg);
-        max-width: none;
-    }
-
-    /* --- Insight --- */
-    .container-sdg {
-        height: auto;
-        padding: var(--space-4) var(--space-2);
-    }
-
-    .text-open {
-        padding: 0 0 var(--space-4);
-    }
-
-    .text-open h2 {
-        font-size: var(--text-h2);
-        margin-bottom: var(--space-2);
-    }
-
-    .text-open p {
-        font-size: var(--text-lg);
-    }
-
-    .un-container {
-        flex-direction: column;
-        gap: var(--space-4);
-    }
-
-    .left {
-        height: auto;
-        gap: var(--space-3);
-    }
-
-    .left-text h3 {
-        font-size: clamp(2.5rem, 12vw, 4rem);
-        margin-bottom: var(--space-2);
-    }
-
-    .left-text p {
-        font-size: var(--text-lg);
-        max-width: none;
-    }
-
-    .btn-link {
-        width: 100%;
-        max-width: 360px;
-        height: 64px;
-    }
-
-    .btn-link span {
-        font-size: var(--text-lg);
-    }
-
-    .btn-link img {
-        height: 20px;
-    }
-
-    .right {
-        height: auto;
-        width: 100%;
-        max-width: 480px;
-        padding: var(--space-2);
-    }
-
-    .cont-logo {
-        height: auto;
-        width: 100%;
-        padding: var(--space-4);
-        margin-bottom: var(--space-3);
-    }
-
-    .cont-logo img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .right p {
-        font-size: var(--text-base);
-    }
-
-    /* --- Break --- */
-    .break {
-        height: auto;
-        padding: var(--space-5) var(--space-2);
-    }
-
-    .break h2 {
-        font-size: var(--text-h2);
-        margin-bottom: var(--space-2);
-    }
-
-    .break p {
-        font-size: var(--text-lg);
-    }
-
-    /* --- Kartu SDG 4 & 10 --- */
-    .container-sdgs {
-        height: auto;
-        flex-direction: column;
-        gap: var(--space-3);
-        padding: var(--space-4) var(--space-2);
-    }
-
-    .container-card {
-        height: auto;
-        width: clamp(280px, 100%, 480px);
-        gap: var(--space-2);
-        padding: 12px 12px var(--space-3);
-        border-radius: var(--radius-xl);
-    }
-
-    .cont-logo-sdg {
-        height: auto;
-        width: 100%;
-    }
-
-    .cont-logo-sdg img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: var(--radius-lg);
-    }
-
-    .text-sdg {
-        gap: var(--space-1);
-        padding: 0 var(--space-1);
-    }
-
-    .text-sdg h3 {
-        font-size: var(--text-h3);
-    }
-
-    .text-sdg p {
-        font-size: var(--text-base);
-    }
-
-    .learn {
-        width: auto;
-        min-width: 200px;
-        height: 56px;
-        padding: 0 var(--space-3);
-        font-size: var(--text-lg);
-    }
-
-    /* --- Footer --- */
-    .container-footer {
-        height: auto;
-        flex-direction: column;
-        gap: var(--space-4);
-        padding: var(--space-4) var(--space-2);
-    }
-
-    .footer-left {
-        max-width: none;
-    }
-
-    .logo-starlight img {
-        width: 200px;
-        margin-bottom: var(--space-2);
-    }
-
-    .footer-left>p {
-        font-size: var(--text-base);
-        max-width: none;
-        margin-bottom: var(--space-3);
-    }
-
-    .ig-web {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--space-1);
-        margin-top: 0;
-    }
-
-    .separator {
-        display: none;
-    }
-
-    .footer-ig,
-    .footer-web {
-        width: auto;
-        height: 56px;
-    }
-
-    .footer-ig span,
-    .footer-web span {
-        font-size: var(--text-sm);
-    }
-
-    .footer-right h2 {
-        font-size: var(--text-h3);
-    }
-
-    .contacts {
-        flex-direction: column;
-        gap: var(--space-2);
-        margin-top: var(--space-2);
-    }
-
-    .contact-left,
-    .contact-right {
-        gap: var(--space-2);
-    }
-
-    .hendra, .rama, .indra, .oki {
-        gap: 12px;
-    }
-
-    .contacts a {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        font-size: var(--text-sm);
-        overflow-wrap: anywhere;
-    }
 }

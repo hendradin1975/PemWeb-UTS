@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG | Starlight</title>
-    <link rel="stylesheet" href="../css/sdg.css">
+    <title>Home | Starlight</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -12,41 +12,41 @@
     <header>
         <nav class="container-navbar">
             <div class="container-logo">
-                <img src="../assets/starlight-logo-light.svg" alt="Starlight">
+                <img src="assets/starlight-logo-light.svg" alt="Starlight">
             </div>
             <ul class="container-menu">
                 <li>
-                    <a href="../index.html">
+                    <a href="index.html" class="active">
                         <span class="en">Home</span>
                         <span class="id">Beranda</span>
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="sdg.html" class="active">SDG</a>
+                    <a href="pages/sdg.html">SDG</a>
                     <ul class="dropdown-isi">
-                        <li><a href="sdgs4.html">SDG 4</a></li>
-                        <li><a href="sdgs10.html">SDG 10</a></li>
+                        <li><a href="pages/sdg4.html">SDG 4</a></li>
+                        <li><a href="pages/sdg10.html">SDG 10</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="inclusive.html">
+                    <a href="pages/inclusive.html">
                         <span class="en">Inclusion</span>
                         <span class="id">Inklusi</span>
                     </a>
                 </li>
                 <li>
-                    <a href="about.html">
+                    <a href="pages/about.html">
                         <span class="en">About</span>
                         <span class="id">Tentang</span>
                     </a>
                 </li>
                 <li>
                     <button type="button" class="lang-btn btn-en">
-                        <img src="../assets/logo-EN.png" alt="">
+                        <img src="assets/logo-EN.png" alt="">
                         <span>EN</span>
                     </button>
                     <button type="button" class="lang-btn btn-id">
-                        <img src="../assets/logo-ID.png" alt="">
+                        <img src="assets/logo-ID.png" alt="">
                         <span>ID</span>
                     </button>
                 </li>
@@ -55,138 +55,176 @@
     </header>
     <!-- Navbar -->
 
+    <main>
+
         <!-- Hero -->
-        <section class="hero">
-            <p class="hero-label">
-                <span class="en">Sustainable Development</span>
-                <span class="id">Pembangunan Berkelanjutan</span>
-            </p>
+        <section class="container-hero">
             <h1>
-                <span class="en">Education &amp; Equality: <br>Two Supporting Goals</span>
-                <span class="id">Pendidikan &amp; Kesetaraan: <br>Dua Tujuan yang Saling Mendukung</span>
+                <span class="en">Inclusive Education For Everyone</span>
+                <span class="id">Pendidikan Inklusif Untuk Semua</span>
             </h1>
-            <p class="hero-text">
-                <span class="en">Good education only matters if everyone can reach it. That is why we focus on SDG 4 (Quality Education) and SDG 10 (Reduced Inequalities).</span>
-                <span class="id">Pendidikan yang baik hanya berarti jika dapat dijangkau semua orang. Itulah sebabnya kami berfokus pada SDG 4 (Pendidikan Berkualitas) dan SDG 10 (Berkurangnya Kesenjangan).</span>
-            </p>
+            <h2>
+                <span class="en">"Every star has a light of its own"</span>
+                <span class="id">"Setiap bintang memiliki cahayanya sendiri"</span>
+            </h2>
         </section>
         <!-- Hero -->
 
-        <!-- Insight -->
-        <section class="container-sdg" aria-labelledby="judul-sdgs">
-            <div class="text-open">
-                <h2 id="judul-sdgs">
-                    <span class="en">Getting to Know the SDGs</span>
-                    <span class="id">Mengenal SDGs</span>
+
+        <!-- What is Inclusive Education -->
+        <section class="container-about" aria-labelledby="judul-about">
+            <div class="about-photo">
+                <img src="images/inclusive-class.jpg" alt="Students learning together in an inclusive classroom">
+                <span class="badge-corner badge-top"></span>
+                <span class="badge-corner badge-bottom"></span>
+            </div>
+            <div class="about-text">
+                <h2 id="judul-about">
+                    <span class="en">What is Inclusive Education?</span>
+                    <span class="id">Apa itu Pendidikan Inklusif?</span>
                 </h2>
                 <p>
-                    <span class="en">The SDGs are a global agreement to address shared challenges such as poverty, education, health, and the environment.</span>
-                    <span class="id">SDGs adalah kesepakatan global untuk menjawab tantangan bersama seperti kemiskinan, pendidikan, kesehatan, dan lingkungan.</span>
+                    <span class="en">Ensuring that every unique student, regardless of their differences, can learn and grow in a supportive environment.</span>
+                    <span class="id">Memastikan setiap siswa yang unik, apa pun perbedaannya, dapat belajar dan berkembang dalam lingkungan yang mendukung.</span>
                 </p>
-            </div>
-            <div class="un-container">
-                <div class="left">
-                    <div class="left-text">
-                        <h3 id="judul-17">
-                            <span class="en">17 Goals, <br>One Agenda</span>
-                            <span class="id">17 Tujuan, <br>Satu Agenda</span>
-                        </h3>
-                        <p>
-                            <span class="en">The SDGs consist of 17 goals agreed upon by United Nations member states in 2015 and form part of the 2030 Agenda.</span>
-                            <span class="id">SDGs terdiri dari 17 tujuan yang disepakati negara-negara anggota PBB pada 2015 dan menjadi bagian dari Agenda 2030.</span>
-                        </p>
-                    </div>
-
-                    <a class="btn-link" href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
-                        <span class="en">See all 17 Goals</span>
-                        <span class="id">Lihat 17 Tujuan</span>
-                        <img src="../assets/arrow.svg" alt="">
+                <div class="about-buttons">
+                    <a class="btn-about" href="pages/about.html">
+                        <span class="en">About us</span>
+                        <span class="id">Tentang kami</span>
+                    </a>
+                    <a class="btn-more" href="pages/inclusive.html">
+                        <span class="en">MORE</span>
+                        <span class="id">LAINNYA</span>
+                        <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
-                <div class="right">
-                    <div class="cont-logo">
-                        <img src="../images/un-logo.png" alt="United Nations logo">
-                    </div>
-                    <p>
-                        <span class="en">Adopted by the UN General Assembly on 25 September 2015.</span>
-                        <span class="id">Diadopsi oleh Majelis Umum PBB pada 25 September 2015.</span>
-                    </p>
-                </div>
             </div>
         </section>
-        <!-- Insight -->
+        <!-- What is Inclusive Education -->
 
 
-        <!-- Break -->
-        <section class="break">
-            <h2>
-                <span class="en">Our Focus</span>
-                <span class="id">Fokus Kami</span>
+        <!-- Programs -->
+        <section class="container-programs" aria-labelledby="judul-programs">
+            <h2 id="judul-programs">
+                <span class="en">What's Our Programs?</span>
+                <span class="id">Apa Saja Program Kami?</span>
             </h2>
+            <div class="programs-list">
+                <article class="program-card">
+                    <img src="images/program-lifelong.jpg" alt="A person reaching for the stars">
+                    <div class="program-text">
+                        <h3>
+                            <span class="en">Lifelong Learning</span>
+                            <span class="id">Belajar Sepanjang Hayat</span>
+                        </h3>
+                        <p>
+                            <span class="en">Keep learning and growing at every stage of life.</span>
+                            <span class="id">Terus belajar dan berkembang di setiap tahap kehidupan.</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="program-card">
+                    <img src="images/program-inclusive.jpg" alt="Children studying together in class">
+                    <div class="program-text">
+                        <h3>
+                            <span class="en">Inclusive Education</span>
+                            <span class="id">Pendidikan Inklusif</span>
+                        </h3>
+                        <p>
+                            <span class="en">A classroom that welcomes every student.</span>
+                            <span class="id">Ruang kelas yang menyambut setiap siswa.</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="program-card">
+                    <img src="images/program-disability.jpg" alt="A teacher supporting a student with a disability">
+                    <div class="program-text">
+                        <h3>
+                            <span class="en">Support Disability</span>
+                            <span class="id">Dukungan Disabilitas</span>
+                        </h3>
+                        <p>
+                            <span class="en">Equal opportunities for learners with disabilities.</span>
+                            <span class="id">Kesempatan yang setara bagi pelajar penyandang disabilitas.</span>
+                        </p>
+                    </div>
+                </article>
+                <article class="program-card">
+                    <img src="images/program-accessible.jpg" alt="Illustration of diverse students together">
+                    <div class="program-text">
+                        <h3>
+                            <span class="en">Accessible Education</span>
+                            <span class="id">Pendidikan Terjangkau</span>
+                        </h3>
+                        <p>
+                            <span class="en">Learning that is within reach for all.</span>
+                            <span class="id">Pembelajaran yang dapat dijangkau semua orang.</span>
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Programs -->
+
+
+        <!-- SDG -->
+        <section class="container-sdg-intro" aria-labelledby="judul-sdg">
+            <h2 id="judul-sdg">SDG</h2>
+            <div class="sdg-wheel">
+                <img src="assets/logo-sdg-wheel.png" alt="Sustainable Development Goals logo">
+            </div>
             <p>
-                <span class="en">Of these 17 goals, we focus on the two most closely tied to inclusion: SDG 4 and SDG 10.</span>
-                <span class="id">Dari 17 tujuan ini, kami berfokus pada dua yang paling berkaitan dengan inklusi: SDG 4 dan SDG 10.</span>
+                <span class="en">The Sustainable Development Goals (SDGs) are 17 global goals adopted by all United Nations member states in 2015 to end poverty, protect the planet, and ensure peace and prosperity for all by 2030.</span>
+                <span class="id">Sustainable Development Goals (SDGs) adalah 17 tujuan global yang disepakati oleh seluruh negara anggota PBB pada 2015 untuk mengakhiri kemiskinan, melindungi bumi, dan menjamin perdamaian serta kesejahteraan bagi semua pada 2030.</span>
             </p>
+            <a class="btn-sdg" href="pages/sdg.html">
+                <span class="en">Learn More</span>
+                <span class="id">Selengkapnya</span>
+            </a>
         </section>
-        <!-- Break -->
+        <!-- SDG -->
 
 
-        <!-- SDG 4 & 10 -->
-        <section class="container-sdgs" aria-label="SDG 4 and SDG 10">
-            <article class="container-card card-sdg4">
-                <div class="cont-logo-sdg">
-                    <img src="../assets/sdg4.png" alt="SDG 4 logo">
+        <!-- SDG 4 -->
+        <section class="container-focus4" aria-label="SDG 4">
+            <article class="focus-card card-sdg4">
+                <div class="focus-logo">
+                    <img src="assets/sdg4.png" alt="SDG 4 logo">
                 </div>
-                <div class="text-sdg">
-                    <h3>
-                        <span class="en">SDG 4 <br>Quality Education</span>
-                        <span class="id">SDG 4 <br>Pendidikan Berkualitas</span>
-                    </h3>
+                <div class="focus-text">
                     <p>
-                        <span class="en">Ensure inclusive, equitable, and quality education, and promote lifelong learning opportunities for all.</span>
-                        <span class="id">Memastikan pendidikan yang inklusif, adil, dan berkualitas, serta mendorong kesempatan belajar sepanjang hayat bagi semua orang.</span>
+                        <span class="en">Aiming to ensure inclusive, equitable, and high-quality education and promote lifelong learning opportunities for all by 2030. It includes primary and secondary education, vocational and higher education, literacy, and safe, inclusive learning environments.</span>
+                        <span class="id">Bertujuan menjamin pendidikan yang inklusif, adil, dan berkualitas tinggi serta mendorong kesempatan belajar sepanjang hayat bagi semua pada 2030. Mencakup pendidikan dasar dan menengah, kejuruan dan tinggi, literasi, serta lingkungan belajar yang aman dan inklusif.</span>
                     </p>
+                    <a class="learn" href="pages/sdg4.html">
+                        <span class="en">Learn More</span>
+                        <span class="id">Selengkapnya</span>
+                    </a>
                 </div>
-                <a class="learn" href="sdgs4.html">
-                    <span class="en">Learn More</span>
-                    <span class="id">Selengkapnya</span>
-                </a>
-            </article>
-            <article class="container-card card-sdg10">
-                <div class="cont-logo-sdg">
-                    <img src="../assets/sdg10.png" alt="SDG 10 logo">
-                </div>
-                <div class="text-sdg">
-                    <h3>
-                        <span class="en">SDG 10 <br>Reduced Inequalities</span>
-                        <span class="id">SDG 10 <br>Berkurangnya Kesenjangan</span>
-                    </h3>
-                    <p>
-                        <span class="en">Reduce inequality within and among countries, and promote social, economic, and political inclusion for all, including persons with disabilities.</span>
-                        <span class="id">Mengurangi ketimpangan di dalam dan antarnegara, serta mendorong inklusi sosial, ekonomi, dan politik bagi semua, termasuk penyandang disabilitas.</span>
-                    </p>
-                </div>
-                <a class="learn" href="sdg10.html">
-                    <span class="en">Learn More</span>
-                    <span class="id">Selengkapnya</span>
-                </a>
             </article>
         </section>
-        <!-- SDG 4 & 10 -->
+        <!-- SDG 4 -->
 
 
-        <!-- Break -->
-        <section class="break">
-            <h2>
-                <span class="en">Why are SDG 4 and SDG 10 connected?</span>
-                <span class="id">Mengapa SDG 4 dan SDG 10 saling terkait?</span>
-            </h2>
-            <p>
-                <span class="en">Education opens opportunities, and equality ensures they reach everyone. Explore how both are put into practice through inclusive education.</span>
-                <span class="id">Pendidikan membuka peluang, dan kesetaraan memastikan peluang itu sampai ke semua orang. Jelajahi bagaimana keduanya diwujudkan lewat pendidikan inklusif.</span>
-            </p>
+        <!-- SDG 10 -->
+        <section class="container-focus10" aria-label="SDG 10">
+            <article class="focus-card card-sdg10">
+                <div class="focus-text">
+                    <p>
+                        <span class="en">SDG 10 aims to reduce inequality within and among countries by 2030 through targets on social, economic, and political inclusion for all, regardless of age, sex, disability, race, or origin.</span>
+                        <span class="id">SDG 10 bertujuan mengurangi ketimpangan di dalam dan antarnegara pada 2030 melalui target inklusi sosial, ekonomi, dan politik bagi semua, tanpa memandang usia, jenis kelamin, disabilitas, ras, atau asal.</span>
+                    </p>
+                    <a class="learn" href="pages/sdg10.html">
+                        <span class="en">Learn More</span>
+                        <span class="id">Selengkapnya</span>
+                    </a>
+                </div>
+                <div class="focus-logo">
+                    <img src="assets/sdg10.png" alt="SDG 10 logo">
+                </div>
+            </article>
         </section>
-        <!-- Break -->
+        <!-- SDG 10 -->
 
     </main>
 
@@ -195,7 +233,7 @@
     <footer class="container-footer">
         <div class="footer-left">
             <div class="logo-starlight">
-                <img src="../assets/starlight-logo-light.svg" alt="Starlight">
+                <img src="assets/starlight-logo-light.svg" alt="Starlight">
             </div>
             <p>
                 <span class="en">Information on inclusive education for all, in line with SDG 4 and SDG 10. This website was created for learning purposes.</span>
@@ -204,18 +242,18 @@
             <div class="ig-web">
                 <div class="footer-ig">
                     <div class="logo-ig">
-                        <img src="../assets/logo-ig.svg" alt="">
+                        <img src="assets/logo-ig.svg" alt="">
                     </div>
                     <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
                         <span>@sdgaction</span>
                     </a>
                 </div>
                 <div class="separator">
-                    <img src="../assets/logo-separator.png" alt="">
+                    <img src="assets/logo-separator.png" alt="">
                 </div>
                 <div class="footer-web">
                     <div class="logo-sdg">
-                        <img src="../assets/logo-sdg.svg" alt="">
+                        <img src="assets/logo-sdg.svg" alt="">
                     </div>
                     <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
                         <span class="en">THE 17 GOALS</span>
@@ -231,12 +269,12 @@
                 <span class="id">Jelajahi</span>
             </h2>
             <ul class="explore-list">
-                <li><a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a></li>
-                <li><a href="sdgs.html">SDG</a></li>
-                <li><a href="sdg4.html">SDG 4</a></li>
-                <li><a href="sdg10.html">SDG 10</a></li>
-                <li><a href="inclusive.html"><span class="en">Inclusion</span><span class="id">Inklusi</span></a></li>
-                <li><a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a></li>
+                <li><a href="index.html"><span class="en">Home</span><span class="id">Beranda</span></a></li>
+                <li><a href="pages/sdg.html">SDG</a></li>
+                <li><a href="pages/sdg4.html">SDG 4</a></li>
+                <li><a href="pages/sdg10.html">SDG 10</a></li>
+                <li><a href="pages/inclusive.html"><span class="en">Inclusion</span><span class="id">Inklusi</span></a></li>
+                <li><a href="pages/about.html"><span class="en">About</span><span class="id">Tentang</span></a></li>
             </ul>
         </nav>
 
@@ -248,21 +286,21 @@
             <div class="contacts">
                 <div class="contact-left">
                     <div class="hendra">
-                        <img src="../assets/profile.svg" alt="">
+                        <img src="assets/profile.svg" alt="">
                         <a href="mailto:hendradinatakomang@gmail.com">hendradinatakomang@gmail.com</a>
                     </div>
                     <div class="rama">
-                        <img src="../assets/profile.svg" alt="">
+                        <img src="assets/profile.svg" alt="">
                         <a href="mailto:rama@gmail.com">rama@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-right">
                     <div class="indra">
-                        <img src="../assets/profile.svg" alt="">
+                        <img src="assets/profile.svg" alt="">
                         <a href="mailto:indrakus46@gmail.com">indrakus46@gmail.com</a>
                     </div>
                     <div class="oki">
-                        <img src="../assets/profile.svg" alt="">
+                        <img src="assets/profile.svg" alt="">
                         <a href="mailto:oki@gmail.com">oki@gmail.com</a>
                     </div>
                 </div>
@@ -272,7 +310,7 @@
     <!-- Footer -->
 
     <!-- javascript -->
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
     <!-- javascript -->
 </body>
 </html>

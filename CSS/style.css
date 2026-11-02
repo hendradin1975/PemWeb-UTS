@@ -1,126 +1,1738 @@
+:root {
+    /* Warna */
+    --color-primary: #1b2a4a;
+    --color-sdg4: #c21f32;
+    --color-sdg10: #dd1367;
+    --color-support: #0f766e;
+    --color-highlight: #ffc857;
+    --color-bg: #fffaf5;
+    --color-bg-section: #f3f5fa;
+    --color-bg-sdg10: #fdecf3;
+    --color-text: #1f2430;
+    --color-on-dark: #fffaf5;
+    --ab-ink-rgb: 31, 36, 48;
+    --ab-navy-rgb: 27, 42, 74;
+    /* Teks di atas navy, merah, pink, atau teal */
+
+    /* Skala desain desktop (Figma 1440px) */
+    --u: min(100vw / 1440, 1px);
+
+    /* Font */
+    --font-heading: "Poppins", Arial, sans-serif;
+    --font-body: "Inter", Arial, sans-serif;
+
+    /* Ukuran teks */
+    --text-sm: 0.9375rem;
+    --text-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+    --text-h3: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+    --text-h2: clamp(1.75rem, 1rem + 2.5vw, 3rem);
+    --text-h1: clamp(2rem, 1rem + 4vw, 3.5rem);
+
+    /* Jarak */
+    --space-1: 0.5rem;
+    /* 8px */
+    --space-2: 1rem;
+    /* 16px */
+    --space-3: 1.5rem;
+    /* 24px */
+    --space-4: 2.5rem;
+    /* 40px */
+    --space-5: 4rem;
+    /* 64px */
+
+    /* Bentuk */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 28px;
+    --radius-xl: 40px;
+    --radius-pill: 999px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Layout */
+    --container: 1200px;
+    --ab-pad: clamp(20px, 5vw, 80px);
+}
+
+/* Font Default */
+@font-face {
+    font-family: "Poppins";
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-Regular.otf);
+    font-weight: 400;
+    font-display: swap;
+}
+/* Font Default */
+
+/* Konfigurasi Tag HTML */
 * {
     box-sizing: border-box;
     margin: 0;
-}
-
-h1, h2 {
-    color: #3D1534;
-}
-
-:root {
-    --seashell: #FFF4EB;
-    --seashell-rgb: 255, 244, 235;
-
-    --wheat: #F6E0B6;
-    --wheat-rgb: 246, 224, 182;
-
-    --powder-blue: #A6BCC9;
-    --powder-blue-rgb: 166, 188, 201;
-
-    --french-blue: #3E4B8E;
-    --french-blue-rgb: 62, 75, 142;
-
-    --midnight-violet: #3D1534;
-    --midnight-violet-rgb: 61, 21, 52;
-    --u: min(100vw / 1440, 100vh / 900);
-}
-
-@font-face {
-    font-family: 'outfit';
-    src: url('../fonts/Outfit-ExtraBold.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* ========== Navbar ========== */
-.container-navbar {
-    background-color: #A6BCC9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: calc(10 * var(--u));
-    height: calc(100 * var(--u));
-}
-
-.container-navbar img {
-    height: calc(60 * var(--u));
-}
-
-.opsi-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: calc(10 * var(--u));
-}
-
-.opsi-navbar a {
-    font-family: outfit;
-    text-decoration: none;
-    color: #3D1534;
-}
-
-/* ========== Navbar ========== */
-
-
-
-.container-hero {
-    width: 100%;
-}
-
-.container-hero img {
-    width: 100%;
-}
-
-.container-hero {
-    width: 100%;
-}
-
-
-.footer {
-    background: var(--color-primary);
-    /* navy #1B2A4A */
-    color: #fff;
-    padding: 3rem 1rem 1.5rem;
-    margin-top: 4rem;
-}
-
-.footer__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    width: min(100% - 2rem, 1200px);
-    margin-inline: auto;
-}
-
-.footer__judul {
-    font-size: 1.125rem;
-    margin-bottom: .75rem;
-}
-
-.footer ul {
-    list-style: none;
     padding: 0;
 }
-
-.footer li {
-    margin-bottom: .5rem;
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
 }
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+a:focus-visible {
+    outline: 3px solid var(--color-highlight);
+    outline-offset: 3px;
+}
+/* Konfigurasi Tag HTML */
 
-.footer a {
-    color: #fff;
+/* Kelas dipakek ulang */
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.flex-column {
+    flex-direction: column;
+}
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+/* Kelas dipakek ulang */
+
+/* ----- Navbar ----- */
+.container-navbar {
+    background-color: var(--color-primary);
+    padding: calc(20 * var(--u)) 0;
+    position: fixed;
+    width: 100%;
+}
+.container-navbar .flex {
+    justify-content: space-between;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    height: calc(48 * var(--u));
+}
+.navbar-logo img {
+    height: 100%;
+}
+.container-logo {
+    display: flex;
+    align-items: center;
+    height: calc(48 * var(--u));
+}
+.container-logo img {
+    height: 100%;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-isi {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: calc(180 * var(--u));
+    padding: calc(16 * var(--u)) calc(20 * var(--u));
+    list-style: none;
+    text-align: center;
+    background-color: var(--color-primary);
+    border-radius: calc(16 * var(--u));
+    box-shadow: var(--shadow);
+    z-index: 10;
+}
+.dropdown-isi li {
+    padding: calc(8 * var(--u)) 0;
+}
+.dropdown-arrow {
+    display: inline-block;
+    font-size: calc(20 * var(--u));
+    margin-left: 6px;
+    transition: all 0.3s ease;
+}
+.dropdown:hover .dropdown-isi {
+    display: block;
+}
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+.container-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: calc(80 * var(--u));
+}
+.container-menu a {
+    color: var(--color-on-dark);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: calc(24 * var(--u));
+    text-decoration: none;
+}
+.container-menu a:hover {
     text-decoration: underline;
 }
-
-.footer a:hover,
-.footer a:focus-visible {
-    color: var(--color-highlight);
+.container-menu a.active {
+    text-decoration: underline;
+    text-decoration-color: var(--color-highlight);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
 }
+.lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100 * var(--u));
+    height: calc(48 * var(--u));
+    padding: 0 calc(8 * var(--u));
+    border: 0;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-highlight);
+    overflow: hidden;
+    cursor: pointer;
+}
+.lang-btn img {
+    width: calc(32 * var(--u));
+    height: calc(32 * var(--u));
+    border-radius: 50%;
+    object-fit: cover;
+}
+.lang-btn span {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: calc(24 * var(--u));
+    color: var(--color-primary);
+}
+.btn-id {
+    display: none;
+    flex-direction: row-reverse;
+}
+.btn-en {
+    padding: 0 calc(12 * var(--u)) 0 calc(8 * var(--u));
+}
+.btn-id {
+    padding: 0 calc(8 * var(--u)) 0 calc(12 * var(--u));
+}
+.btn-en img {
+    animation: from-right 0.35s;
+}
+.btn-en span {
+    animation: from-left 0.35s;
+}
+.btn-id img {
+    animation: from-left 0.35s;
+}
+.btn-id span {
+    animation: from-right 0.35s;
+}
+@keyframes from-left {
+    from {
+        transform: translateX(calc(-50 * var(--u)));
+    }
+}
+@keyframes from-right {
+    from {
+        transform: translateX(calc(50 * var(--u)));
+    }
+}
+.id {
+    display: none;
+}
+body.indo .en {
+    display: none;
+}
+body.indo .id {
+    display: inline;
+}
+/* ----- Navbar ----- */
 
-.footer__bottom {
-    border-top: 1px solid rgba(255, 255, 255, .3);
-    margin-top: 2rem;
-    padding-top: 1rem;
-    font-size: .9rem;
+/* ----- Hero Homepage ----- */
+.container-hero {
+    height: calc(540 * var(--u));
+    padding: calc(120 * var(--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-primary);
+    background-image:
+        linear-gradient(to right, rgba(27, 42, 74, 0.9) 0%, rgba(27, 42, 74, 0.5) 60%, rgba(27, 42, 74, 0.1) 100%),
+        url("../images/Home/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-on-dark);
+}
+.container-hero h1 {
+    font-size: calc(64 * var(--u));
+    max-width: calc(700 * var(--u));
+    margin-bottom: calc(24 * var(--u));
+}
+.container-hero h2 {
+    font-family: var(--font-body);
+    font-size: calc(24 * var(--u));
+    font-weight: 400;
+}
+/* ----- Hero Homepage ----- */
+
+/* ----- Pengenalan Pendidikan Inklusif Homepage ----- */
+.container-about {
+    background-color: var(--color-support);
+    min-height: calc(560 * var(--u));
+    padding: calc(80 * var(--u)) calc(120 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(80 * var(--u));
+}
+.about-photo {
+    position: relative;
+    width: calc(560 * var(--u));
+    height: calc(400 * var(--u));
+    flex-shrink: 0;
+}
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(28 * var(--u));
+}
+.about-text h2 {
+    font-size: calc(48 * var(--u));
+    color: var(--color-on-dark);
+    margin-bottom: calc(24 * var(--u));
+}
+.about-text p {
+    font-size: calc(24 * var(--u));
+    color: var(--color-on-dark);
+    max-width: calc(560 * var(--u));
+    margin-bottom: calc(40 * var(--u));
+}
+.about-buttons {
+    display: flex;
+    align-items: center;
+    gap: calc(24 * var(--u));
+}
+.btn-about,
+.btn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(8 * var(--u));
+    height: calc(56 * var(--u));
+    padding: 0 calc(32 * var(--u));
+    border-radius: calc(28 * var(--u));
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: calc(20 * var(--u));
+    text-decoration: none;
+}
+.btn-about {
+    border: 3px solid var(--color-on-dark);
+    color: var(--color-on-dark);
+}
+.btn-more {
+    background-color: var(--color-highlight);
+    color: var(--color-primary);
+}
+.btn-about:hover,
+.btn-more:hover {
+    text-decoration: underline;
+}
+/* ----- Pengenalan Pendidikan Inklusif Homepage ----- */
+
+/* ----- Program Homepage ----- */
+.container-programs {
+    background-color: var(--color-bg-sdg10);
+    padding: calc(80 * var(--u)) calc(120 * var(--u));
+}
+.container-programs h2 {
+    font-size: calc(48 * var(--u));
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: calc(56 * var(--u));
+}
+.programs-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: calc(40 * var(--u));
+    align-items: start;
+}
+.program-card {
+    background-color: var(--color-highlight);
+    border-radius: calc(16 * var(--u));
+    overflow: hidden;
+    min-height: calc(420 * var(--u));
+    padding: calc(12 * var(--u)) calc(12 * var(--u)) 0;
+}
+.program-card img {
+    width: 100%;
+    height: calc(200 * var(--u));
+    object-fit: cover;
+    display: block;
+    border-radius: calc(16 * var(--u));
+}
+.program-text {
+    padding: calc(20 * var(--u));
     text-align: center;
 }
+.program-text h3 {
+    font-size: calc(24 * var(--u));
+    color: var(--color-primary);
+    margin-bottom: calc(12 * var(--u));
+}
+.program-text p {
+    font-size: calc(18 * var(--u));
+    color: var(--color-text);
+}
+/* ----- Program Homepage ----- */
+
+/* ----- Pengenalan SDG Homepage ----- */
+.container-sdg-intro {
+    background-color: var(--color-bg);
+    padding: calc(80 * var(--u)) calc(200 * var(--u));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.container-sdg-intro h2 {
+    font-size: calc(48 * var(--u));
+    color: var(--color-primary);
+    margin-bottom: calc(40 * var(--u));
+}
+.sdg-wheel {
+    width: calc(360 * var(--u));
+    height: calc(360 * var(--u));
+    margin-bottom: calc(40 * var(--u));
+}
+.sdg-wheel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.container-sdg-intro p {
+    font-size: calc(24 * var(--u));
+    color: var(--color-text);
+    max-width: calc(900 * var(--u));
+    margin-bottom: calc(40 * var(--u));
+}
+.btn-sdg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(200 * var(--u));
+    height: calc(64 * var(--u));
+    border-radius: calc(32 * var(--u));
+    background-color: var(--color-highlight);
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: calc(22 * var(--u));
+    text-decoration: none;
+}
+.btn-sdg:hover {
+    text-decoration: underline;
+}
+/* ----- Pengenalan SDG Homepage ----- */
+
+/* ----- Fokus SDG 4 dan SDG 10 Homepage ----- */
+.container-focus4,
+.container-focus10 {
+    padding: calc(80 * var(--u)) calc(120 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-focus4 {
+    background-color: var(--color-primary);
+    background-image: url("../images/photo-sdg-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container-focus10 {
+    background-color: var(--color-support);
+}
+.focus-card {
+    width: 100%;
+    min-height: calc(400 * var(--u));
+    padding: calc(40 * var(--u));
+    border-radius: calc(40 * var(--u));
+    background-color: var(--color-bg-section);
+    display: flex;
+    align-items: center;
+    gap: calc(60 * var(--u));
+}
+.card-sdg10 {
+    background-color: var(--color-bg-sdg10);
+}
+.focus-logo {
+    width: calc(300 * var(--u));
+    height: calc(300 * var(--u));
+    flex-shrink: 0;
+}
+.focus-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(28 * var(--u));
+}
+.focus-text p {
+    font-size: calc(24 * var(--u));
+    color: var(--color-text);
+    margin-bottom: calc(32 * var(--u));
+}
+.focus-text .learn {
+    background-color: var(--color-sdg4);
+    width: calc(200 * var(--u));
+    height: calc(64 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(32 * var(--u));
+    font-family: var(--font-heading);
+    font-size: calc(22 * var(--u));
+    font-weight: 700;
+    color: var(--color-on-dark);
+    text-decoration: none;
+}
+.card-sdg10 .learn {
+    background-color: var(--color-sdg10);
+}
+.focus-text .learn:hover {
+    text-decoration: underline;
+}
+.focus-text .learn:focus-visible {
+    outline-color: var(--color-primary);
+}
+/* ----- Fokus SDG 4 dan SDG 10 Homepage ----- */
+
+/* ----- Halaman Overview SDG ----- */
+/* ----- Hero Overview SDG ----- */
+.sdgs-hero {
+    height: calc(540 * var(--u));
+    padding: calc(120 * var(--u));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/sdgs/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f3f5fa;
+}
+.sdgs-hero .container {
+    display: block;
+}
+.sdgs-hero__label {
+    font-size: calc(24 * var(--u));
+    font-weight: bold;
+}
+.sdgs-hero h1 {
+    font-size: calc(48 * var(--u));
+}
+.sdgs-hero__text {
+    font-size: calc(24 * var(--u));
+    font-weight: bold;
+    max-width: calc(600 * var(--u));
+}
+/* ----- Hero Overview SDG ----- */
+
+/* ----- Bagian Pengenalan SDG ----- */
+.sdgs-insight {
+    background-color: var(--color-primary);
+    height: calc(1000 * var(--u));
+}
+.sdgs-insight .flex {
+    align-items: unset;
+}
+.sdgs-insight__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(40 * var(--u)) 0;
+    text-align: center;
+}
+.sdgs-insight__intro h2 {
+    color: var(--color-on-dark);
+    font-size: calc(48 * var(--u));
+    margin-bottom: calc(24 * var(--u));
+}
+.sdgs-insight__intro p {
+    color: var(--color-on-dark);
+    font-size: calc(24 * var(--u));
+}
+.sdgs-insight__un {
+    display: flex;
+    justify-content: space-between;
+}
+.sdgs-insight__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: calc(600 * var(--u));
+}
+.sdgs-insight__left-text h3 {
+    font-size: calc(96 * var(--u));
+    color: var(--color-on-dark);
+}
+.sdgs-insight__left-text p {
+    font-size: calc(32 * var(--u));
+    color: var(--color-on-dark);
+    max-width: calc(600 * var(--u));
+}
+.sdgs-insight__link {
+    background-color: var(--color-support);
+    width: calc(360 * var(--u));
+    height: calc(80 * var(--u));
+    border-radius: calc(40 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(24 * var(--u));
+    text-decoration: none;
+}
+.sdgs-insight__link span {
+    font-size: calc(32 * var(--u));
+    color: var(--color-on-dark);
+    font-weight: 600;
+}
+.sdgs-insight__link img {
+    height: calc(24 * var(--u));
+}
+.sdgs-insight__right {
+    height: calc(600 * var(--u));
+    width: calc(429 * var(--u));
+    border-radius: calc(30 * var(--u));
+    padding: calc(16 * var(--u));
+    background: rgba(217, 217, 217, 0.3);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.sdgs-insight__logo {
+    height: calc(397 * var(--u));
+    width: calc(397 * var(--u));
+    padding: calc(39 * var(--u));
+    background-color: var(--color-bg-section);
+    border-radius: calc(14 * var(--u));
+    margin-bottom: calc(40 * var(--u));
+}
+.sdgs-insight__logo img {
+    height: 100%;
+}
+.sdgs-insight__right p {
+    font-size: calc(26 * var(--u));
+    text-align: center;
+    color: var(--color-on-dark);
+}
+/* ----- Bagian Pengenalan SDG ----- */
+
+/* ----- Jeda Overview SDG ----- */
+.sdgs-break {
+    height: calc(320 * var(--u));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 calc(200 * var(--u));
+}
+.sdgs-break h2 {
+    font-size: calc(48 * var(--u));
+    text-align: center;
+}
+.sdgs-break p {
+    font-size: calc(32 * var(--u));
+    text-align: center;
+}
+/* ----- Jeda Overview SDG ----- */
+
+/* ----- Kartu SDG ----- */
+.sdgs-cards {
+    background-color: var(--color-primary);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../images/sdgs/focus.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sdgs-cards .flex {
+    height: calc(860 * var(--u));
+}
+.sdgs-card {
+    height: calc(780 * var(--u));
+    background-color: var(--color-bg-sdg10);
+    width: calc(480 * var(--u));
+    padding: calc(12 * var(--u)) calc(12 * var(--u)) calc(18 * var(--u));
+    border-radius: calc(40 * var(--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.sdgs-card__logo {
+    height: calc(454 * var(--u));
+}
+.sdgs-card__logo img {
+    height: 100%;
+    border-radius: calc(28 * var(--u));
+}
+.sdgs-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+}
+.sdgs-card__content h3 {
+    font-size: calc(32 * var(--u));
+    text-align: center;
+}
+.sdgs-card__content p {
+    font-size: calc(20 * var(--u));
+    text-align: center;
+}
+.sdgs-card .learn {
+    background-color: var(--color-sdg4);
+    width: calc(200 * var(--u));
+    height: calc(70 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(35 * var(--u));
+    font-size: calc(24 * var(--u));
+    font-weight: 700;
+    color: var(--color-on-dark);
+    text-decoration: none;
+}
+.sdgs-card--sdg10 .learn {
+    background-color: var(--color-sdg10);
+}
+.sdgs-card .learn:hover {
+    text-decoration: underline;
+}
+.sdgs-card .learn:focus-visible {
+    outline-color: var(--color-primary);
+}
+/* ----- Kartu SDG ----- */
+
+/* ----- Komponen Target dan Modal SDG ----- */
+.sdgs-target-card {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+.sdgs-read-more,
+.modal-close {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-sdg4);
+    color: var(--color-on-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+.modal:target {
+    display: flex;
+}
+.modal-bg {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-box {
+    position: relative;
+    width: 60vw;
+    max-height: 80vh;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    color: var(--color-text);
+    box-shadow: var(--shadow);
+}
+.modal-box img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+.modal-text h3 {
+    font-size: var(--text-h3);
+    margin-bottom: var(--space-2);
+}
+.modal-text p {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-3);
+}
+/* ----- Komponen Target dan Modal SDG ----- */
+/* ----- Halaman Overview SDG ----- */
+
+/* ----- Footer ----- */
+.container-footer {
+    background-color: var(--color-primary);
+    min-height: calc(400 * var(--u));
+    padding: calc(90 * var(--u)) 0;
+}
+.container-footer .flex {
+    gap: calc(40 * var(--u));
+    align-items: unset;
+}
+.footer-left {
+    max-width: calc(420 * var(--u));
+}
+.footer-left > p {
+    font-size: calc(16 * var(--u));
+    max-width: calc(400 * var(--u));
+    color: var(--color-on-dark);
+    margin-bottom: calc(25 * var(--u));
+}
+.logo-starlight img {
+    width: calc(270 * var(--u));
+    margin-bottom: calc(24 * var(--u));
+}
+.ig-web {
+    display: flex;
+    gap: calc(24 * var(--u));
+    margin-top: calc(18 * var(--u));
+    align-items: center;
+}
+.ig-web a {
+    text-decoration: none;
+}
+.ig-web a:hover {
+    text-decoration: underline solid var(--color-bg);
+}
+.footer-ig {
+    display: flex;
+    align-items: center;
+    height: calc(60 * var(--u));
+    width: calc(210 * var(--u));
+    padding: calc(5 * var(--u));
+    border-radius: calc(30 * var(--u));
+    gap: calc(8 * var(--u));
+}
+.logo-ig {
+    background-color: var(--color-bg-sdg10);
+    height: calc(50 * var(--u));
+    width: calc(50 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(25 * var(--u));
+}
+.logo-ig img {
+    height: calc(32 * var(--u));
+}
+.footer-ig span,
+.footer-web span {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: calc(14 * var(--u));
+    color: var(--color-bg-section);
+}
+.separator {
+    height: calc(58 * var(--u));
+}
+.separator img {
+    height: 100%;
+}
+.footer-web {
+    display: flex;
+    align-items: center;
+    height: calc(60 * var(--u));
+    width: calc(180 * var(--u));
+    padding: calc(5 * var(--u));
+    border-radius: calc(30 * var(--u));
+    gap: calc(8 * var(--u));
+}
+.logo-sdg {
+    background-color: var(--color-bg-sdg10);
+    height: calc(50 * var(--u));
+    width: calc(50 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(25 * var(--u));
+}
+.logo-sdg img {
+    height: calc(32 * var(--u));
+}
+.footer-explore h2,
+.footer-right h2 {
+    color: var(--color-on-dark);
+    font-size: calc(40 * var(--u));
+}
+.explore-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(12 * var(--u));
+    margin-top: calc(25 * var(--u));
+}
+.explore-list a {
+    color: var(--color-on-dark);
+    font-size: calc(16 * var(--u));
+    text-decoration: none;
+}
+.explore-list a:hover {
+    text-decoration: underline;
+}
+.contacts {
+    display: flex;
+    gap: calc(25 * var(--u));
+    margin-top: calc(25 * var(--u));
+}
+.contacts a {
+    color: var(--color-on-dark);
+    font-size: calc(14 * var(--u));
+    text-decoration: none;
+}
+.contacts a:hover {
+    text-decoration: underline;
+}
+.contact-left,
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: calc(25 * var(--u));
+}
+.hendra,
+.rama,
+.indra,
+.oki {
+    display: flex;
+    align-items: center;
+    gap: calc(20 * var(--u));
+}
+/* ----- Footer ----- */
+
+/* ----- Detail Hero SDG ----- */
+.sdg-detail-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sdgs4-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/sdgs4/hero.jpg");
+}
+.sdgs10-hero {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/sdgs10/hero.jpg");
+}
+.sdg-detail-hero .flex {
+    height: calc(700 * var(--u));
+}
+.sdg-detail-hero__text {
+    color: #f3f5fa;
+}
+.sdg-detail-hero__text h1 {
+    font-family: Poppins, sans-serif;
+    font-size: calc(128 * var(--u));
+}
+.sdg-detail-hero__text h2 {
+    font-family: Poppins, sans-serif;
+    font-size: calc(64 * var(--u));
+}
+.sdg-detail-hero__text h3 {
+    font-family: Inter, sans-serif;
+    font-size: calc(24 * var(--u));
+}
+.sdg-detail-hero__logo {
+    height: calc(300 * var(--u));
+    width: auto;
+}
+.sdg-detail-hero__logo img {
+    height: 100%;
+    width: auto;
+}
+/* ----- Detail Hero SDG ----- */
+
+/* ----- Preview SDG ----- */
+.sdg-preview {
+    padding: calc(48 * var(--u));
+    color: #f3f5fa;
+}
+.sdg-preview--sdg4 {
+    background-color: var(--color-sdg4);
+}
+.sdg-preview--sdg10 {
+    background-color: var(--color-sdg10);
+}
+.sdg-preview .flex {
+    height: calc(900 * var(--u));
+    gap: calc(48 * var(--u));
+}
+.sdg-preview__text {
+    color: #f3f5fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(8 * var(--u));
+}
+.sdg-preview__text h1 {
+    font-family: Poppins, sans-serif;
+    font-size: calc(64 * var(--u));
+}
+.sdg-preview__text h2 {
+    font-family: Inter, sans-serif;
+    font-size: calc(32 * var(--u));
+    text-align: center;
+}
+.sdg-preview__video {
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+.sdg-preview__video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.sdg-preview__description h1 {
+    font-family: Inter, sans-serif;
+    font-size: calc(24 * var(--u));
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/* ----- Preview SDG ----- */
+
+/* ----- Article SDG ----- */
+.sdg-article {
+    padding: calc(80 * var(--u));
+    align-items: center;
+    color: var(--color-primary);
+}
+.sdg-article .flex {
+    height: calc(920 * var(--u));
+    gap: calc(48 * var(--u));
+}
+.sdg-article .flex > h1,
+.sdg-article__text h1 {
+    font-family: Poppins, sans-serif;
+    font-size: calc(48 * var(--u));
+}
+.sdg-article__content {
+    display: flex;
+    align-items: center;
+    gap: calc(48 * var(--u));
+}
+.sdg-article__photo {
+    height: calc(680 * var(--u));
+    width: calc(720 * var(--u));
+    flex-shrink: 0;
+}
+.sdg-article__photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    object-position: center;
+}
+.sdg-article__text {
+    height: calc(680 * var(--u));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sdg-article__text p {
+    font-family: Inter, sans-serif;
+    font-size: calc(28 * var(--u));
+}
+.sdg-article__link {
+    background-color: var(--color-support);
+    height: calc(80 * var(--u));
+    width: calc(380 * var(--u));
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease-in-out;
+}
+.sdg-article__link:hover {
+    scale: 1.05;
+}
+.sdg-article__link a {
+    color: #f3f5fa;
+    font-family: Inter, sans-serif;
+    font-size: calc(32 * var(--u));
+}
+/* ----- Article SDG ----- */
+
+/* ----- Targets SDG ----- */
+.sdg-targets {
+    padding: 0 0 calc(80 * var(--u)) 0;
+}
+.sdg-targets .flex {
+    height: calc(900 * var(--u));
+    gap: calc(48 * var(--u));
+}
+.sdg-targets h1 {
+    font-family: Poppins, sans-serif;
+    font-size: calc(48 * var(--u));
+    color: var(--color-primary);
+}
+.sdg-targets__cards {
+    display: flex;
+    align-items: center;
+    gap: calc(20 * var(--u));
+}
+.sdg-target-card {
+    --target-border-color: var(--color-sdg4);
+    height: calc(400 * var(--u));
+    width: calc(240 * var(--u));
+    padding: calc(12 * var(--u));
+    background-color: var(--color-bg-section);
+    border: 1px solid var(--target-border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sdg-target-card--sdg4 {
+    --target-border-color: var(--color-sdg4);
+}
+.sdg-target-card--sdg10 {
+    --target-border-color: var(--color-sdg10);
+}
+.sdg-target-card__photo {
+    height: calc(226 * var(--u));
+    width: calc(216 * var(--u));
+}
+.sdg-target-card__photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+.sdg-target-card h2 {
+    font-family: Inter, sans-serif;
+    font-size: calc(14 * var(--u));
+    text-align: center;
+    color: var(--color-primary);
+}
+.sdg-target-card a {
+    text-decoration: none;
+    color: #f3f5fa;
+    transition: all 300ms ease-in-out;
+}
+.sdg-target-card a:hover {
+    scale: 1.05;
+}
+.sdg-target-card__more {
+    background-color: var(--color-primary);
+    width: calc(140 * var(--u));
+    height: calc(40 * var(--u));
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f5fa;
+}
+.sdg-target-card__more a {
+    color: #f3f5fa;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: calc(12 * var(--u));
+}
+.sdg-targets__summary {
+    font-family: Inter, sans-serif;
+    font-size: calc(32 * var(--u));
+    color: var(--color-primary);
+    font-weight: bold;
+    text-align: center;
+}
+.sdg-targets__full-link {
+    background-color: var(--color-primary);
+    height: calc(80 * var(--u));
+    width: calc(240 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    transition: all 300ms ease-in-out;
+}
+.sdg-targets__full-link a {
+    color: #f3f5fa;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: bold;
+    font-size: calc(18 * var(--u));
+}
+.sdg-targets__full-link:hover {
+    scale: 1.05;
+}
+/* ----- Targets SDG ----- */
+
+/* ----- Halaman About ----- */
+.ab-page-document {
+    scroll-behavior: smooth;
+}
+.ab-page {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+.ab-page *,
+.ab-page *::before,
+.ab-page *::after {
+    box-sizing: border-box;
+}
+.ab-page :where(img) {
+    display: block;
+    max-width: 100%;
+}
+.ab-page :where(h1, h2, h3, p, ul) {
+    margin: 0;
+    padding: 0;
+}
+.ab-page :where(ul) {
+    list-style: none;
+}
+.ab-page a:focus-visible,
+.ab-page button:focus-visible {
+    outline: 3px solid var(--color-sdg10);
+    outline-offset: 3px;
+}
+.ab-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--ab-pad);
+}
+.ab-eyebrow {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.8vw, 26px);
+    letter-spacing: 2px;
+    color: var(--color-primary);
+    text-align: center;
+}
+/* ----- About Navbar ----- */
+.ab-page .container-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(20 * var(--u)) calc(40 * var(--u));
+    z-index: 20;
+}
+.ab-page .container-navbar > .container {
+    width: 100%;
+}
+/* ----- About Navbar ----- */
+
+/* ----- About Hero ----- */
+.ab-section-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(30px, 3.05vw, 44px);
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    padding-bottom: 14px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.ab-section-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 170px;
+    max-width: 60%;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-support);
+    transform: translateX(-50%);
+}
+.ab-btn {
+    background: var(--color-sdg10);
+    color: var(--color-on-dark);
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.5vw, 22px);
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 999px;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ab-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+.ab-hero {
+    background: var(--color-support);
+    border-bottom: 12px solid var(--color-highlight);
+    text-align: center;
+    padding: clamp(48px, 7vw, 100px) var(--ab-pad) clamp(56px, 8vw, 120px);
+}
+.ab-hero h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(26px, 4.45vw, 64px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--color-on-dark);
+    text-wrap: balance;
+}
+.ab-hero__accent {
+    color: var(--color-highlight);
+}
+/* ----- About Hero ----- */
+
+/* ----- About Story ----- */
+.ab-story {
+    background: var(--color-bg);
+    padding: clamp(40px, 5vw, 70px) 0 clamp(48px, 6vw, 80px);
+}
+.ab-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+    margin-top: clamp(32px, 5vw, 70px);
+}
+.ab-story__text {
+    text-align: center;
+}
+.ab-story__text p {
+    font-size: clamp(18px, 1.95vw, 28px);
+    line-height: 1.65;
+    text-wrap: balance;
+    margin-bottom: clamp(24px, 3vw, 40px);
+}
+.ab-story__photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 1.4vw, 20px);
+}
+.ab-photo {
+    object-fit: cover;
+    border: 2px solid rgba(var(--ab-navy-rgb), 0.15);
+    border-radius: clamp(24px, 3.6vw, 52px);
+    background: var(--color-bg-sdg10);
+    min-width: 0;
+}
+.ab-photo--side {
+    flex: 17;
+    aspect-ratio: 170 / 360;
+}
+.ab-photo--center {
+    flex: 21;
+    aspect-ratio: 210 / 440;
+}
+/* ----- About Story ----- */
+
+/* ----- About Identity and Values ----- */
+.ab-about__top {
+    background: var(--color-bg-sdg10);
+    text-align: center;
+    padding: clamp(48px, 6vw, 80px) var(--ab-pad) clamp(32px, 5vw, 80px);
+}
+.ab-about__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(30px, 3.6vw, 52px);
+    line-height: 1.5;
+    color: var(--color-primary);
+    margin-top: 8px;
+}
+.ab-about__mid {
+    background: linear-gradient(to bottom, var(--color-bg-sdg10) 58%, var(--color-bg-section) 58%);
+    padding: 0 var(--ab-pad);
+}
+.ab-values {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto calc(clamp(40px, 4.2vw, 60px) * -1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: var(--color-support);
+    color: var(--color-on-dark);
+    border-radius: clamp(28px, 3.3vw, 48px);
+    padding: clamp(24px, 3vw, 40px) clamp(12px, 2vw, 28px);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: clamp(13px, 1.4vw, 20px);
+}
+.ab-values li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.ab-icon-target {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    flex: none;
+    border: 4px solid var(--color-highlight);
+    border-radius: 50%;
+    position: relative;
+}
+.ab-icon-target::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-highlight);
+}
+.ab-icon-target--sm {
+    width: 36px;
+    height: 36px;
+    border: 5px solid var(--color-support);
+}
+.ab-icon-target--sm::after {
+    width: 12px;
+    height: 12px;
+    background: var(--color-support);
+}
+.ab-icon-square {
+    display: inline-block;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 5px solid var(--color-support);
+    position: relative;
+}
+.ab-icon-square::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-support);
+}
+.ab-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--color-bg);
+    border-radius: clamp(32px, 3.9vw, 56px);
+    padding: clamp(80px, 9vw, 130px) clamp(24px, 6vw, 80px) clamp(40px, 5vw, 72px);
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: clamp(24px, 4vw, 60px);
+}
+.ab-card__col h3 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(24px, 2.5vw, 36px);
+    color: var(--color-primary);
+    margin-bottom: 14px;
+}
+.ab-card__col p {
+    font-size: clamp(16px, 1.53vw, 22px);
+    line-height: 1.65;
+}
+.ab-card__divider {
+    background: var(--color-primary);
+    opacity: 0.6;
+}
+/* ----- About Identity and Values ----- */
+
+/* ----- About Team ----- */
+.ab-team {
+    background: var(--color-bg-section);
+    padding: clamp(40px, 5vw, 70px) 0 clamp(48px, 6vw, 90px);
+}
+.ab-team__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(30px, 3.6vw, 52px);
+    line-height: 1.5;
+    color: var(--color-primary);
+    text-align: center;
+}
+.ab-team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+    margin-top: clamp(28px, 4vw, 56px);
+}
+.ab-member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
+.ab-avatar {
+    width: min(200px, 100%);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(var(--ab-navy-rgb), 0.2);
+    background: var(--color-bg);
+    margin-bottom: 20px;
+}
+.ab-member h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(17px, 1.8vw, 26px);
+}
+.ab-member__role {
+    font-size: clamp(14px, 1.4vw, 20px);
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+.ab-member__role::after {
+    content: "";
+    display: block;
+    width: 100px;
+    max-width: 70%;
+    height: 2px;
+    background: var(--color-primary);
+    opacity: 0.4;
+    margin: 12px auto 14px;
+}
+.ab-member__bio {
+    font-size: clamp(14px, 1.25vw, 18px);
+    line-height: 1.5;
+    max-width: 260px;
+}
+/* ----- About Team ----- */
+
+/* ----- About CTA ----- */
+.ab-cta {
+    background: var(--color-bg-sdg10);
+    color: var(--color-text);
+    text-align: center;
+    padding: clamp(48px, 6vw, 90px) var(--ab-pad);
+}
+.ab-cta h2 {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(26px, 3.3vw, 48px);
+    line-height: 1.4;
+    text-wrap: balance;
+}
+.ab-cta p {
+    font-size: clamp(16px, 1.53vw, 22px);
+    margin: 12px auto 28px;
+    max-width: 60ch;
+    text-wrap: balance;
+}
+.ab-btn--cta {
+    padding: 16px 56px;
+}
+/* ----- About CTA ----- */
+
+/* ----- About Responsive ----- */
+@media (max-width: 900px) {
+    .ab-story__grid {
+        grid-template-columns: 1fr;
+    }
+    .ab-story__text p {
+        max-width: 36ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ab-story__photos {
+        max-width: 520px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .ab-team__grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+}
+@media (max-width: 700px) {
+    .ab-values {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+        font-size: 15px;
+    }
+    .ab-card {
+        grid-template-columns: 1fr;
+        padding-top: 110px;
+    }
+    .ab-card__divider {
+        width: 100%;
+        height: 2px;
+    }
+}
+@media (max-width: 400px) {
+    .ab-team__grid {
+        gap: 16px;
+    }
+    .ab-btn {
+        padding: 12px 28px;
+    }
+}
+/* ----- About Responsive ----- */
+/* ----- Halaman About ----- */
+
+/* ----- Halaman Inclusion ----- */
+.iclsv-page h1 {
+    font-size: var(--text-h1);
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+/* ----- Inclusion Hero ----- */
+.iclsv-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 calc(120 * var(--u));
+    background-color: var(--color-bg-section);
+    min-height: calc(600 * var(--u));
+}
+.iclsv-hero > .container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.iclsv-hero__text {
+    max-width: calc(600 * var(--u));
+}
+.iclsv-img {
+    width: calc(500 * var(--u));
+}
+.iclsv-img img {
+    width: 100%;
+}
+.iclsv-sdg p {
+    font-size: calc(14 * var(--u));
+    display: inline-block;
+    border-radius: calc(40 * var(--u));
+    padding: calc(8 * var(--u)) calc(16 * var(--u));
+    margin-top: calc(16 * var(--u));
+    font-weight: 600;
+    color: var(--color-bg);
+}
+.iclsv-sdg__4 {
+    background-color: var(--color-sdg4);
+    margin-right: 0.5rem;
+}
+.iclsv-sdg__10 {
+    margin-left: 0.5rem;
+    background-color: var(--color-sdg10);
+}
+/* ----- Inclusion Hero ----- */
+
+/* ----- Inclusion Quote ----- */
+.iclsv-quotes {
+    padding-block: calc(50 * var(--u));
+    max-width: 1440px;
+    color: var(--color-bg);
+    text-align: center;
+    background-color: var(--color-primary);
+}
+.iclsv-quotes blockquote {
+    font-size: var(--text-h3);
+    font-weight: 600;
+    max-width: calc(900 * var(--u));
+}
+.iclsv-quotes__highlight {
+    color: var(--color-highlight);
+}
+/* ----- Inclusion Quote ----- */
+
+/* ----- Inclusion Hindrance ----- */
+.iclsv-definition__title {
+    text-align: center;
+}
+/* ----- Inclusion Hindrance ----- */
+/* ----- Halaman Inclusion ----- */
+
+/* ----- Halaman SDG 10 ----- */
+/* ----- SDG 10 Legacy Components ----- */
+.sdgs10-target-card--legacy {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+.sdgs10-read-more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-sdg10);
+    color: var(--color-on-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+.sdgs10-page .modal-close {
+    background-color: var(--color-sdg10);
+}
+/* ----- SDG 10 Legacy Components ----- */
+
+/* ----- Halaman SDG 10 ----- */
+/* ----- SDG 4 Legacy Components ----- */
+.sdgs4-target-card--legacy {
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+.sdgs4-read-more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-sdg4);
+    color: var(--color-on-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+/* ----- SDG 4 Legacy Components ----- */

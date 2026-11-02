@@ -63,6 +63,7 @@
 7. Website URL & Repository
 
 8. Contents & Assets Reference
+- Image
 https://www.vecteezy.com/free-vector/design-elements
 https://images.pexels.com/photos/7495219/pexels-photo-7495219.jpeg
 https://www.pexels.com/photo/people-sitting-at-the-table-7495219/

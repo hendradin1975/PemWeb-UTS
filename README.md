@@ -32,32 +32,33 @@
 5. Technology Implementation Explanation
 
 6. Folder Structure
+   ```
    UTS-PEMWEB/
    ├── assets/
    ├── css/
-   │   └── about.css
-   │   └── inclusive.css
-   │   └── sdgs.css
-   │   └── sdgs4.css
-   │   └── sdgs10.css
+   │   ├── about.css
+   │   ├── inclusive.css
+   │   ├── sdgs.css
+   │   ├── sdgs4.css
+   │   ├── sdgs10.css
    │   └── style.css
    ├── fonts/
    ├── images/
-   │   └── about
-   │   └── home
-   │   └── inclusive
-   │   └── sdgs
-   │   └── sdgs4
-   │   └── sdgs10
+   │   ├── about/
+   │   ├── home/
+   │   ├── inclusive/
+   │   ├── sdgs/
+   │   ├── sdgs4/
+   │   └── sdgs10/
    ├── js/
    ├── pages/
-   │   └── about.html
-   │   └── inclusive.html
-   │   └── sdg.html
-   │   └── sdgs4.html
+   │   ├── about.html
+   │   ├── inclusive.html
+   │   ├── sdg.html
+   │   ├── sdgs4.html
    │   └── sdgs10.html
    ├── index.html
-   ├── README.md
+   └── README.md
 
 7. Website URL & Repository
 

@@ -11,7 +11,6 @@ tombolID.addEventListener('click', function () {
     tombolEN.style.display = 'flex';
 });
 
-
 function IDlang() {
     document.body.classList.add('indo');
     tombolEN.style.display = 'none';

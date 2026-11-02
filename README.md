@@ -36,11 +36,6 @@
    UTS-PEMWEB/
    ├── assets/
    ├── css/
-   │   ├── about.css
-   │   ├── inclusive.css
-   │   ├── sdgs.css
-   │   ├── sdgs4.css
-   │   ├── sdgs10.css
    │   └── style.css
    ├── fonts/
    ├── images/

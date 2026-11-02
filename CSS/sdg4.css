@@ -739,4 +739,5 @@ body.indo .id {
     display: flex;
     align-items: center;
     gap: calc(20 * var(--u));
+    background-color: #0F766E;
 }

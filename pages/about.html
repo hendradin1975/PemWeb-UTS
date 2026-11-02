@@ -1,58 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="ab-page-document">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | Starlight</title>
   <meta name="description" content="Starlight works toward quality education for all and fewer gaps between learners.">
-  <link rel="stylesheet" href="../CSS/sdg.css">
-  <link rel="stylesheet" href="../CSS/about.css">
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body class="ab-page">
 
-  <!-- Navbar (same as the SDG page) -->
+  <!-- Navbar -->
     <header>
         <nav class="container-navbar">
-            <div class="container-logo">
-                <img src="../assets/starlight-logo-light.svg" alt="Starlight">
-            </div>
-            <ul class="container-menu">
-                <li>
-                    <a href="../index.html">
-                        <span class="en">Home</span>
-                        <span class="id">Beranda</span>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="sdg.html">SDG</a>
-                    <ul class="dropdown-isi">
-                        <li><a href="sdgs4.html">SDG 4</a></li>
-                        <li><a href="sdgs10.html">SDG 10</a></li>
+            <div class="container">
+                <div class="flex">
+                    <div class="navbar-logo">
+                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+                    </div>
+                    <ul class="container-menu">
+                        <li>
+                            <a href="../index.html">
+                                <span class="en">Home</span>
+                                <span class="id">Beranda</span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="sdgs.html">
+                                SDG <span class="dropdown-arrow">&#9662;</span>
+                            </a>
+                            <ul class="dropdown-isi">
+                                <li><a href="sdgs4.html">SDG 4</a></li>
+                                <li><a href="sdgs10.html">SDG 10</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="inclusive.html">
+                                <span class="en">Inclusion</span>
+                                <span class="id">Inklusi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="active">
+                                <span class="en">About</span>
+                                <span class="id">Tentang</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button" class="lang-btn btn-en">
+                                <img src="../assets/logo-EN.png" alt="" />
+                                <span>EN</span>
+                            </button>
+                            <button type="button" class="lang-btn btn-id">
+                                <img src="../assets/logo-ID.png" alt="" />
+                                <span>ID</span>
+                            </button>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="inclusive.html">
-                        <span class="en">Inclusion</span>
-                        <span class="id">Inklusi</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html" class="active">
-                        <span class="en">About</span>
-                        <span class="id">Tentang</span>
-                    </a>
-                </li>
-                <li>
-                    <button type="button" class="lang-btn btn-en">
-                        <img src="../assets/logo-EN.png" alt="">
-                        <span>EN</span>
-                    </button>
-                    <button type="button" class="lang-btn btn-id">
-                        <img src="../assets/logo-ID.png" alt="">
-                        <span>ID</span>
-                    </button>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
   <!-- Navbar -->
@@ -74,7 +79,7 @@
         <div class="ab-story__grid">
           <div class="ab-story__text">
             <p><span class="en">Starlight began with one idea every child deserves to learn in a way that works for them. We work toward quality education for all and fewer gaps between learners.</span><span class="id">Starlight berawal dari satu gagasan: setiap anak berhak belajar dengan cara yang sesuai bagi mereka. Kami bekerja menuju pendidikan berkualitas untuk semua dan berkurangnya kesenjangan antarpelajar.</span></p>
-            <a class="ab-btn" href="sdg.html"><span class="en">Our approach</span><span class="id">Pendekatan kami</span></a>
+            <a class="button ab-btn" href="sdgs.html"><span class="en">Our approach</span><span class="id">Pendekatan kami</span></a>
           </div>
 
           <!-- TO SWAP A PHOTO: change the src (and alt) below, or overwrite the file in /images/about -->
@@ -158,84 +163,102 @@
     <section class="ab-cta">
       <h2><span class="en">Let’s Make Learning Open to All.</span><span class="id">Mari Wujudkan Pembelajaran yang Terbuka untuk Semua.</span></h2>
       <p><span class="en">Tell us about your school or community and we’ll reply within two business days.</span><span class="id">Ceritakan tentang sekolah atau komunitasmu dan kami akan membalas dalam dua hari kerja.</span></p>
-      <a class="ab-btn ab-btn--cta" href="#contact"><span class="en">Get in Touch</span><span class="id">Hubungi Kami</span></a>
+      <a class="button ab-btn ab-btn--cta" href="#contact"><span class="en">Get in Touch</span><span class="id">Hubungi Kami</span></a>
     </section>
 
   </main>
 
-  <!-- Footer (same as the SDG page) -->
+  <!-- Footer -->
     <footer class="container-footer">
-        <div class="footer-left">
-            <div class="logo-starlight">
-                <img src="../assets/starlight-logo-light.svg" alt="Starlight">
-            </div>
-            <p>
-                <span class="en">Information on inclusive education for all, in line with SDG 4 and SDG 10. This website was created for learning purposes.</span>
-                <span class="id">Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10. Website ini dibuat untuk keperluan pembelajaran.</span>
-            </p>
-            <div class="ig-web">
-                <div class="footer-ig">
-                    <div class="logo-ig">
-                        <img src="../assets/logo-ig.svg" alt="">
+        <div class="container">
+            <div class="flex flex-between">
+                <div class="footer-left">
+                    <div class="logo-starlight">
+                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
                     </div>
-                    <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
-                        <span>@sdgaction</span>
-                    </a>
-                </div>
-                <div class="separator">
-                    <img src="../assets/logo-separator.png" alt="">
-                </div>
-                <div class="footer-web">
-                    <div class="logo-sdg">
-                        <img src="../assets/logo-sdg.svg" alt="">
+                    <p>
+                        <span class="en"
+                            >Information on inclusive education for all, in line with SDG 4 and SDG 10. This website
+                            was created for learning purposes.</span
+                        >
+                        <span class="id"
+                            >Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10.
+                            Website ini dibuat untuk keperluan pembelajaran.</span
+                        >
+                    </p>
+                    <div class="ig-web">
+                        <div class="footer-ig">
+                            <div class="logo-ig">
+                                <img src="../assets/logo-ig.svg" alt="" />
+                            </div>
+                            <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
+                                <span>@sdgaction</span>
+                            </a>
+                        </div>
+                        <div class="separator">
+                            <img src="../assets/logo-separator.png" alt="" />
+                        </div>
+                        <div class="footer-web">
+                            <div class="logo-sdg">
+                                <img src="../assets/logo-sdg.svg" alt="" />
+                            </div>
+                            <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
+                                <span class="en">THE 17 GOALS</span>
+                                <span class="id">17 TUJUAN</span>
+                            </a>
+                        </div>
                     </div>
-                    <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
-                        <span class="en">THE 17 GOALS</span>
-                        <span class="id">17 TUJUAN</span>
-                    </a>
                 </div>
-            </div>
-        </div>
 
-        <nav class="footer-explore">
-            <h2>
-                <span class="en">Explore</span>
-                <span class="id">Jelajahi</span>
-            </h2>
-            <ul class="explore-list">
-                <li><a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a></li>
-                <li><a href="sdg.html">SDG</a></li>
-                <li><a href="sdgs4.html">SDG 4</a></li>
-                <li><a href="sdgs10.html">SDG 10</a></li>
-                <li><a href="inclusive.html"><span class="en">Inclusion</span><span class="id">Inklusi</span></a></li>
-                <li><a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a></li>
-            </ul>
-        </nav>
+                <nav class="footer-explore">
+                    <h2>
+                        <span class="en">Explore</span>
+                        <span class="id">Jelajahi</span>
+                    </h2>
+                    <ul class="explore-list">
+                        <li>
+                            <a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                        </li>
+                        <li><a href="sdgs.html">SDG</a></li>
+                        <li><a href="sdgs4.html">SDG 4</a></li>
+                        <li><a href="sdgs10.html">SDG 10</a></li>
+                        <li>
+                            <a href="inclusive.html"
+                                ><span class="en">Inclusion</span><span class="id">Inklusi</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a>
+                        </li>
+                    </ul>
+                </nav>
 
-        <div class="footer-right" id="contact">
-            <h2>
-                <span class="en">Contact Us</span>
-                <span class="id">Hubungi Kami</span>
-            </h2>
-            <div class="contacts">
-                <div class="contact-left">
-                    <div class="hendra">
-                        <img src="../assets/profile.svg" alt="">
-                        <a href="mailto:hendradinatakomang@gmail.com">hendradinatakomang@gmail.com</a>
-                    </div>
-                    <div class="rama">
-                        <img src="../assets/profile.svg" alt="">
-                        <a href="mailto:rama@gmail.com">rama@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact-right">
-                    <div class="indra">
-                        <img src="../assets/profile.svg" alt="">
-                        <a href="mailto:indrakus46@gmail.com">indrakus46@gmail.com</a>
-                    </div>
-                    <div class="oki">
-                        <img src="../assets/profile.svg" alt="">
-                        <a href="mailto:oki@gmail.com">oki@gmail.com</a>
+                <div class="footer-right" id="contact">
+                    <h2>
+                        <span class="en">Contact Us</span>
+                        <span class="id">Hubungi Kami</span>
+                    </h2>
+                    <div class="contacts">
+                        <div class="contact-left">
+                            <div class="hendra">
+                                <img src="../assets/profile.svg" alt="" />
+                                <a href="https://github.com/hendradin1975" target="_blank" rel="noopener">hendradin1975</a>
+                            </div>
+                            <div class="rama">
+                                <img src="../assets/profile.svg" alt="" />
+                                <a href="https://github.com/PutuRama" target="_blank" rel="noopener">PutuRama</a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <div class="indra">
+                                <img src="../assets/profile.svg" alt="" />
+                                <a href="https://github.com/indrakus46-collab" target="_blank" rel="noopener">indrakus46-collab</a>
+                            </div>
+                            <div class="oki">
+                                <img src="../assets/profile.svg" alt="" />
+                                <a href="https://github.com/kiogit-cyber" target="_blank" rel="noopener">kiogit-cyber</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -415,8 +415,8 @@ body.indo .id {
 }
 
 .video-frame {
-    width: calc(960 * var(--u));
-    max-width: 100%;
+    width: 100%;
+    max-width: 960px;
     aspect-ratio: 16 / 9;
     margin: 0 auto;
     border-radius: var(--radius-lg);
@@ -489,7 +489,7 @@ body.indo .id {
 
 .article-text p {
     font-family: inter;
-    font-size: calc(32 * var(--u));
+    font-size: calc(30 * var(--u));
 }
 
 .article-more {

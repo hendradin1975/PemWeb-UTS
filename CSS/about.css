@@ -93,7 +93,7 @@ html { scroll-behavior: smooth; }
 
 /* ---------- HERO ---------- */
 .ab-hero {
-  background: var(--ab-navy);
+  background: var(--ab-teal);   /* different from the navy navbar; try --ab-pink, --ab-blush or --ab-mist too */
   border-bottom: 12px solid var(--ab-amber);
   text-align: center;
   padding: clamp(48px, 7vw, 100px) var(--ab-pad) clamp(56px, 8vw, 120px);

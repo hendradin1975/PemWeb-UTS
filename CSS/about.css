@@ -5,7 +5,7 @@
     --color-bg, --color-bg-section, --color-bg-sdg10, --color-text,
     --color-on-dark, --font-heading, --font-body).
    Load order in about.html:  sdg.css  →  about.css
-   The navbar and footer are the team's own (styles come from sdg.css).
+   The navbar, footer and EN/ID switch are the team's own (styles from sdg.css, logic from JS/script.js).
    Every class here starts with "ab-" so nothing clashes with other pages.
    The second value in each var() is a fallback (same value as sdg.css).
    ========================================================== */
@@ -107,7 +107,7 @@ html { scroll-behavior: smooth; }
   color: var(--ab-ondark);
   text-wrap: balance;
 }
-.ab-hero h1 span { color: var(--ab-amber); }
+.ab-hero__accent { color: var(--ab-amber); }
 
 /* ---------- STORY ---------- */
 .ab-story { background: var(--ab-bg); padding: clamp(40px, 5vw, 70px) 0 clamp(48px, 6vw, 80px); }

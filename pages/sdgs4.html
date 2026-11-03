@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SDG 4</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
         <link rel="stylesheet" href="../CSS/style.css" />
     </head>
     <body class="sdgs4-page">
@@ -15,7 +16,10 @@
                         <div class="navbar-logo">
                             <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
                         </div>
-                        <ul class="container-menu">
+                        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+                            <i class="bx bx-menu" aria-hidden="true"></i>
+                        </button>
+                        <ul class="container-menu" id="primary-navigation">
                             <li>
                                 <a href="../index.html">
                                     <span class="en">Home</span>
@@ -23,8 +27,11 @@
                                 </a>
                             </li>
                             <li class="dropdown">
-                                <a href="sdgs.html" class="active">SDG <span class="dropdown-arrow">&#9662;</span></a>
-                                <ul class="dropdown-isi">
+                                <a href="sdgs.html" class="active">SDG</a>
+                                <button class="dropdown-toggle" type="button" aria-label="Open SDG submenu" aria-controls="sdg-submenu" aria-expanded="false">
+                                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <ul class="dropdown-isi" id="sdg-submenu">
                                     <li><a href="sdgs4.html">SDG 4</a></li>
                                     <li><a href="sdgs10.html">SDG 10</a></li>
                                 </ul>
@@ -132,7 +139,7 @@
                     </h1>
                     <div class="sdg-article__content">
                         <div class="sdg-article__photo">
-                            <img src="../images/sdgs4/about.jpg" alt="" />
+                            <img class="image-cover" src="../images/sdgs4/about.jpg" alt="" />
                         </div>
                         <div class="sdg-article__text">
                             <h1>
@@ -153,7 +160,7 @@
                                     dihapus agar belajar terbuka bagi semua.</span
                                 >
                             </p>
-                            <div class="sdg-article__link">
+                            <div class="sdg-article__link button-hover">
                                 <a class="button" href="https://sdgs.un.org/goals/goal4">
                                     <span class="en">Read the Full Goal</span>
                                     <span class="id">Baca Tujuan Lengkap</span>
@@ -167,7 +174,7 @@
         <!-- Article -->
 
         <!-- Key Target -->
-        <section class="sdg-targets">
+        <section class="sdg-targets" id="target">
             <div class="container">
                 <div class="flex flex-column">
                     <h1>
@@ -178,7 +185,8 @@
                         <!-- Card 1 -->
                         <div class="sdg-target-card sdg-target-card--sdg4">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs4/target-1.jpg" alt="" />
+                                <img
+                                    class="image-cover" class="image-cover" src="../images/sdgs4/target-1.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en">Free, quality primary and secondary education for all children</span>
@@ -186,35 +194,35 @@
                                     >Pendidikan dasar dan menengah yang gratis dan berkualitas bagi semua anak</span
                                 >
                             </h2>
-                            <a class="button" href="#modal-4-1">
-                                <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
+                                <a class="button" href="#modal-4-1">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Card 2 -->
                         <div class="sdg-target-card sdg-target-card--sdg4">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs4/target-2.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs4/target-2.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en">Quality early childhood care and pre-primary education</span>
                                 <span class="id">Pengasuhan dan pendidikan anak usia dini yang berkualitas</span>
                             </h2>
-                            <a class="button" href="#modal-4-2">
-                                <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
+                                <a class="button" href="#modal-4-2">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Card 3 -->
                         <div class="sdg-target-card sdg-target-card--sdg4">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs4/target-3.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs4/target-3.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -225,18 +233,18 @@
                                     terjangkau</span
                                 >
                             </h2>
-                            <a class="button" href="#modal-4-3">
-                                <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
+                                <a class="button" href="#modal-4-3">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Card 4 -->
                         <div class="sdg-target-card sdg-target-card--sdg4">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs4/target-4.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs4/target-4.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -247,18 +255,18 @@
                                     disabilitas</span
                                 >
                             </h2>
-                            <a class="button" href="#modal-4-4">
-                                <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
+                                <a class="button" href="#modal-4-4">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Card 5 -->
                         <div class="sdg-target-card sdg-target-card--sdg4">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs4/target-5.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs4/target-5.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en">Safe, inclusive, and accessible learning environments for all</span>
@@ -266,12 +274,12 @@
                                     >Lingkungan belajar yang aman, inklusif, dan mudah diakses oleh semua orang</span
                                 >
                             </h2>
-                            <a class="button" href="#modal-4-5">
-                                <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
+                                <a class="button" href="#modal-4-5">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="sdg-targets__summary">
@@ -282,7 +290,7 @@
                             >Kami menyoroti lima dari sepuluh target SDG 4 yang paling dekat dengan inklusi</span
                         >
                     </p>
-                    <div class="sdg-targets__full-link">
+                    <div class="sdg-targets__full-link button-hover">
                         <a class="button" href="https://sdgs.un.org/goals/goal4">
                             <span class="en">Read Full Target</span>
                             <span class="id">Baca Target Lengkap</span>
@@ -292,26 +300,197 @@
                     <!-- Pop-Up -->
                     <div class="modal" id="modal-4-1">
                         <div class="modal-box">
-                            <img src="../images/sdgs4/target-1.jpg" alt="Children studying together in a classroom" />
+                            <img class="image-cover" src="../images/sdgs4/target-1.jpg" alt="" />
                             <div class="modal-text">
                                 <h3>
                                     <span class="en"
-                                        >Free, quality primary and secondary education for all children</span
+                                        >Free, quality primary and secondary
+                                        education for all children</span
                                     >
                                     <span class="id"
-                                        >Pendidikan dasar dan menengah yang gratis dan berkualitas bagi semua anak</span
+                                        >Pendidikan dasar dan menengah yang
+                                        gratis dan berkualitas bagi semua
+                                        anak</span
                                     >
                                 </h3>
                                 <p>
                                     <span class="en"
-                                        >Target 4.1 aims for every girl and boy to finish free, fair, and good-quality
-                                        primary and secondary schooling by 2030, with learning that is relevant and
-                                        effective for them.</span
+                                        >Target 4.1 aims to ensure that all
+                                        girls and boys complete free, equitable,
+                                        and quality primary and secondary
+                                        education leading to relevant and
+                                        effective learning outcomes.</span
                                     >
                                     <span class="id"
-                                        >Target 4.1 bertujuan agar setiap anak perempuan dan laki-laki menamatkan
-                                        pendidikan dasar dan menengah yang gratis, adil, dan berkualitas pada 2030,
-                                        dengan pembelajaran yang relevan dan efektif bagi mereka.</span
+                                        >Target 4.1 bertujuan memastikan bahwa
+                                        semua anak perempuan dan laki-laki
+                                        menyelesaikan pendidikan dasar dan
+                                        menengah yang gratis, setara, dan
+                                        berkualitas yang mengarah pada hasil
+                                        belajar yang relevan dan efektif.</span
+                                    >
+                                </p>
+                                <a class="button modal-close" href="#target">
+                                    <span class="en">Close</span>
+                                    <span class="id">Tutup</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-4-2">
+                        <div class="modal-box">
+                            <img class="image-cover" src="../images/sdgs4/target-2.jpg" alt="" />
+                            <div class="modal-text">
+                                <h3>
+                                    <span class="en"
+                                        >Quality early childhood care and
+                                        pre-primary education</span
+                                    >
+                                    <span class="id"
+                                        >Pengasuhan dan pendidikan anak usia
+                                        dini yang berkualitas</span
+                                    >
+                                </h3>
+                                <p>
+                                    <span class="en"
+                                        >Target 4.2 aims to ensure that all
+                                        girls and boys have access to quality
+                                        early childhood development, care, and
+                                        pre-primary education so that they are
+                                        ready for primary education.</span
+                                    >
+                                    <span class="id"
+                                        >Target 4.2 bertujuan memastikan bahwa
+                                        semua anak perempuan dan laki-laki
+                                        memiliki akses terhadap perkembangan
+                                        anak usia dini, pengasuhan, dan
+                                        pendidikan prasekolah yang berkualitas,
+                                        sehingga mereka siap untuk pendidikan
+                                        dasar.</span
+                                    >
+                                </p>
+                                <a class="button modal-close" href="#target">
+                                    <span class="en">Close</span>
+                                    <span class="id">Tutup</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-4-3">
+                        <div class="modal-box">
+                            <img class="image-cover" src="../images/sdgs4/target-3.jpg" alt="" />
+                            <div class="modal-text">
+                                <h3>
+                                    <span class="en"
+                                        >Equal access to affordable technical,
+                                        vocational, and university
+                                        education</span
+                                    >
+                                    <span class="id"
+                                        >Akses setara ke pendidikan teknik,
+                                        kejuruan, dan perguruan tinggi yang
+                                        terjangkau</span
+                                    >
+                                </h3>
+                                <p>
+                                    <span class="en"
+                                        >Target 4.3 aims to ensure equal access
+                                        for all women and men to affordable and
+                                        quality technical, vocational, and
+                                        tertiary education, including
+                                        university.</span
+                                    >
+                                    <span class="id"
+                                        >Target 4.3 bertujuan menjamin akses
+                                        yang setara bagi semua perempuan dan
+                                        laki-laki terhadap pendidikan teknik,
+                                        kejuruan, dan tersier, termasuk
+                                        universitas, yang terjangkau dan
+                                        berkualitas.</span
+                                    >
+                                </p>
+                                <a class="button modal-close" href="#target">
+                                    <span class="en">Close</span>
+                                    <span class="id">Tutup</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-4-4">
+                        <div class="modal-box">
+                            <img class="image-cover" src="../images/sdgs4/target-4.jpg" alt="" />
+                            <div class="modal-text">
+                                <h3>
+                                    <span class="en"
+                                        >Equal access to education for everyone,
+                                        including persons with
+                                        disabilities</span
+                                    >
+                                    <span class="id"
+                                        >Akses pendidikan yang setara bagi semua
+                                        orang, termasuk penyandang
+                                        disabilitas</span
+                                    >
+                                </h3>
+                                <p>
+                                    <span class="en"
+                                        >Target 4.5 aims to eliminate gender
+                                        disparities in education and ensure
+                                        equal access to all levels of education
+                                        and vocational training for the
+                                        vulnerable, including persons with
+                                        disabilities, indigenous peoples, and
+                                        children in vulnerable situations.</span
+                                    >
+                                    <span class="id"
+                                        >Target 4.5 bertujuan menghilangkan
+                                        disparitas gender dalam pendidikan dan
+                                        memastikan akses yang setara ke semua
+                                        tingkat pendidikan dan pelatihan
+                                        kejuruan bagi kelompok rentan, termasuk
+                                        penyandang disabilitas, masyarakat adat,
+                                        dan anak-anak dalam situasi
+                                        rentan.</span
+                                    >
+                                </p>
+                                <a class="button modal-close" href="#target">
+                                    <span class="en">Close</span>
+                                    <span class="id">Tutup</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-4-5">
+                        <div class="modal-box">
+                            <img class="image-cover" src="../images/sdgs4/target-5.jpg" alt="" />
+                            <div class="modal-text">
+                                <h3>
+                                    <span class="en"
+                                        >Safe, inclusive, and accessible
+                                        learning environments for all</span
+                                    >
+                                    <span class="id"
+                                        >Lingkungan belajar yang aman, inklusif,
+                                        dan mudah diakses oleh semua orang</span
+                                    >
+                                </h3>
+                                <p>
+                                    <span class="en"
+                                        >Target 4.a aims to build and upgrade
+                                        education facilities that are child,
+                                        disability, and gender sensitive and
+                                        provide safe, non-violent, inclusive,
+                                        and effective learning environments for
+                                        all.</span
+                                    >
+                                    <span class="id"
+                                        >Target 4.a bertujuan membangun dan
+                                        meningkatkan fasilitas pendidikan yang
+                                        ramah anak, disabilitas, dan gender,
+                                        serta menyediakan lingkungan belajar
+                                        yang aman, bebas dari kekerasan,
+                                        inklusif, dan efektif bagi semua
+                                        orang.</span
                                     >
                                 </p>
                                 <a class="button modal-close" href="#target">
@@ -425,7 +604,7 @@
         <!-- Footer -->
 
         <!-- javascript -->
-        <script src="../js/script.js"></script>
+        <script src="../JS/script.js"></script>
         <!-- javascript -->
     </body>
 </html>

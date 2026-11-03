@@ -26,30 +26,96 @@
 | About | To introduce the website and the team behind it. | Gives information about the purpose of Starlight as a learning project, and provides the team members and their contact details. |
 
 4. Implemented Technology
-   - HTML: 5
-   - CSS: 3
+   - HTML5: Builds the website pages and their content.
+   - CSS3: Styles the pages and provides responsive layouts with Flexbox, CSS Grid, and media queries (without a CSS framework).
+   - JavaScript (Vanilla): Controls the responsive navigation, SDG submenu, and English/Indonesian language selection.
+   - Boxicons: Supplies interface icons through the Boxicons CDN.
+   - Local fonts: Inter and Poppins are included in the `fonts/` directory.
 
 5. Technology Implementation Explanation
+   - **HTML5 and navigation:** Each page has its own HTML file. Semantic elements such as `header`, `nav`, and `main` organize the content. The shared navigation connects pages with relative links:
+
+     ```html
+     <ul class="container-menu" id="primary-navigation">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="pages/sdgs.html">SDG</a></li>
+     </ul>
+     ```
+
+     The JavaScript opens and closes the mobile menu by changing its state class and the button's accessibility state:
+
+     ```js
+     const isOpen = navMenu.classList.toggle('is-open');
+     navToggle.setAttribute('aria-expanded', String(isOpen));
+     ```
+
+   - **CSS3 and reusable layouts:** All page styles are maintained in `CSS/style.css`. Shared classes reduce repeated declarations; for example, `.flex` provides a reusable Flexbox layout:
+
+     ```css
+     .flex {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     ```
+
+   - **Flexbox and CSS Grid:** Flexbox is used for one-dimensional alignment, such as navigation and footer content. CSS Grid arranges repeated content into columns, as in the homepage program cards:
+
+     ```css
+     .programs-list {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: calc(40 * var(--u));
+     }
+     ```
+
+   - **Responsive design:** Media queries adapt the layout to smaller screens. At widths of 784px and below, the navigation becomes a collapsible menu; at 520px and below, program cards become a single column:
+
+     ```css
+     @media (max-width: 784px) {
+         .container-menu {
+             display: none;
+             flex-direction: column;
+         }
+
+         .container-menu.is-open {
+             display: flex;
+         }
+     }
+
+     @media (max-width: 520px) {
+         .programs-list {
+             grid-template-columns: 1fr;
+         }
+     }
+     ```
+
+   - **JavaScript:** `JS/script.js` toggles the mobile navigation and SDG submenu, updates their accessibility attributes, and switches the displayed language. The language choice is saved in `localStorage` so it is restored on the next visit.
 
 6. Folder Structure
    ```
-   UTS-PEMWEB/
+   PemWeb-UTS/
    ├── assets/
+<<<<<<< HEAD
    ├── css/
+=======
+   ├── CSS/
+>>>>>>> 62d168b (feat(main): finishing combining)
    │   └── style.css
    ├── fonts/
    ├── images/
    │   ├── about/
-   │   ├── home/
+   │   ├── Home/
    │   ├── inclusive/
    │   ├── sdgs/
    │   ├── sdgs4/
    │   └── sdgs10/
-   ├── js/
+   ├── JS/
+   │   └── script.js
    ├── pages/
    │   ├── about.html
    │   ├── inclusive.html
-   │   ├── sdg.html
+   │   ├── sdgs.html
    │   ├── sdgs4.html
    │   └── sdgs10.html
    ├── index.html

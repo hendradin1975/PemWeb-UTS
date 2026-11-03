@@ -1,214 +1,647 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../CSS/style.css" />
 
-    <title>Document</title>
-</head>
-<body class="iclsv-page">
-    <!-- Navbar -->
-    <header>
-        <nav class="container-navbar">
-            <div class="container">
-                <div class="flex">
-                    <div class="navbar-logo">
-                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+        <meta
+            name="description"
+            content="Learn how inclusive education connects quality learning with equal opportunity for every student."
+        />
+        <title>Inclusive Learning | Starlight</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+    </head>
+    <body class="iclsv-page">
+        <!-- Navbar -->
+        <header>
+            <nav class="container-navbar">
+                <div class="container">
+                    <div class="flex">
+                        <div class="navbar-logo">
+                            <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+                        </div>
+                        <button
+                            class="nav-toggle"
+                            type="button"
+                            aria-label="Open menu"
+                            aria-controls="primary-navigation"
+                            aria-expanded="false"
+                        >
+                            <i class="bx bx-menu" aria-hidden="true"></i>
+                        </button>
+                        <ul class="container-menu" id="primary-navigation">
+                            <li>
+                                <a href="../index.html">
+                                    <span class="en">Home</span>
+                                    <span class="id">Beranda</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="sdgs.html">SDG</a>
+                                <button
+                                    class="dropdown-toggle"
+                                    type="button"
+                                    aria-label="Open SDG submenu"
+                                    aria-controls="sdg-submenu"
+                                    aria-expanded="false"
+                                >
+                                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <ul class="dropdown-isi" id="sdg-submenu">
+                                    <li><a href="sdgs4.html">SDG 4</a></li>
+                                    <li><a href="sdgs10.html">SDG 10</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="inclusive.html" class="active">
+                                    <span class="en">Inclusion</span>
+                                    <span class="id">Inklusi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <span class="en">About</span>
+                                    <span class="id">Tentang</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="lang-btn btn-en">
+                                    <img src="../assets/logo-EN.png" alt="" />
+                                    <span>EN</span>
+                                </button>
+                                <button type="button" class="lang-btn btn-id">
+                                    <img src="../assets/logo-ID.png" alt="" />
+                                    <span>ID</span>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="container-menu">
-                        <li>
-                            <a href="../index.html">
-                                <span class="en">Home</span>
-                                <span class="id">Beranda</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="sdgs.html">
-                                SDG <span class="dropdown-arrow">&#9662;</span>
-                            </a>
-                            <ul class="dropdown-isi">
-                                <li><a href="sdgs4.html">SDG 4</a></li>
-                                <li><a href="sdgs10.html">SDG 10</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="inclusive.html" class="active">
-                                <span class="en">Inclusion</span>
-                                <span class="id">Inklusi</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html">
-                                <span class="en">About</span>
-                                <span class="id">Tentang</span>
-                            </a>
-                        </li>
-                        <li>
-                            <button type="button" class="lang-btn btn-en">
-                                <img src="../assets/logo-EN.png" alt="">
-                                <span>EN</span>
-                            </button>
-                            <button type="button" class="lang-btn btn-id">
-                                <img src="../assets/logo-ID.png" alt="">
-                                <span>ID</span>
-                            </button>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Navbar -->
+            </nav>
+        </header>
+        <!-- Navbar -->
 
-    <section class="iclsv-hero ">
-        <div class="container">
-            <div class="iclsv-hero__text">
-                <h1>Menghubungkan Pendidikan dan Kesetaraan</h1>
-                <p>
-                    Pembelajaran inklusif memastikan setiap siswa, termasuk penyandang disabilitas
-                    dan individu neurodivergen, dapat belajar bersama dengan dukungan yang
-                    sesuai. Inilah jembatan antara pendidikan berkualitas dan berkurangnya
-                    kesenjangan.
-                </p>
-                <div class="iclsv-sdg">
-                    <p class="iclsv-sdg__4">SDG 4: Pendidikan Berkualitas</p>
-                    <p class="iclsv-sdg__10">SDG 10: Berkurangnya Kasenjangan</p>
-                </div>
-            </div>
-            <div class="iclsv-img">
-                <img src="../images/inclusive/iclsv-hero__img.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="iclsv-quotes container">
-        <blockquote>"Kesenjangan <span class="iclsv-quotes__highlight">Pendidikan Hari Ini</span> adalah Kesenjangan <span class="iclsv-quotes__highlight">Ekonomi di Masa Depan</span>"</blockquote>
-    </section>
-
-    <section class="iclsv-definition">
-        <div class="iclsv-definition__text">
-            <p>APA ITU PEMBELAJARAN INKLUSIF?</p>
-
-        <h4>Sistem yang beradaptasi dengan siswa, bukan sebaliknya.</h4> 
-
-        <p>
-            Banyak sistem pendidikan masih menerapkan satu standar untuk
-            semua, sehingga kelompok tertentu tertinggal. Pembelajaran
-            inklusif merancang sistem secara fleksibel agar setiap siswa
-            punya kesempatan yang sama untuk berkembang dengan
-            caranya sendiri.
-        </p>
-        </div>
-        <div>
-            <img src="" alt="">
-        </div>
-    </section>
-
-    <section class="iclsv-hindrance container">
-        <div class="iclsv-definition__title">
-            <h6 class="">SIAPA YANG DILAYANI</h6>
-            <h4>Hambatan belajar berbeda, kebutuhan berbeda.</h4>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="container-footer">
-        <div class="container">
-            <div class="flex flex-between">
-                <div class="footer-left">
-                    <div class="logo-starlight">
-                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+        <main>
+            <section class="iclsv-hero">
+                <div class="container flex flex-between iclsv-hero__layout">
+                    <div class="iclsv-hero__content">
+                        <h1 class="text-balance">
+                            <span class="en">Connecting Education and Equality</span>
+                            <span class="id">Menghubungkan Pendidikan dan Kesetaraan</span>
+                        </h1>
+                        <p class="iclsv-hero__description">
+                            <span class="en"
+                                >Inclusive learning helps every student, including students with disabilities and
+                                neurodivergent learners, learn together with the support they need. It connects quality
+                                education with reduced inequality.</span
+                            >
+                            <span class="id"
+                                >Pembelajaran inklusif memastikan setiap siswa, termasuk penyandang disabilitas dan
+                                individu neurodivergen, dapat belajar bersama dengan dukungan yang sesuai. Inilah
+                                jembatan antara pendidikan berkualitas dan berkurangnya kesenjangan.</span
+                            >
+                        </p>
+                        <div class="iclsv-sdg">
+                            <a class="button iclsv-sdg__4" href="sdgs4.html">
+                                <span class="en">SDG 4: Quality Education</span>
+                                <span class="id">SDG 4: Pendidikan Berkualitas</span>
+                            </a>
+                            <a class="button iclsv-sdg__10" href="sdgs10.html">
+                                <span class="en">SDG 10: Reduced Inequalities</span>
+                                <span class="id">SDG 10: Berkurangnya Kesenjangan</span>
+                            </a>
+                        </div>
                     </div>
+                    <div class="iclsv-hero__visual">
+                        <img
+                            src="../images/inclusive/iclsv-hero__img.png"
+                            alt="Diagram showing inclusive education connecting SDG 4 and SDG 10"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="iclsv-quote-section">
+                <div class="container">
+                    <blockquote class="iclsv-quote text-balance">
+                        <span class="en">“The education gap of today is the economic gap of tomorrow.”</span>
+                        <span class="id"
+                            >“Kesenjangan Pendidikan Hari Ini adalah Kesenjangan Ekonomi di Masa Depan.”</span
+                        >
+                    </blockquote>
+                </div>
+            </section>
+
+            <section class="iclsv-definition container">
+                <div class="iclsv-definition__text">
+                    <p class="iclsv-eyebrow">
+                        <span class="en">What is inclusive learning?</span>
+                        <span class="id">Apa itu pembelajaran inklusif?</span>
+                    </p>
+                    <h2 class="text-balance">
+                        <span class="en">A learning system that adapts to students, not the other way around.</span>
+                        <span class="id">Sistem yang beradaptasi dengan siswa, bukan sebaliknya.</span>
+                    </h2>
                     <p>
                         <span class="en"
-                            >Information on inclusive education for all, in line with SDG 4 and SDG 10. This website
-                            was created for learning purposes.</span
+                            >Many education systems still use a one-size-fits-all approach, leaving some learners
+                            behind. Inclusive learning makes the environment and teaching flexible so every student can
+                            participate and grow in their own way.</span
                         >
                         <span class="id"
-                            >Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10.
-                            Website ini dibuat untuk keperluan pembelajaran.</span
+                            >Banyak sistem pendidikan masih menerapkan satu standar untuk semua, sehingga kelompok
+                            tertentu tertinggal. Pembelajaran inklusif merancang sistem secara fleksibel agar setiap
+                            siswa punya kesempatan yang sama untuk berkembang dengan caranya sendiri.</span
                         >
                     </p>
-                    <div class="ig-web">
-                        <div class="footer-ig">
-                            <div class="logo-ig">
-                                <img src="../assets/logo-ig.svg" alt="" />
-                            </div>
-                            <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
-                                <span>@sdgaction</span>
-                            </a>
-                        </div>
-                        <div class="separator">
-                            <img src="../assets/logo-separator.png" alt="" />
-                        </div>
-                        <div class="footer-web">
-                            <div class="logo-sdg">
-                                <img src="../assets/logo-sdg.svg" alt="" />
-                            </div>
-                            <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
-                                <span class="en">THE 17 GOALS</span>
-                                <span class="id">17 TUJUAN</span>
-                            </a>
-                        </div>
+                </div>
+                <figure class="iclsv-definition__visual">
+                    <img
+                        class="image-cover"
+                        src="../images/inclusive/iclsv-definition__img.jpg"
+                        alt="Students learning together in a bright classroom"
+                        loading="lazy"
+                    />
+                </figure>
+            </section>
+
+            <section class="iclsv-hindrance">
+                <div class="iclsv-container">
+                    <p class="iclsv-eyebrow">
+                        <span class="en">Who is included?</span>
+                        <span class="id">Siapa yang dilayani?</span>
+                    </p>
+                    <h2 class="text-balance">
+                        <span class="en">Different barriers, different needs.</span>
+                        <span class="id">Hambatan belajar berbeda, kebutuhan berbeda.</span>
+                    </h2>
+                    <div class="iclsv-hindrance__grid">
+                        <article class="iclsv-card iclsv-info-card">
+                            <h3>
+                                <span class="en">Students with disabilities</span>
+                                <span class="id">Penyandang disabilitas</span>
+                            </h3>
+                            <p>
+                                <span class="en"
+                                    >Students may need support related to physical, sensory, or intellectual
+                                    access.</span
+                                >
+                                <span class="id"
+                                    >Siswa dapat membutuhkan dukungan terkait akses fisik, sensorik, atau
+                                    intelektual.</span
+                                >
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="en"
+                                        ><strong>Physical:</strong> accessible paths, desks, and facilities.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>Fisik:</strong> gedung tanpa ramp dan toilet yang dapat diakses.</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="en"
+                                        ><strong>Sensory:</strong> captioning, assistive listening, and alternative
+                                        formats.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>Sensorik:</strong> materi hanya visual atau hanya audio, tanpa
+                                        alternatif.</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="en"
+                                        ><strong>Intellectual:</strong> clear instructions and flexible learning
+                                        pace.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>Intelektual:</strong> instruksi panjang dan rumit tanpa
+                                        penyederhanaan.</span
+                                    >
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="iclsv-card iclsv-info-card">
+                            <h3>
+                                <span class="en">Neurodivergent learners</span>
+                                <span class="id">Individu neurodivergen</span>
+                            </h3>
+                            <p>
+                                <span class="en"
+                                    >Students may process information, attention, and communication differently.</span
+                                >
+                                <span class="id">Siswa memiliki cara belajar dan kebutuhan yang beragam.</span>
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="en"
+                                        ><strong>ADHD:</strong> flexible focus breaks and clear task steps.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>ADHD:</strong> sulit mempertahankan fokus pada pelajaran panjang dan
+                                        monoton.</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="en"
+                                        ><strong>Autism:</strong> predictable routines and sensory-aware spaces.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>Autisme:</strong> peka terhadap suara dan cahaya, serta sulit
+                                        menghadapi perubahan rutinitas.</span
+                                    >
+                                </li>
+                                <li>
+                                    <span class="en"
+                                        ><strong>Dyslexia:</strong> readable text, extra time, and audio options.</span
+                                    >
+                                    <span class="id"
+                                        ><strong>Disleksia:</strong> kesulitan membaca teks padat dan huruf yang
+                                        rapat.</span
+                                    >
+                                </li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
+            </section>
 
-                <nav class="footer-explore">
-                    <h2>
-                        <span class="en">Explore</span>
-                        <span class="id">Jelajahi</span>
+            <section class="iclsv-pillars iclsv-container">
+                <p class="iclsv-eyebrow">
+                    <span class="en">Three key pillars</span>
+                    <span class="id">3 pilar utama</span>
+                </p>
+                <h2 class="text-balance">
+                    <span class="en">What makes a classroom inclusive?</span>
+                    <span class="id">Tiga hal yang membuat kelas benar-benar inklusif.</span>
+                </h2>
+                <div class="iclsv-pillars__grid">
+                    <article class="iclsv-card iclsv-pillar-card">
+                        <span class="iclsv-pillar-card__icon" aria-hidden="true">UDL</span>
+                        <h3>
+                            <span class="en">Universal Design for Learning</span>
+                            <span class="id">Desain Universal untuk Pembelajaran</span>
+                        </h3>
+                        <p>
+                            <span class="en"
+                                >Offer different ways to engage, understand information, and show learning.</span
+                            >
+                            <span class="id"
+                                >Rancang pengajaran berbasis cara manusia belajar, dengan tiga prinsip:</span
+                            >
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en"
+                                    ><strong>Representation:</strong> text, audio, video, and infographics.</span
+                                >
+                                <span class="id"
+                                    ><strong>Beragam representasi:</strong> teks, audio, video, infografis.</span
+                                >
+                            </li>
+                            <li>
+                                <span class="en"
+                                    ><strong>Expression:</strong> projects, presentations, or writing.</span
+                                >
+                                <span class="id"
+                                    ><strong>Beragam ekspresi:</strong> tes tertulis, proyek seni, presentasi.</span
+                                >
+                            </li>
+                            <li>
+                                <span class="en"><strong>Engagement:</strong> meaningful choices and motivation.</span>
+                                <span class="id"
+                                    ><strong>Beragam keterlibatan:</strong> motivasi sesuai minat siswa.</span
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="iclsv-card iclsv-pillar-card">
+                        <span class="iclsv-pillar-card__icon iclsv-pillar-card__icon--pink" aria-hidden="true"
+                            >A11Y</span
+                        >
+                        <h3>
+                            <span class="en">Physical and digital accessibility</span>
+                            <span class="id">Aksesibilitas fisik &amp; digital</span>
+                        </h3>
+                        <p>
+                            <span class="en">Make learning accessible in school and online.</span>
+                            <span class="id">Ruang belajar tanpa hambatan, di sekolah maupun di layar.</span>
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="en"
+                                    ><strong>Physical:</strong> ramps, reachable desks, and sensory-friendly
+                                    rooms.</span
+                                >
+                                <span class="id"
+                                    ><strong>Fisik:</strong> ramp, toilet ramah kursi roda, ruang kelas ramah
+                                    sensorik.</span
+                                >
+                            </li>
+                            <li>
+                                <span class="en"
+                                    ><strong>Digital:</strong> captions, screen-reader support, and legible text.</span
+                                >
+                                <span class="id"
+                                    ><strong>Digital:</strong> standar WCAG, dapat dibaca screen reader, dilengkapi
+                                    takarir.</span
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="iclsv-card iclsv-pillar-card">
+                        <span class="iclsv-pillar-card__icon iclsv-pillar-card__icon--navy" aria-hidden="true"
+                            >SAFE</span
+                        >
+                        <h3>
+                            <span class="en">A safe social-emotional environment</span>
+                            <span class="id">Lingkungan sosio-emosional yang aman</span>
+                        </h3>
+                        <p>
+                            <span class="en"
+                                >Build a classroom where differences are welcomed and students feel respected, included,
+                                and safe to participate.</span
+                            >
+                            <span class="id"
+                                >Kelas yang merayakan keberagaman: bebas perundungan dan diskriminasi, dengan empati dan
+                                kolaborasi yang dipupuk sejak dini.</span
+                            >
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="iclsv-practices">
+                <div class="iclsv-container">
+                    <p class="iclsv-eyebrow iclsv-eyebrow--highlight">
+                        <span class="en">Everyday practices</span>
+                        <span class="id">Contoh praktik</span>
+                    </p>
+                    <h2 class="text-balance">
+                        <span class="en">Same material, different ways to learn.</span>
+                        <span class="id">Materi yang sama, cara belajar berbeda.</span>
                     </h2>
-                    <ul class="explore-list">
+                    <div class="iclsv-practices__grid">
+                        <article>
+                            <h3>
+                                <span class="en">Captions and sign language</span
+                                ><span class="id">Takarir dan bahasa isyarat</span>
+                            </h3>
+                            <p>
+                                <span class="en">Video that can be followed without relying on sound.</span>
+                                <span class="id">Video yang dapat diikuti tanpa bergantung pada suara.</span>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>
+                                <span class="en">Audiobooks and learning podcasts</span
+                                ><span class="id">Audiobook dan podcast edukasi</span>
+                            </h3>
+                            <p>
+                                <span class="en">An audio option for learners who benefit from listening.</span>
+                                <span class="id">Untuk siswa tunanetra atau dengan gaya belajar auditori.</span>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>
+                                <span class="en">Dyslexia-friendly text</span
+                                ><span class="id">Teks ramah disleksia</span>
+                            </h3>
+                            <p>
+                                <span class="en">Readable fonts, generous spacing, and short blocks of text.</span>
+                                <span class="id">Huruf jelas, spasi lega, dan blok teks pendek.</span>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>
+                                <span class="en">High-contrast mode</span><span class="id">Mode kontras tinggi</span>
+                            </h3>
+                            <p>
+                                <span class="en">Support for learners with visual impairments.</span>
+                                <span class="id">Membantu siswa dengan gangguan penglihatan membaca layar.</span>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>
+                                <span class="en">Sensory-friendly classroom</span
+                                ><span class="id">Ruang kelas ramah sensorik</span>
+                            </h3>
+                            <p>
+                                <span class="en">A calmer learning space with fewer sensory distractions.</span>
+                                <span class="id">Pencahayaan dan kebisingan yang terkendali serta area tenang.</span>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>
+                                <span class="en">Visual schedules and instructions</span
+                                ><span class="id">Jadwal dan instruksi visual</span>
+                            </h3>
+                            <p>
+                                <span class="en">Predictable routines that help students prepare and participate.</span>
+                                <span class="id">Rutinitas yang jelas membantu siswa autis dan ADHD.</span>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="iclsv-sdg-links iclsv-container">
+                <p class="iclsv-eyebrow">
+                    <span class="en">Connected to the SDGs</span>
+                    <span class="id">Kaitan dengan SDG</span>
+                </p>
+                <h2 class="text-balance">
+                    <span class="en">One approach, two goals.</span>
+                    <span class="id">Satu pendekatan, dua tujuan.</span>
+                </h2>
+                <div class="iclsv-sdg-links__grid">
+                    <article class="iclsv-sdg-card iclsv-sdg-card--4">
+                        <h3>
+                            SDG 4: <span class="en">Quality Education</span
+                            ><span class="id">Pendidikan Berkualitas</span>
+                        </h3>
+                        <p>
+                            <span class="en"
+                                >Inclusive learning helps every student access quality education and reach their
+                                potential.</span
+                            >
+                            <span class="id"
+                                >Pembelajaran inklusif memastikan pendidikan berkualitas dan bermakna dapat dijangkau
+                                semua siswa.</span
+                            >
+                        </p>
+                        <a href="sdgs4.html">
+                            <span class="en">Learn more</span><span class="id">Baca selengkapnya</span>
+                        </a>
+                    </article>
+                    <article class="iclsv-sdg-card iclsv-sdg-card--10">
+                        <h3>
+                            SDG 10: <span class="en">Reduced Inequalities</span
+                            ><span class="id">Berkurangnya Kesenjangan</span>
+                        </h3>
+                        <p>
+                            <span class="en"
+                                >Removing barriers creates fairer opportunities for learners from every
+                                background.</span
+                            >
+                            <span class="id"
+                                >Kesempatan belajar yang setara membantu mengurangi kesenjangan sejak awal.</span
+                            >
+                        </p>
+                        <a href="sdgs10.html">
+                            <span class="en">Learn more</span><span class="id">Baca selengkapnya</span>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="iclsv-references">
+                <div class="iclsv-container">
+                    <h2>
+                        <span class="en">References and further reading</span>
+                        <span class="id">Rujukan dan bacaan lanjutan</span>
+                    </h2>
+                    <ul>
                         <li>
-                            <a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                            <a
+                                href="https://peraturan.bpk.go.id/Details/44019/uu-no-8-tahun-2016"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <span class="en">Indonesia Law No. 8 of 2016 on Persons with Disabilities</span>
+                                <span class="id">Undang-Undang No. 8 Tahun 2016 tentang Penyandang Disabilitas</span>
+                            </a>
                         </li>
-                        <li><a href="sdgs.html">SDG</a></li>
-                        <li><a href="sdgs4.html">SDG 4</a></li>
-                        <li><a href="sdgs10.html">SDG 10</a></li>
                         <li>
-                            <a href="inclusive.html"
-                                ><span class="en">Inclusion</span><span class="id">Inklusi</span></a
+                            <a href="https://udlguidelines.cast.org/" target="_blank" rel="noopener"
+                                >UDL Guidelines, CAST</a
                             >
                         </li>
                         <li>
-                            <a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a>
+                            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener"
+                                >Web Content Accessibility Guidelines (WCAG), W3C</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.unicef.org/education/inclusive-education"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <span class="en">UNICEF inclusive education resources</span>
+                                <span class="id">Sumber UNICEF tentang pendidikan inklusif</span>
+                            </a>
                         </li>
                     </ul>
-                </nav>
+                </div>
+            </section>
+        </main>
 
-                <div class="footer-right" id="contact">
-                    <h2>
-                        <span class="en">Contact Us</span>
-                        <span class="id">Hubungi Kami</span>
-                    </h2>
-                    <div class="contacts">
-                        <div class="contact-left">
-                            <div class="hendra">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/hendradin1975" target="_blank" rel="noopener">hendradin1975</a>
+        <!-- Footer -->
+        <footer class="container-footer">
+            <div class="container">
+                <div class="flex flex-between">
+                    <div class="footer-left">
+                        <div class="logo-starlight">
+                            <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+                        </div>
+                        <p>
+                            <span class="en"
+                                >Information on inclusive education for all, in line with SDG 4 and SDG 10. This website
+                                was created for learning purposes.</span
+                            >
+                            <span class="id"
+                                >Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10.
+                                Website ini dibuat untuk keperluan pembelajaran.</span
+                            >
+                        </p>
+                        <div class="ig-web">
+                            <div class="footer-ig">
+                                <div class="logo-ig">
+                                    <img src="../assets/logo-ig.svg" alt="" />
+                                </div>
+                                <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
+                                    <span>@sdgaction</span>
+                                </a>
                             </div>
-                            <div class="rama">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/PutuRama" target="_blank" rel="noopener">PutuRama</a>
+                            <div class="separator">
+                                <img src="../assets/logo-separator.png" alt="" />
+                            </div>
+                            <div class="footer-web">
+                                <div class="logo-sdg">
+                                    <img src="../assets/logo-sdg.svg" alt="" />
+                                </div>
+                                <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
+                                    <span class="en">THE 17 GOALS</span>
+                                    <span class="id">17 TUJUAN</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="contact-right">
-                            <div class="indra">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/indrakus46-collab" target="_blank" rel="noopener">indrakus46-collab</a>
+                    </div>
+
+                    <nav class="footer-explore">
+                        <h2>
+                            <span class="en">Explore</span>
+                            <span class="id">Jelajahi</span>
+                        </h2>
+                        <ul class="explore-list">
+                            <li>
+                                <a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+                            </li>
+                            <li><a href="sdgs.html">SDG</a></li>
+                            <li><a href="sdgs4.html">SDG 4</a></li>
+                            <li><a href="sdgs10.html">SDG 10</a></li>
+                            <li>
+                                <a href="inclusive.html"
+                                    ><span class="en">Inclusion</span><span class="id">Inklusi</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-right" id="contact">
+                        <h2>
+                            <span class="en">Contact Us</span>
+                            <span class="id">Hubungi Kami</span>
+                        </h2>
+                        <div class="contacts">
+                            <div class="contact-left">
+                                <div class="hendra">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a href="https://github.com/hendradin1975" target="_blank" rel="noopener"
+                                        >hendradin1975</a
+                                    >
+                                </div>
+                                <div class="rama">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a href="https://github.com/PutuRama" target="_blank" rel="noopener">PutuRama</a>
+                                </div>
                             </div>
-                            <div class="oki">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/kiogit-cyber" target="_blank" rel="noopener">kiogit-cyber</a>
+                            <div class="contact-right">
+                                <div class="indra">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a href="https://github.com/indrakus46-collab" target="_blank" rel="noopener"
+                                        >indrakus46-collab</a
+                                    >
+                                </div>
+                                <div class="oki">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a href="https://github.com/kiogit-cyber" target="_blank" rel="noopener"
+                                        >kiogit-cyber</a
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- Footer -->
-    <script src="../JS/script.js"></script>
-</body>
+        </footer>
+        <!-- Footer -->
+        <script src="../JS/script.js"></script>
+    </body>
 </html>

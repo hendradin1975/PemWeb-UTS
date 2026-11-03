@@ -2094,8 +2094,6 @@ body.iclsv-page {
 }
 @media (max-width: 784px) {
     .container-navbar {
-        position: sticky;
-        top: 0;
         padding: 10px 0;
     }
     .container-navbar .container > .flex {

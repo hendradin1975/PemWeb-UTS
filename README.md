@@ -119,10 +119,22 @@
    └── README.md
 
 8. Website URL & Repository
-
-9. Contents & Assets Reference
+   Website: https://hendradin1975.github.io/PemWeb-UTS/
+   Repository: https://github.com/hendradin1975/PemWeb-UTS.git
+10. Contents & Assets Reference
    
    a. Image
    - https://www.vecteezy.com/free-vector/design-elements
    - https://images.pexels.com/photos/7495219/pexels-photo-7495219.jpeg
    - https://www.pexels.com/photo/people-sitting-at-the-table-7495219/
+   - Photo by Yan Krukau: https://www.pexels.com/photo/kids-at-school-8617811/
+   - Photo by Agung Pandit Wiguna: https://www.pexels.com/id-id/foto/anak-laki-laki-menggunakan-silver-macbook-indoors-3401403/
+   - Photo by kimmi jun: https://www.pexels.com/photo/students-and-teacher-in-classroom-18506736/
+   - Photo by Dario Fernandez Ruz: https://www.pexels.com/photo/a-student-writing-on-a-blackboard-6827520/
+   - Photo by Musa Ajit: https://www.pexels.com/id-id/foto/anak-laki-laki-afrika-yang-tersenyum-di-ruang-kelas-31152400/
+   - Photo by Ron Lach : https://www.pexels.com/id-id/foto/duduk-sekolah-siswa-murid-10646410/
+   - Photo by Pavel Danilyuk: https://www.pexels.com/photo/boy-in-orange-shirt-playing-train-toy-on-the-floor-8422249/
+   - Photo by illustrate Digital Ug: https://www.pexels.com/photo/students-in-a-class-with-a-sewing-machine-20853652/
+   - Photo by Ivan S: https://www.pexels.com/photo/woman-reading-a-book-8127566/
+   - Photo by gsregvrd: https://www.pexels.com/photo/children-playing-on-playground-bridge-in-uniforms-35107699/
+   - Photo by Airam Dato-on: https://www.pexels.com/photo/a-group-of-young-friends-photo-11627194/

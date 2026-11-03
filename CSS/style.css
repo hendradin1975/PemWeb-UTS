@@ -1599,7 +1599,7 @@ body.iclsv-page {
 }
 /* ----- Inclusion Hero ----- */
 .iclsv-hero {
-    padding-block: clamp(48px, 6vw, 88px);
+    padding-block: clamp(160px, 6vw, 88px);
     background: var(--color-bg-section);
 }
 .iclsv-container {
@@ -2375,7 +2375,6 @@ body.iclsv-page {
     }
     .sdgs-hero {
         min-height: 420px;
-        padding: 56px 0;
     }
     .sdgs-hero__label,
     .sdgs-hero__text {
@@ -2724,9 +2723,6 @@ body.iclsv-page {
     .indra,
     .oki {
         justify-content: center;
-    }
-    .iclsv-hero {
-        padding-block: 48px;
     }
     .iclsv-hero .container {
         min-width: 0;

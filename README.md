@@ -28,7 +28,7 @@
 4. Implemented Technology
    - HTML5: Builds the website pages and their content.
    - CSS3: Styles the pages and provides responsive layouts with Flexbox, CSS Grid, and media queries (without a CSS framework).
-   - JavaScript (Vanilla): Controls the responsive navigation, SDG submenu, and English/Indonesian language selection.
+   - JavaScript (Vanilla): Controls the responsive navigation, SDG submenu, and English/Indonesian language selection. The selected language is saved in `localStorage`.
    - Boxicons: Supplies interface icons through the Boxicons CDN.
    - Local fonts: Inter and Poppins are included in the `fonts/` directory.
 
@@ -42,12 +42,14 @@
      </ul>
      ```
 
-     The JavaScript opens and closes the mobile menu by changing its state class and the button's accessibility state:
+     JavaScript toggles the mobile menu and SDG submenu, while CSS controls their visibility:
 
      ```js
-     const isOpen = navMenu.classList.toggle('is-open');
-     navToggle.setAttribute('aria-expanded', String(isOpen));
+     const isOpen = navMenu.classList.toggle("is-open");
+     navToggle.setAttribute("aria-expanded", String(isOpen));
      ```
+
+     The mobile menu, SDG submenu, and language selection are handled in `JS/script.js`.
 
    - **CSS3 and reusable layouts:** All page styles are maintained in `CSS/style.css`. Shared classes reduce repeated declarations; for example, `.flex` provides a reusable Flexbox layout:
 
@@ -90,7 +92,7 @@
      }
      ```
 
-   - **JavaScript:** `JS/script.js` toggles the mobile navigation and SDG submenu, updates their accessibility attributes, and switches the displayed language. The language choice is saved in `localStorage` so it is restored on the next visit.
+   - **JavaScript:** `JS/script.js` toggles the responsive navigation and SDG submenu, updates accessibility labels, handles Escape, and switches the displayed language. The language choice is saved in `localStorage` so it is restored on the next visit.
 
 6. Folder Structure
 

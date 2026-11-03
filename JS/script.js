@@ -1,8 +1,10 @@
+// Variable
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".container-menu");
 const englishButton = document.querySelector(".btn-en");
 const indonesianButton = document.querySelector(".btn-id");
 
+// Close menu Function for Navbar and Navbar Dropdown
 function closeMenu() {
     navMenu.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
@@ -15,6 +17,7 @@ function closeMenu() {
     });
 }
 
+// Open and Close click action
 navToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("is-open");
     if (!isOpen) {
@@ -26,6 +29,7 @@ navToggle.addEventListener("click", () => {
     navToggle.querySelector("i").className = isOpen ? "bx bx-x" : "bx bx-menu";
 });
 
+// Toggle Navbar Dropdown
 navMenu.addEventListener("click", (event) => {
     const toggle = event.target.closest(".dropdown-toggle");
     if (toggle) {
@@ -38,6 +42,7 @@ navMenu.addEventListener("click", (event) => {
     }
 });
 
+// Klik ESC Also Cancelling Navbar Dropdown
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && navMenu.classList.contains("is-open")) {
         closeMenu();
@@ -45,8 +50,10 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+// Close menu dropdown to close if window getting reset
 window.matchMedia("(min-width: 785px)").addEventListener("change", closeMenu);
 
+// Toggle Langguage
 function setLanguage(language, remember = true) {
     const isIndonesian = language === "id";
     document.body.classList.toggle("indo", isIndonesian);
@@ -57,6 +64,7 @@ function setLanguage(language, remember = true) {
     }
 }
 
+// Check button status
 englishButton.addEventListener("click", () => setLanguage("id"));
 indonesianButton.addEventListener("click", () => setLanguage("en"));
 setLanguage(localStorage.getItem("bahasa") === "id" ? "id" : "en", false);

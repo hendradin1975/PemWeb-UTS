@@ -5,7 +5,7 @@
 | Name | ID Number | Responsibilities (Pages) |
 | --- | --- | --- |
 | Komang Hendra Dinata | 2515091044 | SDG, SDG 4, SDG 10, Header, Footer |
-| I Putu Rama Pratama | 2515091074 | Inclusion |
+| I Putu Rama Pratama | 2515091074 | Inclusion, Responsiveness |
 | Putu Bagus Oki Bramastana | 2515091107 | About |
 | Made Indra Kusuma Yudha | 2515091123 | Home |
 
@@ -93,19 +93,16 @@
    - **JavaScript:** `JS/script.js` toggles the mobile navigation and SDG submenu, updates their accessibility attributes, and switches the displayed language. The language choice is saved in `localStorage` so it is restored on the next visit.
 
 6. Folder Structure
+
    ```
    PemWeb-UTS/
    ├── assets/
-<<<<<<< HEAD
    ├── css/
-=======
-   ├── CSS/
->>>>>>> 62d168b (feat(main): finishing combining)
    │   └── style.css
    ├── fonts/
    ├── images/
    │   ├── about/
-   │   ├── Home/
+   │   ├── home/
    │   ├── inclusive/
    │   ├── sdgs/
    │   ├── sdgs4/
@@ -121,9 +118,9 @@
    ├── index.html
    └── README.md
 
-7. Website URL & Repository
+8. Website URL & Repository
 
-8. Contents & Assets Reference
+9. Contents & Assets Reference
    
    a. Image
    - https://www.vecteezy.com/free-vector/design-elements

@@ -1,296 +1,518 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="ab-page-document">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us | Starlight</title>
-  <meta name="description" content="Starlight works toward quality education for all and fewer gaps between learners.">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<body class="ab-page">
-
-  <!-- Navbar -->
-    <header>
-        <nav class="container-navbar">
-            <div class="container">
-                <div class="flex">
-                    <div class="navbar-logo">
-                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About Us | Starlight</title>
+        <meta
+            name="description"
+            content="Starlight works toward quality education for all and fewer gaps between learners."
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        />
+        <link rel="stylesheet" href="../CSS/style.css" />
+    </head>
+    <body class="ab-page">
+        <!-- Navbar -->
+        <header>
+            <nav class="container-navbar">
+                <div class="container">
+                    <div class="flex">
+                        <div class="navbar-logo">
+                            <img
+                                src="../assets/starlight-logo-light.svg"
+                                alt="Starlight"
+                            />
+                        </div>
+                        <button
+                            class="nav-toggle"
+                            type="button"
+                            aria-label="Open menu"
+                            aria-controls="primary-navigation"
+                            aria-expanded="false"
+                        >
+                            <i class="bx bx-menu" aria-hidden="true"></i>
+                        </button>
+                        <ul class="container-menu" id="primary-navigation">
+                            <li>
+                                <a href="../index.html">
+                                    <span class="en">Home</span>
+                                    <span class="id">Beranda</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="sdgs.html">SDG</a>
+                                <button
+                                    class="dropdown-toggle"
+                                    type="button"
+                                    aria-label="Open SDG submenu"
+                                    aria-controls="sdg-submenu"
+                                    aria-expanded="false"
+                                >
+                                    <i
+                                        class="bx bx-chevron-down"
+                                        aria-hidden="true"
+                                    ></i>
+                                </button>
+                                <ul class="dropdown-isi" id="sdg-submenu">
+                                    <li><a href="sdgs4.html">SDG 4</a></li>
+                                    <li><a href="sdgs10.html">SDG 10</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="inclusive.html">
+                                    <span class="en">Inclusion</span>
+                                    <span class="id">Inklusi</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="active">
+                                    <span class="en">About</span>
+                                    <span class="id">Tentang</span>
+                                </a>
+                            </li>
+                            <li>
+                                <button type="button" class="lang-btn btn-en">
+                                    <img src="../assets/logo-EN.png" alt="" />
+                                    <span>EN</span>
+                                </button>
+                                <button type="button" class="lang-btn btn-id">
+                                    <img src="../assets/logo-ID.png" alt="" />
+                                    <span>ID</span>
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
-                        <i class="bx bx-menu" aria-hidden="true"></i>
-                    </button>
-                    <ul class="container-menu" id="primary-navigation">
-                        <li>
-                            <a href="../index.html">
-                                <span class="en">Home</span>
-                                <span class="id">Beranda</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="sdgs.html">SDG</a>
-                            <button class="dropdown-toggle" type="button" aria-label="Open SDG submenu" aria-controls="sdg-submenu" aria-expanded="false">
-                                <i class="bx bx-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <ul class="dropdown-isi" id="sdg-submenu">
-                                <li><a href="sdgs4.html">SDG 4</a></li>
-                                <li><a href="sdgs10.html">SDG 10</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="inclusive.html">
-                                <span class="en">Inclusion</span>
-                                <span class="id">Inklusi</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="active">
-                                <span class="en">About</span>
-                                <span class="id">Tentang</span>
-                            </a>
-                        </li>
-                        <li>
-                            <button type="button" class="lang-btn btn-en">
-                                <img src="../assets/logo-EN.png" alt="" />
-                                <span>EN</span>
-                            </button>
-                            <button type="button" class="lang-btn btn-id">
-                                <img src="../assets/logo-ID.png" alt="" />
-                                <span>ID</span>
-                            </button>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-  <!-- Navbar -->
+            </nav>
+        </header>
+        <!-- Navbar -->
 
-  <main id="main-content">
+        <main id="main-content">
+            <!-- HERO -->
+            <section class="ab-hero">
+                <h1 class="text-balance">
+                    <span class="en">Every Learner Belongs</span
+                    ><span class="id">Setiap Pelajar Punya Tempat</span><br />
+                    <span class="ab-hero__accent"
+                        ><span class="en">Every Mind Can Shine</span
+                        ><span class="id"
+                            >Setiap Pikiran Bisa Bersinar</span
+                        ></span
+                    >
+                </h1>
+            </section>
 
-    <!-- HERO -->
-    <section class="ab-hero">
-      <h1 class="text-balance">
-        <span class="en">Every Learner Belongs</span><span class="id">Setiap Pelajar Punya Tempat</span><br>
-        <span class="ab-hero__accent"><span class="en">Every Mind Can Shine</span><span class="id">Setiap Pikiran Bisa Bersinar</span></span>
-      </h1>
-    </section>
+            <!-- OUR STORY -->
+            <section class="ab-story" id="story">
+                <div class="ab-container">
+                    <h2 class="ab-section-title">
+                        <span class="en">Our Story</span
+                        ><span class="id">Cerita Kami</span>
+                    </h2>
+                    <div class="ab-story__grid">
+                        <div class="ab-story__text">
+                            <p class="text-balance">
+                                <span class="en"
+                                    >Starlight began with one idea every child
+                                    deserves to learn in a way that works for
+                                    them. We work toward quality education for
+                                    all and fewer gaps between learners.</span
+                                ><span class="id"
+                                    >Starlight berawal dari satu gagasan: setiap
+                                    anak berhak belajar dengan cara yang sesuai
+                                    bagi mereka. Kami bekerja menuju pendidikan
+                                    berkualitas untuk semua dan berkurangnya
+                                    kesenjangan antarpelajar.</span
+                                >
+                            </p>
+                            <a class="button ab-btn" href="sdgs.html"
+                                ><span class="en">Our approach</span
+                                ><span class="id">Pendekatan kami</span></a
+                            >
+                        </div>
 
-    <!-- OUR STORY -->
-    <section class="ab-story" id="story">
-      <div class="ab-container">
-        <h2 class="ab-section-title"><span class="en">Our Story</span><span class="id">Cerita Kami</span></h2>
-        <div class="ab-story__grid">
-          <div class="ab-story__text">
-            <p class="text-balance"><span class="en">Starlight began with one idea every child deserves to learn in a way that works for them. We work toward quality education for all and fewer gaps between learners.</span><span class="id">Starlight berawal dari satu gagasan: setiap anak berhak belajar dengan cara yang sesuai bagi mereka. Kami bekerja menuju pendidikan berkualitas untuk semua dan berkurangnya kesenjangan antarpelajar.</span></p>
-            <a class="button ab-btn" href="sdgs.html"><span class="en">Our approach</span><span class="id">Pendekatan kami</span></a>
-          </div>
-
-          <!-- TO SWAP A PHOTO: change the src (and alt) below, or overwrite the file in /images/about -->
-          <div class="ab-story__photos">
-            <img class="image-cover ab-photo ab-photo--side" src="../images/about/story-1.jpg" alt="Describe photo 1">
-            <img class="image-cover ab-photo ab-photo--center" src="../images/about/story-2.jpg" alt="Describe photo 2">
-            <img class="image-cover ab-photo ab-photo--side" src="../images/about/story-3.jpg" alt="Describe photo 3">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT US -->
-    <section class="ab-about">
-      <div class="ab-about__top">
-        <p class="ab-eyebrow"><span class="en">ABOUT US</span><span class="id">TENTANG KAMI</span></p>
-        <h2 class="ab-about__title">
-          <span class="en">Our Identity,<br>Vision and Values</span>
-          <span class="id">Identitas Kami,<br>Visi dan Nilai</span>
-        </h2>
-      </div>
-
-      <div class="ab-about__mid">
-        <ul class="ab-values">
-          <li>
-            <i class="bx bx-user ab-icon" aria-hidden="true"></i>
-            <span class="en">Belonging</span><span class="id">Rasa Memiliki</span>
-          </li>
-          <li>
-            <i class="bx bx-git-compare ab-icon" aria-hidden="true"></i>
-            <span class="en">Equality</span><span class="id">Kesetaraan</span>
-          </li>
-          <li>
-            <i class="bx bx-accessibility ab-icon" aria-hidden="true"></i>
-            <span class="en">Accessibility</span><span class="id">Aksesibilitas</span>
-          </li>
-          <li>
-            <i class="bx bx-group ab-icon" aria-hidden="true"></i>
-            <span class="en">Collaboration</span><span class="id">Kolaborasi</span>
-          </li>
-        </ul>
-
-        <div class="ab-card">
-          <div class="ab-card__col">
-            <h3>
-              <i class="bx bx-show ab-icon ab-icon--card" aria-hidden="true"></i>
-              <span class="en">Vision</span><span class="id">Visi</span>
-            </h3>
-            <p><span class="en">A world where every learner has equal access to quality education, whatever their background or ability.</span><span class="id">Dunia di mana setiap pelajar memiliki akses setara terhadap pendidikan berkualitas, apa pun latar belakang atau kemampuannya.</span></p>
-          </div>
-          <div class="ab-card__divider" role="presentation"></div>
-          <div class="ab-card__col">
-            <h3>
-              <i class="bx bx-flag ab-icon ab-icon--card" aria-hidden="true"></i>
-              <span class="en">Mission</span><span class="id">Misi</span>
-            </h3>
-            <p><span class="en">To close learning gaps with inclusive teaching, fair access, and support that leaves no learner behind.</span><span class="id">Menutup kesenjangan belajar melalui pengajaran inklusif, akses yang adil, dan dukungan yang tidak meninggalkan satu pun pelajar.</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="ab-team">
-      <div class="ab-container">
-        <p class="ab-eyebrow"><span class="en">MEET OUR TEAM</span><span class="id">KENALI TIM KAMI</span></p>
-        <h2 class="ab-team__title"><span class="en">Our Team</span><span class="id">Tim Kami</span></h2>
-
-        <ul class="ab-team__grid">
-          <li class="ab-member">
-            <img class="image-cover ab-avatar" src="../images/about/team-1.jpeg" alt="Photo of team member 1">
-            <h3>Hendra</h3>
-            <p class="ab-member__role"><span class="en">Head of the program</span><span class="id">Kepala Program</span></p>
-            <p class="ab-member__bio"><span class="en">Mastermind to this web design</span><span class="id">Pembuat design inti</span></p>
-          </li>
-          <li class="ab-member">
-            <img class="image-cover ab-avatar" src="../images/about/team-2.jpeg" alt="Photo of team member 2">
-            <h3>Indra</h3>
-            <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
-            <p class="ab-member__bio"><span class="en">Homepage developer</span><span class="id">Pembuat halaman beranda</span></p>
-          </li>
-          <li class="ab-member">
-            <img class="image-cover ab-avatar" src="../images/about/team-3.jpeg" alt="Photo of team member 3">
-            <h3>Rama</h3>
-            <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
-            <p class="ab-member__bio"><span class="en">Incursive learning page creator</span><span class="id">Pembuat halaman incursive learning</span></p>
-          </li>
-          <li class="ab-member">
-            <img class="image-cover ab-avatar" src="../images/about/team-4.jpeg" alt="Photo of team member 4">
-            <h3>Oki</h3>
-            <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
-            <p class="ab-member__bio"><span class="en">About us page creator</span><span class="id">Pembuat halaman tentang kita</span></p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="ab-cta">
-      <h2 class="text-balance"><span class="en">Let’s Make Learning Open to All.</span><span class="id">Mari Wujudkan Pembelajaran yang Terbuka untuk Semua.</span></h2>
-      <p class="text-balance"><span class="en">Tell us about your school or community and we’ll reply within two business days.</span><span class="id">Ceritakan tentang sekolah atau komunitasmu dan kami akan membalas dalam dua hari kerja.</span></p>
-      <a class="button ab-btn ab-btn--cta" href="#contact"><span class="en">Get in Touch</span><span class="id">Hubungi Kami</span></a>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-    <footer class="container-footer">
-        <div class="container">
-            <div class="flex flex-between">
-                <div class="footer-left">
-                    <div class="logo-starlight">
-                        <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
+                        <!-- TO SWAP A PHOTO: change the src (and alt) below, or overwrite the file in /images/about -->
+                        <div class="ab-story__photos">
+                            <img
+                                class="image-cover ab-photo ab-photo--side"
+                                src="../images/about/story-1.jpg"
+                                alt="Describe photo 1"
+                            />
+                            <img
+                                class="image-cover ab-photo ab-photo--center"
+                                src="../images/about/story-2.jpg"
+                                alt="Describe photo 2"
+                            />
+                            <img
+                                class="image-cover ab-photo ab-photo--side"
+                                src="../images/about/story-3.jpg"
+                                alt="Describe photo 3"
+                            />
+                        </div>
                     </div>
-                    <p>
+                </div>
+            </section>
+
+            <!-- ABOUT US -->
+            <section class="ab-about">
+                <div class="ab-about__top">
+                    <p class="ab-eyebrow">
+                        <span class="en">ABOUT US</span
+                        ><span class="id">TENTANG KAMI</span>
+                    </p>
+                    <h2 class="ab-about__title">
                         <span class="en"
-                            >Information on inclusive education for all, in line with SDG 4 and SDG 10. This website
-                            was created for learning purposes.</span
+                            >Our Identity,<br />Vision and Values</span
                         >
                         <span class="id"
-                            >Informasi tentang pendidikan inklusif untuk semua, sejalan dengan SDG 4 dan SDG 10.
-                            Website ini dibuat untuk keperluan pembelajaran.</span
+                            >Identitas Kami,<br />Visi dan Nilai</span
                         >
-                    </p>
-                    <div class="ig-web">
-                        <div class="footer-ig">
-                            <div class="logo-ig">
-                                <img src="../assets/logo-ig.svg" alt="" />
-                            </div>
-                            <a href="https://www.instagram.com/sdgaction/" target="_blank" rel="noopener">
-                                <span>@sdgaction</span>
-                            </a>
+                    </h2>
+                </div>
+
+                <div class="ab-about__mid">
+                    <ul class="ab-values">
+                        <li>
+                            <i
+                                class="bx bx-user ab-icon"
+                                aria-hidden="true"
+                            ></i>
+                            <span class="en">Belonging</span
+                            ><span class="id">Rasa Memiliki</span>
+                        </li>
+                        <li>
+                            <i
+                                class="bx bx-git-compare ab-icon"
+                                aria-hidden="true"
+                            ></i>
+                            <span class="en">Equality</span
+                            ><span class="id">Kesetaraan</span>
+                        </li>
+                        <li>
+                            <i
+                                class="bx bx-accessibility ab-icon"
+                                aria-hidden="true"
+                            ></i>
+                            <span class="en">Accessibility</span
+                            ><span class="id">Aksesibilitas</span>
+                        </li>
+                        <li>
+                            <i
+                                class="bx bx-group ab-icon"
+                                aria-hidden="true"
+                            ></i>
+                            <span class="en">Collaboration</span
+                            ><span class="id">Kolaborasi</span>
+                        </li>
+                    </ul>
+
+                    <div class="ab-card">
+                        <div class="ab-card__col">
+                            <h3>
+                                <i
+                                    class="bx bx-show ab-icon ab-icon--card"
+                                    aria-hidden="true"
+                                ></i>
+                                <span class="en">Vision</span
+                                ><span class="id">Visi</span>
+                            </h3>
+                            <p>
+                                <span class="en"
+                                    >A world where every learner has equal
+                                    access to quality education, whatever their
+                                    background or ability.</span
+                                ><span class="id"
+                                    >Dunia di mana setiap pelajar memiliki akses
+                                    setara terhadap pendidikan berkualitas, apa
+                                    pun latar belakang atau kemampuannya.</span
+                                >
+                            </p>
                         </div>
-                        <div class="separator">
-                            <img src="../assets/logo-separator.png" alt="" />
-                        </div>
-                        <div class="footer-web">
-                            <div class="logo-sdg">
-                                <img src="../assets/logo-sdg.svg" alt="" />
-                            </div>
-                            <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
-                                <span class="en">THE 17 GOALS</span>
-                                <span class="id">17 TUJUAN</span>
-                            </a>
+                        <div class="ab-card__divider" role="presentation"></div>
+                        <div class="ab-card__col">
+                            <h3>
+                                <i
+                                    class="bx bx-flag ab-icon ab-icon--card"
+                                    aria-hidden="true"
+                                ></i>
+                                <span class="en">Mission</span
+                                ><span class="id">Misi</span>
+                            </h3>
+                            <p>
+                                <span class="en"
+                                    >To close learning gaps with inclusive
+                                    teaching, fair access, and support that
+                                    leaves no learner behind.</span
+                                ><span class="id"
+                                    >Menutup kesenjangan belajar melalui
+                                    pengajaran inklusif, akses yang adil, dan
+                                    dukungan yang tidak meninggalkan satu pun
+                                    pelajar.</span
+                                >
+                            </p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <nav class="footer-explore">
-                    <h2>
-                        <span class="en">Explore</span>
-                        <span class="id">Jelajahi</span>
+            <!-- TEAM -->
+            <section class="ab-team">
+                <div class="ab-container">
+                    <p class="ab-eyebrow">
+                        <span class="en">MEET OUR TEAM</span
+                        ><span class="id">KENALI TIM KAMI</span>
+                    </p>
+                    <h2 class="ab-team__title">
+                        <span class="en">Our Team</span
+                        ><span class="id">Tim Kami</span>
                     </h2>
-                    <ul class="explore-list">
-                        <li>
-                            <a href="../index.html"><span class="en">Home</span><span class="id">Beranda</span></a>
+
+                    <ul class="ab-team__grid">
+                        <li class="ab-member">
+                            <img
+                                class="image-cover ab-avatar"
+                                src="../images/about/team-1.jpeg"
+                                alt="Photo of team member 1"
+                            />
+                            <h3>Hendra</h3>
+                            <p class="ab-member__role">
+                                <span class="en">Head of the program</span
+                                ><span class="id">Kepala Program</span>
+                            </p>
+                            <p class="ab-member__bio">
+                                <span class="en"
+                                    >Mastermind to this web design</span
+                                ><span class="id">Pembuat design inti</span>
+                            </p>
                         </li>
-                        <li><a href="sdgs.html">SDG</a></li>
-                        <li><a href="sdgs4.html">SDG 4</a></li>
-                        <li><a href="sdgs10.html">SDG 10</a></li>
-                        <li>
-                            <a href="inclusive.html"
-                                ><span class="en">Inclusion</span><span class="id">Inklusi</span></a
-                            >
+                        <li class="ab-member">
+                            <img
+                                class="image-cover ab-avatar"
+                                src="../images/about/team-2.jpeg"
+                                alt="Photo of team member 2"
+                            />
+                            <h3>Indra</h3>
+                            <p class="ab-member__role">
+                                <span class="en">Website Page creator</span
+                                ><span class="id">Pembuat halaman website</span>
+                            </p>
+                            <p class="ab-member__bio">
+                                <span class="en">Homepage developer</span
+                                ><span class="id">Pembuat halaman beranda</span>
+                            </p>
                         </li>
-                        <li>
-                            <a href="about.html"><span class="en">About</span><span class="id">Tentang</span></a>
+                        <li class="ab-member">
+                            <img
+                                class="image-cover ab-avatar"
+                                src="../images/about/team-3.jpeg"
+                                alt="Photo of team member 3"
+                            />
+                            <h3>Rama</h3>
+                            <p class="ab-member__role">
+                                <span class="en">Website Page creator</span
+                                ><span class="id">Pembuat halaman website</span>
+                            </p>
+                            <p class="ab-member__bio">
+                                <span class="en"
+                                    >Incursive learning page creator</span
+                                ><span class="id"
+                                    >Pembuat halaman incursive learning</span
+                                >
+                            </p>
+                        </li>
+                        <li class="ab-member">
+                            <img
+                                class="image-cover ab-avatar"
+                                src="../images/about/team-4.jpeg"
+                                alt="Photo of team member 4"
+                            />
+                            <h3>Oki</h3>
+                            <p class="ab-member__role">
+                                <span class="en">Website Page creator</span
+                                ><span class="id">Pembuat halaman website</span>
+                            </p>
+                            <p class="ab-member__bio">
+                                <span class="en">About us page creator</span
+                                ><span class="id"
+                                    >Pembuat halaman tentang kita</span
+                                >
+                            </p>
                         </li>
                     </ul>
-                </nav>
+                </div>
+            </section>
 
-                <div class="footer-right" id="contact">
-                    <h2>
-                        <span class="en">Contact Us</span>
-                        <span class="id">Hubungi Kami</span>
-                    </h2>
-                    <div class="contacts">
-                        <div class="contact-left">
-                            <div class="hendra">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/hendradin1975" target="_blank" rel="noopener">hendradin1975</a>
+            <!-- CTA -->
+            <section class="ab-cta">
+                <h2 class="text-balance">
+                    <span class="en">Let’s Make Learning Open to All.</span
+                    ><span class="id"
+                        >Mari Wujudkan Pembelajaran yang Terbuka untuk
+                        Semua.</span
+                    >
+                </h2>
+                <p class="text-balance">
+                    <span class="en"
+                        >Tell us about your school or community and we’ll reply
+                        within two business days.</span
+                    ><span class="id"
+                        >Ceritakan tentang sekolah atau komunitasmu dan kami
+                        akan membalas dalam dua hari kerja.</span
+                    >
+                </p>
+                <a class="button ab-btn ab-btn--cta" href="#contact"
+                    ><span class="en">Get in Touch</span
+                    ><span class="id">Hubungi Kami</span></a
+                >
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="container-footer">
+            <div class="container">
+                <div class="flex flex-between">
+                    <div class="footer-left">
+                        <div class="logo-starlight">
+                            <img
+                                src="../assets/starlight-logo-light.svg"
+                                alt="Starlight"
+                            />
+                        </div>
+                        <p>
+                            <span class="en"
+                                >Information on inclusive education for all, in
+                                line with SDG 4 and SDG 10. This website was
+                                created for learning purposes.</span
+                            >
+                            <span class="id"
+                                >Informasi tentang pendidikan inklusif untuk
+                                semua, sejalan dengan SDG 4 dan SDG 10. Website
+                                ini dibuat untuk keperluan pembelajaran.</span
+                            >
+                        </p>
+                        <div class="ig-web">
+                            <div class="footer-ig">
+                                <div class="logo-ig">
+                                    <img src="../assets/logo-ig.svg" alt="" />
+                                </div>
+                                <a
+                                    href="https://www.instagram.com/sdgaction/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <span>@sdgaction</span>
+                                </a>
                             </div>
-                            <div class="rama">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/PutuRama" target="_blank" rel="noopener">PutuRama</a>
+                            <div class="separator">
+                                <img
+                                    src="../assets/logo-separator.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="footer-web">
+                                <div class="logo-sdg">
+                                    <img src="../assets/logo-sdg.svg" alt="" />
+                                </div>
+                                <a
+                                    href="https://sdgs.un.org/goals"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <span class="en">THE 17 GOALS</span>
+                                    <span class="id">17 TUJUAN</span>
+                                </a>
                             </div>
                         </div>
-                        <div class="contact-right">
-                            <div class="indra">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/indrakus46-collab" target="_blank" rel="noopener">indrakus46-collab</a>
+                    </div>
+
+                    <nav class="footer-explore">
+                        <h2>
+                            <span class="en">Explore</span>
+                            <span class="id">Jelajahi</span>
+                        </h2>
+                        <ul class="explore-list">
+                            <li>
+                                <a href="../index.html"
+                                    ><span class="en">Home</span
+                                    ><span class="id">Beranda</span></a
+                                >
+                            </li>
+                            <li><a href="sdgs.html">SDG</a></li>
+                            <li><a href="sdgs4.html">SDG 4</a></li>
+                            <li><a href="sdgs10.html">SDG 10</a></li>
+                            <li>
+                                <a href="inclusive.html"
+                                    ><span class="en">Inclusion</span
+                                    ><span class="id">Inklusi</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="about.html"
+                                    ><span class="en">About</span
+                                    ><span class="id">Tentang</span></a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-right" id="contact">
+                        <h2>
+                            <span class="en">Contact Us</span>
+                            <span class="id">Hubungi Kami</span>
+                        </h2>
+                        <div class="contacts">
+                            <div class="contact-left">
+                                <div class="hendra">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a
+                                        href="https://github.com/hendradin1975"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >hendradin1975</a
+                                    >
+                                </div>
+                                <div class="rama">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a
+                                        href="https://github.com/PutuRama"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >PutuRama</a
+                                    >
+                                </div>
                             </div>
-                            <div class="oki">
-                                <img src="../assets/profile.svg" alt="" />
-                                <a href="https://github.com/kiogit-cyber" target="_blank" rel="noopener">kiogit-cyber</a>
+                            <div class="contact-right">
+                                <div class="indra">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a
+                                        href="https://github.com/indrakus46-collab"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >indrakus46-collab</a
+                                    >
+                                </div>
+                                <div class="oki">
+                                    <img src="../assets/profile.svg" alt="" />
+                                    <a
+                                        href="https://github.com/kiogit-cyber"
+                                        target="_blank"
+                                        rel="noopener"
+                                        >kiogit-cyber</a
+                                    >
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
-  <!-- Footer -->
+        </footer>
+        <!-- Footer -->
 
-  <!-- javascript (language switch) -->
-  <script src="../JS/script.js"></script>
-  <!-- javascript -->
-</body>
+        <!-- javascript (language switch) -->
+        <script src="../JS/script.js"></script>
+        <!-- javascript -->
+    </body>
 </html>

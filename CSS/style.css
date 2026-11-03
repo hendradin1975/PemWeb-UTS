@@ -183,14 +183,6 @@ button:focus-visible {
 .navbar-logo img {
     height: 100%;
 }
-.container-logo {
-    display: flex;
-    align-items: center;
-    height: calc(48 * var(--u));
-}
-.container-logo img {
-    height: 100%;
-}
 .dropdown {
     position: relative;
 }
@@ -781,18 +773,7 @@ body.indo .id {
 }
 /* ----- Kartu SDG ----- */
 
-/* ----- Komponen Target dan Modal SDG ----- */
-.sdgs-target-card,
-.sdgs10-target-card--legacy,
-.sdgs4-target-card--legacy {
-    padding: var(--space-3);
-    border-radius: var(--radius-lg);
-    background-color: var(--color-surface);
-    box-shadow: var(--shadow);
-}
-.sdgs-read-more,
-.sdgs10-read-more,
-.sdgs4-read-more,
+/* ----- Modal SDG ----- */
 .modal-close {
     --read-more-background: var(--color-sdg4);
     display: inline-flex;
@@ -805,7 +786,6 @@ body.indo .id {
     font-weight: 700;
     text-decoration: none;
 }
-.sdgs10-read-more,
 .sdgs10-page .modal-close {
     --read-more-background: var(--color-sdg10);
 }
@@ -1566,34 +1546,6 @@ body.indo .id {
 
 /* ----- Halaman Inclusion ----- */
 
-/* ----- SDG Legacy Components ----- */
-.sdgs10-target-card--legacy,
-.sdgs4-target-card--legacy {
-    padding: var(--space-3);
-    border-radius: var(--radius-lg);
-    background-color: var(--color-surface);
-    box-shadow: var(--shadow);
-}
-.sdgs10-read-more,
-.sdgs4-read-more {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 var(--space-3);
-    border-radius: var(--radius-pill);
-    color: var(--color-on-dark);
-    font-weight: 700;
-    text-decoration: none;
-}
-.sdgs10-read-more,
-.sdgs10-page .modal-close {
-    background-color: var(--color-sdg10);
-}
-.sdgs4-read-more {
-    background-color: var(--color-sdg4);
-}
-/* ----- SDG Legacy Components ----- */
-
 body.iclsv-page {
     background: var(--color-bg);
 }
@@ -2101,8 +2053,7 @@ body.iclsv-page {
         justify-content: space-between;
         gap: 12px;
     }
-    .navbar-logo,
-    .container-logo {
+    .navbar-logo {
         width: auto;
         height: 36px;
     }

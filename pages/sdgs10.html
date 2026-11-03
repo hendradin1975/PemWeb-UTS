@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SDG 10</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/style2.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+        <link rel="stylesheet" href="../CSS/style.css" />
     </head>
     <body class="sdgs10-page">
         <!-- Navbar -->
@@ -19,7 +19,10 @@
                                 alt="Starlight"
                             />
                         </div>
-                        <ul class="container-menu">
+                        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+                            <i class="bx bx-menu" aria-hidden="true"></i>
+                        </button>
+                        <ul class="container-menu" id="primary-navigation">
                             <li>
                                 <a href="../index.html">
                                     <span class="en">Home</span>
@@ -27,13 +30,11 @@
                                 </a>
                             </li>
                             <li class="dropdown">
-                                <a href="sdgs.html" class="active"
-                                    >SDG
-                                    <span class="dropdown-arrow"
-                                        >&#9662;</span
-                                    ></a
-                                >
-                                <ul class="dropdown-isi">
+                                <a href="sdgs.html" class="active">SDG</a>
+                                <button class="dropdown-toggle" type="button" aria-label="Open SDG submenu" aria-controls="sdg-submenu" aria-expanded="false">
+                                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <ul class="dropdown-isi" id="sdg-submenu">
                                     <li><a href="sdgs4.html">SDG 4</a></li>
                                     <li><a href="sdgs10.html">SDG 10</a></li>
                                 </ul>
@@ -142,7 +143,7 @@
                     </h1>
                     <div class="sdg-article__content">
                         <div class="sdg-article__photo">
-                            <img src="../images/sdgs10/about.jpg" alt="" />
+                            <img class="image-cover" src="../images/sdgs10/about.jpg" alt="" />
                         </div>
                         <div class="sdg-article__text">
                             <h1>
@@ -161,7 +162,7 @@
                                     >SDG 10 bertujuan mengurangi ketimpangan di dalam dan antarnegara. Namun akses layanan yang tidak merata masih membuat banyak orang tertinggal. Pada 2030, kesenjangan ini ditutup agar semua orang dapat ikut serta dalam kehidupan ekonomi, sosial, dan politik.</span
                                 >
                             </p>
-                            <div class="sdg-article__link">
+                            <div class="sdg-article__link button-hover">
                                 <a class="button" href="https://sdgs.un.org/goals/goal4">
                                     <span class="en">Read the Full Goal</span>
                                     <span class="id">Baca Tujuan Lengkap</span>
@@ -175,7 +176,7 @@
         <!-- Article -->
 
         <!-- Key Target -->
-        <section class="sdg-targets">
+        <section class="sdg-targets" id="target">
             <div class="container">
                 <div class="flex flex-column">
                     <h1>
@@ -186,7 +187,7 @@
                         <!-- Card 1 -->
                         <div class="sdg-target-card sdg-target-card--sdg10">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs10/target-1.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs10/target-1.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -196,7 +197,7 @@
                                     >Pertumbuhan pendapatan yang lebih cepat bagi 40% penduduk termiskin</span
                                 >
                             </h2>
-                            <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
                                 <a class="button" href="#modal-10-1">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
@@ -207,7 +208,7 @@
                         <!-- Card 2 -->
                         <div class="sdg-target-card sdg-target-card--sdg10">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs10/target-2.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs10/target-2.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -217,7 +218,7 @@
                                     >Inklusi sosial, ekonomi, dan politik bagi semua orang</span
                                 >
                             </h2>
-                            <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
                                 <a class="button" href="#modal-10-2">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
@@ -228,7 +229,7 @@
                         <!-- Card 3 -->
                         <div class="sdg-target-card sdg-target-card--sdg10">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs10/target-3.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs10/target-3.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -238,7 +239,7 @@
                                     >Kesempatan yang setara dan penghapusan hukum serta praktik yang diskriminatif</span
                                 >
                             </h2>
-                            <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
                                 <a class="button" href="#modal-10-3">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
@@ -249,7 +250,7 @@
                         <!-- Card 4 -->
                         <div class="sdg-target-card sdg-target-card--sdg10">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs10/target-4.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs10/target-4.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -259,7 +260,7 @@
                                     >Kebijakan fiskal, upah, dan perlindungan sosial yang mendorong kesetaraan</span
                                 >
                             </h2>
-                            <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
                                 <a class="button" href="#modal-10-4">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
@@ -270,7 +271,7 @@
                         <!-- Card 5 -->
                         <div class="sdg-target-card sdg-target-card--sdg10">
                             <div class="sdg-target-card__photo">
-                                <img src="../images/sdgs10/target-5.jpg" alt="" />
+                                <img class="image-cover" src="../images/sdgs10/target-5.jpg" alt="" />
                             </div>
                             <h2>
                                 <span class="en"
@@ -280,7 +281,7 @@
                                     >Migrasi dan mobilitas penduduk yang tertib, aman, dan bertanggung jawab</span
                                 >
                             </h2>
-                            <div class="sdg-target-card__more">
+                            <div class="sdg-target-card__more button-hover">
                                 <a class="button" href="#modal-10-5">
                                     <span class="en">More</span>
                                     <span class="id">Selengkapnya</span>
@@ -294,7 +295,7 @@
                         <span class="id"
                             >Kami menyoroti lima dari sepuluh target SDG 10 yang paling dekat dengan inklusi</span>
                     </p>
-                    <div class="sdg-targets__full-link">
+                    <div class="sdg-targets__full-link button-hover">
                         <a class="button" href="https://sdgs.un.org/goals/goal10">
                             <span class="en">Read Full Target</span>
                             <span class="id">Baca Target Lengkap</span>
@@ -315,7 +316,7 @@
                                     <span class="en">Target 10.1 aims to progressively achieve and sustain income growth of the bottom 40% of the population at a rate higher than the national average by 2030.</span>
                                     <span class="id">Target 10.1 bertujuan mencapai dan mempertahankan pertumbuhan pendapatan 40% penduduk terbawah secara bertahap pada laju yang lebih tinggi dari rata-rata nasional pada 2030.</span>
                                 </p>
-                                <a class="modal-close" href="#target">
+                                <a class="button modal-close" href="#target">
                                     <span class="en">Close</span>
                                     <span class="id">Tutup</span>
                                 </a>
@@ -335,7 +336,7 @@
                                     <span class="en">Target 10.2 aims to empower and promote the inclusion of everyone by 2030, irrespective of age, sex, disability, race, ethnicity, origin, religion, or economic or other status.</span>
                                     <span class="id">Target 10.2 bertujuan memberdayakan dan mendorong inklusi semua orang pada 2030, tanpa memandang usia, jenis kelamin, disabilitas, ras, etnis, asal-usul, agama, atau status ekonomi maupun status lainnya.</span>
                                 </p>
-                                <a class="modal-close" href="#target">
+                                <a class="button modal-close" href="#target">
                                     <span class="en">Close</span>
                                     <span class="id">Tutup</span>
                                 </a>
@@ -356,7 +357,7 @@
                                     <span class="en">Target 10.3 aims to ensure equal opportunity and reduce inequalities of outcome, including by eliminating discriminatory laws, policies, and practices and promoting fair ones.</span>
                                     <span class="id">Target 10.3 bertujuan menjamin kesempatan yang setara dan mengurangi ketimpangan hasil, termasuk dengan menghapus hukum, kebijakan, dan praktik yang diskriminatif serta mendorong yang adil.</span>
                                 </p>
-                                <a class="modal-close" href="#target">
+                                <a class="button modal-close" href="#target">
                                     <span class="en">Close</span>
                                     <span class="id">Tutup</span>
                                 </a>
@@ -377,7 +378,7 @@
                                     <span class="en">Target 10.4 aims to adopt policies, especially fiscal, wage, and social protection policies, that progressively achieve greater equality.</span>
                                     <span class="id">Target 10.4 bertujuan menerapkan kebijakan, terutama kebijakan fiskal, upah, dan perlindungan sosial, yang secara bertahap mewujudkan kesetaraan yang lebih besar.</span>
                                 </p>
-                                <a class="modal-close" href="#target">
+                                <a class="button modal-close" href="#target">
                                     <span class="en">Close</span>
                                     <span class="id">Tutup</span>
                                 </a>
@@ -546,7 +547,7 @@
         <!-- Footer -->
 
         <!-- javascript -->
-        <script src="../js/script.js"></script>
+        <script src="../JS/script.js"></script>
         <!-- javascript -->
     </body>
 </html>

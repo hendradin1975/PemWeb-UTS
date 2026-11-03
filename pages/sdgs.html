@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>SDG | Starlight</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
         <link rel="stylesheet" href="../CSS/style.css" />
     </head>
     <body class="sdgs-page">
@@ -15,7 +16,10 @@
                         <div class="navbar-logo">
                             <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
                         </div>
-                        <ul class="container-menu">
+                        <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+                            <i class="bx bx-menu" aria-hidden="true"></i>
+                        </button>
+                        <ul class="container-menu" id="primary-navigation">
                             <li>
                                 <a href="../index.html">
                                     <span class="en">Home</span>
@@ -23,8 +27,11 @@
                                 </a>
                             </li>
                             <li class="dropdown">
-                                <a href="sdgs.html" class="active">SDG <span class="dropdown-arrow">&#9662;</span></a>
-                                <ul class="dropdown-isi">
+                                <a href="sdgs.html" class="active">SDG</a>
+                                <button class="dropdown-toggle" type="button" aria-label="Open SDG submenu" aria-controls="sdg-submenu" aria-expanded="false">
+                                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <ul class="dropdown-isi" id="sdg-submenu">
                                     <li><a href="sdgs4.html">SDG 4</a></li>
                                     <li><a href="sdgs10.html">SDG 10</a></li>
                                 </ul>
@@ -122,7 +129,7 @@
                                 </p>
                             </div>
 
-                            <a class="sdgs-insight__link" href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
+                            <a class="sdgs-insight__link button-hover" href="https://sdgs.un.org/goals" target="_blank" rel="noopener">
                                 <span class="en">See all 17 Goals</span>
                                 <span class="id">Lihat 17 Tujuan</span>
                                 <img src="../assets/arrow.svg" alt="" />
@@ -224,20 +231,22 @@
 
         <!-- Break -->
         <section class="sdgs-break">
-            <h2>
-                <span class="en">Why are SDG 4 and SDG 10 connected?</span>
-                <span class="id">Mengapa SDG 4 dan SDG 10 saling terkait?</span>
-            </h2>
-            <p>
-                <span class="en"
-                    >Education opens opportunities, and equality ensures they reach everyone. Explore how both are put
-                    into practice through inclusive education.</span
-                >
-                <span class="id"
-                    >Pendidikan membuka peluang, dan kesetaraan memastikan peluang itu sampai ke semua orang. Jelajahi
-                    bagaimana keduanya diwujudkan lewat pendidikan inklusif.</span
-                >
-            </p>
+            <div class="container">
+                <h2>
+                    <span class="en">Why are SDG 4 and SDG 10 connected?</span>
+                    <span class="id">Mengapa SDG 4 dan SDG 10 saling terkait?</span>
+                </h2>
+                <p>
+                    <span class="en"
+                        >Education opens opportunities, and equality ensures they reach everyone. Explore how both are put
+                        into practice through inclusive education.</span
+                    >
+                    <span class="id"
+                        >Pendidikan membuka peluang, dan kesetaraan memastikan peluang itu sampai ke semua orang. Jelajahi
+                        bagaimana keduanya diwujudkan lewat pendidikan inklusif.</span
+                    >
+                </p>
+            </div>
         </section>
         <!-- Break -->
 
@@ -340,7 +349,7 @@
         <!-- Footer -->
 
         <!-- javascript -->
-        <script src="../js/script.js"></script>
+        <script src="../JS/script.js"></script>
         <!-- javascript -->
     </body>
 </html>

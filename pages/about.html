@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | Starlight</title>
   <meta name="description" content="Starlight works toward quality education for all and fewer gaps between learners.">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body class="ab-page">
@@ -17,7 +18,10 @@
                     <div class="navbar-logo">
                         <img src="../assets/starlight-logo-light.svg" alt="Starlight" />
                     </div>
-                    <ul class="container-menu">
+                    <button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="primary-navigation" aria-expanded="false">
+                        <i class="bx bx-menu" aria-hidden="true"></i>
+                    </button>
+                    <ul class="container-menu" id="primary-navigation">
                         <li>
                             <a href="../index.html">
                                 <span class="en">Home</span>
@@ -25,10 +29,11 @@
                             </a>
                         </li>
                         <li class="dropdown">
-                            <a href="sdgs.html">
-                                SDG <span class="dropdown-arrow">&#9662;</span>
-                            </a>
-                            <ul class="dropdown-isi">
+                            <a href="sdgs.html">SDG</a>
+                            <button class="dropdown-toggle" type="button" aria-label="Open SDG submenu" aria-controls="sdg-submenu" aria-expanded="false">
+                                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="dropdown-isi" id="sdg-submenu">
                                 <li><a href="sdgs4.html">SDG 4</a></li>
                                 <li><a href="sdgs10.html">SDG 10</a></li>
                             </ul>
@@ -66,7 +71,7 @@
 
     <!-- HERO -->
     <section class="ab-hero">
-      <h1>
+      <h1 class="text-balance">
         <span class="en">Every Learner Belongs</span><span class="id">Setiap Pelajar Punya Tempat</span><br>
         <span class="ab-hero__accent"><span class="en">Every Mind Can Shine</span><span class="id">Setiap Pikiran Bisa Bersinar</span></span>
       </h1>
@@ -78,15 +83,15 @@
         <h2 class="ab-section-title"><span class="en">Our Story</span><span class="id">Cerita Kami</span></h2>
         <div class="ab-story__grid">
           <div class="ab-story__text">
-            <p><span class="en">Starlight began with one idea every child deserves to learn in a way that works for them. We work toward quality education for all and fewer gaps between learners.</span><span class="id">Starlight berawal dari satu gagasan: setiap anak berhak belajar dengan cara yang sesuai bagi mereka. Kami bekerja menuju pendidikan berkualitas untuk semua dan berkurangnya kesenjangan antarpelajar.</span></p>
+            <p class="text-balance"><span class="en">Starlight began with one idea every child deserves to learn in a way that works for them. We work toward quality education for all and fewer gaps between learners.</span><span class="id">Starlight berawal dari satu gagasan: setiap anak berhak belajar dengan cara yang sesuai bagi mereka. Kami bekerja menuju pendidikan berkualitas untuk semua dan berkurangnya kesenjangan antarpelajar.</span></p>
             <a class="button ab-btn" href="sdgs.html"><span class="en">Our approach</span><span class="id">Pendekatan kami</span></a>
           </div>
 
           <!-- TO SWAP A PHOTO: change the src (and alt) below, or overwrite the file in /images/about -->
           <div class="ab-story__photos">
-            <img class="ab-photo ab-photo--side" src="../images/about/story-1.jpg" alt="Describe photo 1">
-            <img class="ab-photo ab-photo--center" src="../images/about/story-2.jpg" alt="Describe photo 2">
-            <img class="ab-photo ab-photo--side" src="../images/about/story-3.jpg" alt="Describe photo 3">
+            <img class="image-cover ab-photo ab-photo--side" src="../images/about/story-1.jpg" alt="Describe photo 1">
+            <img class="image-cover ab-photo ab-photo--center" src="../images/about/story-2.jpg" alt="Describe photo 2">
+            <img class="image-cover ab-photo ab-photo--side" src="../images/about/story-3.jpg" alt="Describe photo 3">
           </div>
         </div>
       </div>
@@ -104,20 +109,38 @@
 
       <div class="ab-about__mid">
         <ul class="ab-values">
-          <li><span class="ab-icon-target" aria-hidden="true"></span><span class="en">Belonging</span><span class="id">Rasa Memiliki</span></li>
-          <li><span class="ab-icon-target" aria-hidden="true"></span><span class="en">Equality</span><span class="id">Kesetaraan</span></li>
-          <li><span class="ab-icon-target" aria-hidden="true"></span><span class="en">Accessibility</span><span class="id">Aksesibilitas</span></li>
-          <li><span class="ab-icon-target" aria-hidden="true"></span><span class="en">Collaboration</span><span class="id">Kolaborasi</span></li>
+          <li>
+            <i class="bx bx-user ab-icon" aria-hidden="true"></i>
+            <span class="en">Belonging</span><span class="id">Rasa Memiliki</span>
+          </li>
+          <li>
+            <i class="bx bx-git-compare ab-icon" aria-hidden="true"></i>
+            <span class="en">Equality</span><span class="id">Kesetaraan</span>
+          </li>
+          <li>
+            <i class="bx bx-accessibility ab-icon" aria-hidden="true"></i>
+            <span class="en">Accessibility</span><span class="id">Aksesibilitas</span>
+          </li>
+          <li>
+            <i class="bx bx-group ab-icon" aria-hidden="true"></i>
+            <span class="en">Collaboration</span><span class="id">Kolaborasi</span>
+          </li>
         </ul>
 
         <div class="ab-card">
           <div class="ab-card__col">
-            <h3><span class="ab-icon-target ab-icon-target--sm" aria-hidden="true"></span><span class="en">Vision</span><span class="id">Visi</span></h3>
+            <h3>
+              <i class="bx bx-show ab-icon ab-icon--card" aria-hidden="true"></i>
+              <span class="en">Vision</span><span class="id">Visi</span>
+            </h3>
             <p><span class="en">A world where every learner has equal access to quality education, whatever their background or ability.</span><span class="id">Dunia di mana setiap pelajar memiliki akses setara terhadap pendidikan berkualitas, apa pun latar belakang atau kemampuannya.</span></p>
           </div>
           <div class="ab-card__divider" role="presentation"></div>
           <div class="ab-card__col">
-            <h3><span class="ab-icon-square" aria-hidden="true"></span><span class="en">Mission</span><span class="id">Misi</span></h3>
+            <h3>
+              <i class="bx bx-flag ab-icon ab-icon--card" aria-hidden="true"></i>
+              <span class="en">Mission</span><span class="id">Misi</span>
+            </h3>
             <p><span class="en">To close learning gaps with inclusive teaching, fair access, and support that leaves no learner behind.</span><span class="id">Menutup kesenjangan belajar melalui pengajaran inklusif, akses yang adil, dan dukungan yang tidak meninggalkan satu pun pelajar.</span></p>
           </div>
         </div>
@@ -132,25 +155,25 @@
 
         <ul class="ab-team__grid">
           <li class="ab-member">
-            <img class="ab-avatar" src="../images/about/team-1.jpeg" alt="Photo of team member 1">
+            <img class="image-cover ab-avatar" src="../images/about/team-1.jpeg" alt="Photo of team member 1">
             <h3>Hendra</h3>
             <p class="ab-member__role"><span class="en">Head of the program</span><span class="id">Kepala Program</span></p>
             <p class="ab-member__bio"><span class="en">Mastermind to this web design</span><span class="id">Pembuat design inti</span></p>
           </li>
           <li class="ab-member">
-            <img class="ab-avatar" src="../images/about/team-2.jpeg" alt="Photo of team member 2">
+            <img class="image-cover ab-avatar" src="../images/about/team-2.jpeg" alt="Photo of team member 2">
             <h3>Indra</h3>
             <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
             <p class="ab-member__bio"><span class="en">Homepage developer</span><span class="id">Pembuat halaman beranda</span></p>
           </li>
           <li class="ab-member">
-            <img class="ab-avatar" src="../images/about/team-3.jpeg" alt="Photo of team member 3">
+            <img class="image-cover ab-avatar" src="../images/about/team-3.jpeg" alt="Photo of team member 3">
             <h3>Rama</h3>
             <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
             <p class="ab-member__bio"><span class="en">Incursive learning page creator</span><span class="id">Pembuat halaman incursive learning</span></p>
           </li>
           <li class="ab-member">
-            <img class="ab-avatar" src="../images/about/team-4.jpeg" alt="Photo of team member 4">
+            <img class="image-cover ab-avatar" src="../images/about/team-4.jpeg" alt="Photo of team member 4">
             <h3>Oki</h3>
             <p class="ab-member__role"><span class="en">Website Page creator</span><span class="id">Pembuat halaman website</span></p>
             <p class="ab-member__bio"><span class="en">About us page creator</span><span class="id">Pembuat halaman tentang kita</span></p>
@@ -161,8 +184,8 @@
 
     <!-- CTA -->
     <section class="ab-cta">
-      <h2><span class="en">Let’s Make Learning Open to All.</span><span class="id">Mari Wujudkan Pembelajaran yang Terbuka untuk Semua.</span></h2>
-      <p><span class="en">Tell us about your school or community and we’ll reply within two business days.</span><span class="id">Ceritakan tentang sekolah atau komunitasmu dan kami akan membalas dalam dua hari kerja.</span></p>
+      <h2 class="text-balance"><span class="en">Let’s Make Learning Open to All.</span><span class="id">Mari Wujudkan Pembelajaran yang Terbuka untuk Semua.</span></h2>
+      <p class="text-balance"><span class="en">Tell us about your school or community and we’ll reply within two business days.</span><span class="id">Ceritakan tentang sekolah atau komunitasmu dan kami akan membalas dalam dua hari kerja.</span></p>
       <a class="button ab-btn ab-btn--cta" href="#contact"><span class="en">Get in Touch</span><span class="id">Hubungi Kami</span></a>
     </section>
 

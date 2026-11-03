@@ -166,6 +166,9 @@ button:focus-visible {
     background-color: var(--color-primary);
     padding: calc(20 * var(--u)) 0;
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
     z-index: 3;
 }
